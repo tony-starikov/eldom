@@ -25,6 +25,8 @@ Route::group([
     Route::get('locale/{locale}', 'PageController@changeLocale')->name('locale');
 
     Route::get('/', 'PageController@main')->name('main');
+
+    Route::get('/{category_slug}', 'CategoryController@showCategory')->name('showCategory');
 });
 
 Route::middleware('auth')->group(function () {
@@ -46,7 +48,9 @@ Route::middleware('auth')->group(function () {
         ], function () {
             Route::get('/home', 'HomeAdminController@index')->name('adminHome');
 
-            Route::resource('users', 'UserController');
+            Route::resource('/users', 'UserController');
+
+            Route::resource('/categories', 'CategoryController');
         });
 
     });

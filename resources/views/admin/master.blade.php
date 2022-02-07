@@ -36,7 +36,7 @@
                         <a class="nav-link text-dark" href="{{ route('users.index') }}">ПОЛЬЗОВАТЕЛИ</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-dark" href="{{ route('main') }}">КАТЕГОРИИ</a>
+                        <a class="nav-link text-dark" href="{{ route('categories.index') }}">КАТЕГОРИИ</a>
                     </li>
                 </ul>
                 <!-- Right links -->

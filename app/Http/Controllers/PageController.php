@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Category;
 use App\Page;
 use Illuminate\Support\Facades\App;
 
@@ -18,6 +19,8 @@ class PageController extends Controller
     {
         $page_info = Page::where('name', 'main')->first();
 
-        return view('main', compact('page_info'));
+        $categories = Category::orderBy('id', 'asc')->get();
+
+        return view('main', compact('page_info', 'categories'));
     }
 }
