@@ -15,11 +15,13 @@ class CategoryController extends Controller
      */
     public function showCategory($category_slug)
     {
-        $category = Category::where('slug', $category_slug)->first();
+        $main_category = Category::where('slug', $category_slug)->first();
+
+        $main_subcategories = $main_category->subcategories;
 
         $categories = Category::orderBy('id', 'asc')->get();
 
-        return view('category', compact('category', 'categories'));
+        return view('category', compact('main_category', 'categories', 'main_subcategories'));
 
     }
 }

@@ -27,6 +27,8 @@ Route::group([
     Route::get('/', 'PageController@main')->name('main');
 
     Route::get('/{category_slug}', 'CategoryController@showCategory')->name('showCategory');
+
+    Route::get('/{category_slug}/{subcategory_slug}', 'SubcategoryController@showSubcategory')->name('showSubcategory');
 });
 
 Route::middleware('auth')->group(function () {
@@ -51,6 +53,8 @@ Route::middleware('auth')->group(function () {
             Route::resource('/users', 'UserController');
 
             Route::resource('/categories', 'CategoryController');
+
+            Route::resource('/subcategories', 'SubcategoryController');
         });
 
     });

@@ -4,9 +4,10 @@ namespace App\Http\Controllers\Admin;
 
 use App\Category;
 use App\Http\Controllers\Controller;
+use App\Subcategory;
 use Illuminate\Http\Request;
 
-class CategoryController extends Controller
+class SubcategoryController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,8 +16,8 @@ class CategoryController extends Controller
      */
     public function index()
     {
-        $categories = Category::orderBy('id', 'asc')->get();
-        return  view('admin.categories.index', compact('categories'));
+        $subcategories = Subcategory::orderBy('id', 'asc')->get();
+        return  view('admin.subcategories.index', compact('subcategories'));
     }
 
     /**
@@ -26,7 +27,9 @@ class CategoryController extends Controller
      */
     public function create()
     {
-        return view('admin.categories.create');
+        $categories = Category::orderBy('id', 'asc')->get();
+
+        return view('admin.subcategories.create', compact('categories'));
     }
 
     /**
@@ -39,18 +42,18 @@ class CategoryController extends Controller
     {
         $parameters = $request->all();
 
-        Category::create($parameters);
+        Subcategory::create($parameters);
 
-        return redirect()->route('categories.index');
+        return redirect()->route('subcategories.index');
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Category  $category
+     * @param  \App\Subcategory  $subcategory
      * @return \Illuminate\Http\Response
      */
-    public function show(Category $category)
+    public function show(Subcategory $subcategory)
     {
         //
     }
@@ -58,40 +61,42 @@ class CategoryController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Category  $category
+     * @param  \App\Subcategory  $subcategory
      * @return \Illuminate\Http\Response
      */
-    public function edit(Category $category)
+    public function edit(Subcategory $subcategory)
     {
-        return  view('admin.categories.edit', compact('category'));
+        $categories = Category::orderBy('id', 'asc')->get();
+
+        return  view('admin.subcategories.edit', compact('subcategory', 'categories'));
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Category  $category
+     * @param  \App\Subcategory  $subcategory
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Category $category)
+    public function update(Request $request, Subcategory $subcategory)
     {
         $parameters = $request->all();
 
-        $category->update($parameters);
+        $subcategory->update($parameters);
 
-        return redirect()->route('categories.index');
+        return redirect()->route('subcategories.index');
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Category  $category
+     * @param  \App\Subcategory  $subcategory
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Category $category)
+    public function destroy(Subcategory $subcategory)
     {
-        $category->delete();
+        $subcategory->delete();
 
-        return redirect()->route('categories.index');
+        return redirect()->route('subcategories.index');
     }
 }

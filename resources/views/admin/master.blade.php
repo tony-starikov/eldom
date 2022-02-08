@@ -38,6 +38,9 @@
                     <li class="nav-item">
                         <a class="nav-link text-dark" href="{{ route('categories.index') }}">КАТЕГОРИИ</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="{{ route('subcategories.index') }}">ПОДКАТЕГОРИИ</a>
+                    </li>
                 </ul>
                 <!-- Right links -->
                 <ul class="navbar-nav d-flex flex-row">

@@ -1,6 +1,6 @@
 @extends('master')
 
-@section('title', $main_category->name)
+@section('title', $main_subcategory->name)
 
 @section('main')
 
@@ -13,7 +13,8 @@
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a class="text-decoration-none" href="{{ route('main') }}">ГЛАВНАЯ</a></li>
-                        <li class="breadcrumb-item active"><a>{{ mb_strtoupper($main_category->name) }}</a></li>
+                        <li class="breadcrumb-item"><a class="text-decoration-none" href="{{ route('showCategory', $main_category->slug) }}">{{ mb_strtoupper($main_category->name) }}</a></li>
+                        <li class="breadcrumb-item active"><a>{{ mb_strtoupper($main_subcategory->name) }}</a></li>
                     </ol>
                 </nav>
 
@@ -42,7 +43,7 @@
                                     @foreach($category->subcategories as $subcategory)
 
                                         <li>
-                                            <a class="text-decoration-none text-dark" href="{{ route('showSubcategory', [$category->slug, $subcategory->slug]) }}">
+                                            <a class="text-decoration-none text-dark @if($main_subcategory->id == $subcategory->id) bg-warning @endif  " href="{{ route('showSubcategory', [$category->slug, $subcategory->slug]) }}">
                                                 | {{ mb_strtoupper($subcategory->name) }}
                                             </a>
                                         </li>
@@ -68,23 +69,6 @@
 
                     <div class="row">
 
-                        @foreach($main_subcategories as $subcategory)
-
-                            <div class="col-4">
-
-                                <div class="card m-2">
-
-                                    <a class="text-decoration-none text-dark" href="{{ route('showSubcategory', [$main_category->slug, $subcategory->slug]) }}">
-                                        <div class="card-body text-center">
-                                            <h5 class="card-title">{{ mb_strtoupper($subcategory->name) }}</h5>
-                                        </div>
-                                    </a>
-
-                                </div>
-
-                            </div>
-
-                        @endforeach
 
 
                     </div>

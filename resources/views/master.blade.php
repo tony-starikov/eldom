@@ -43,8 +43,11 @@
                             КАТАЛОГ
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            @foreach($categories as $category)
+                            @foreach(\App\Category::all() as $category)
                                 <li><a class="dropdown-item" href="{{ route('showCategory', $category->slug) }}">{{ mb_strtoupper($category->name) }}</a></li>
+                                @foreach($category->subcategories as $subcategory)
+                                    <li><a class="dropdown-item" href="{{ route('showSubcategory', [$category->slug, $subcategory->slug]) }}">| {{ mb_strtoupper($subcategory->name) }}</a></li>
+                                @endforeach
                             @endforeach
                         </ul>
                     </li>
