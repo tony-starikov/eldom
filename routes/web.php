@@ -19,17 +19,6 @@ Auth::routes([
     'verify' => false,
 ]);
 
-Route::group([
-    'middleware' => 'set_locale',
-], function () {
-    Route::get('locale/{locale}', 'PageController@changeLocale')->name('locale');
-
-    Route::get('/', 'PageController@main')->name('main');
-
-    Route::get('/{category_slug}', 'CategoryController@showCategory')->name('showCategory');
-
-    Route::get('/{category_slug}/{subcategory_slug}', 'SubcategoryController@showSubcategory')->name('showSubcategory');
-});
 
 Route::middleware('auth')->group(function () {
 
@@ -55,10 +44,26 @@ Route::middleware('auth')->group(function () {
             Route::resource('/categories', 'CategoryController');
 
             Route::resource('/subcategories', 'SubcategoryController');
+
+            Route::resource('/products', 'ProductController');
         });
 
     });
 
+});
+
+Route::group([
+    'middleware' => 'set_locale',
+], function () {
+    Route::get('locale/{locale}', 'PageController@changeLocale')->name('locale');
+
+    Route::get('/', 'PageController@main')->name('main');
+
+    Route::get('/{category_slug}', 'CategoryController@showCategory')->name('showCategory');
+
+    Route::get('/{category_slug}/{subcategory_slug}', 'SubcategoryController@showSubcategory')->name('showSubcategory');
+
+    Route::get('/{category_slug}/{subcategory_slug}/{product_slug}', 'ProductController@showProduct')->name('showProduct');
 });
 
 

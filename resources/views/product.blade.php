@@ -14,7 +14,8 @@
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a class="text-decoration-none" href="{{ route('main') }}">ГЛАВНАЯ</a></li>
                         <li class="breadcrumb-item"><a class="text-decoration-none" href="{{ route('showCategory', $main_category->slug) }}">{{ mb_strtoupper($main_category->name) }}</a></li>
-                        <li class="breadcrumb-item active"><a>{{ mb_strtoupper($main_subcategory->name) }}</a></li>
+                        <li class="breadcrumb-item"><a class="text-decoration-none" href="{{ route('showSubcategory', [$main_category->slug, $main_subcategory->slug]) }}">{{ mb_strtoupper($main_subcategory->name) }}</a></li>
+                        <li class="breadcrumb-item active"><a>{{ mb_strtoupper($main_product->name) }}</a></li>
                     </ol>
                 </nav>
 
@@ -65,37 +66,20 @@
 
             <div class="col-9">
 
-                <h5>{{ mb_strtoupper($main_subcategory->name) }}</h5>
-
-                <section>
+                <h5>{{ mb_strtoupper($main_product->name) }}</h5>
 
                     <div class="row">
 
-
-                        @foreach($main_subcategory->products as $product)
-
-                            <div class="col-4 p-3">
-
-                                <a class="text-decoration-none" href="{{ route('showProduct', [$main_category->slug, $main_subcategory->slug, $product->slug]) }}">
-                                    <div class="card h-100">
-                                        <img src="/images/1.png" class="card-img-top img-fluid" alt="...">
-                                        <div class="card-body text-center">
-                                            <p class="card-title w-75 mx-auto text-dark">{{ mb_strtoupper($product->name) }}</p>
-                                            <h3 class="card-title w-75 mx-auto">{{ $product->price }} грн</h3>
-                                            <a href="#" class="btn btn-primary">ДОБАВИТЬ В КОРЗИНУ</a>
-                                        </div>
-                                    </div>
-                                </a>
-
-                            </div>
-
-                        @endforeach
-
-
+                        <div class="col-6 text-center"><img src="/images/1.png" class="img-fluid w-75" alt="{{ $main_product->name }}"></div>
+                        <div class="col-6">
+                            <h6>АРТИКУЛ: {{ $main_product->code }}</h6>
+                            <h6 class="text-primary">@if($main_product->status == 1) В НАЛИЧИИ @else ОЖИДАЕТСЯ ПОСТАВКА @endif</h6>
+                            <p>{{ $main_product->small_description }}</p>
+                            <h3 class="text-success">{{ $main_product->price }} грн</h3>
+                            <a href="#" class="btn btn-primary">ДОБАВИТЬ В КОРЗИНУ</a>
+                        </div>
 
                     </div>
-
-                </section>
 
             </div>
 
