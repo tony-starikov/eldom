@@ -28,22 +28,22 @@
 
                 <h5>КАТЕГОРИИ</h5>
 
-                <ul>
+                <ul class="list-group">
 
                     @foreach($categories as $category)
 
-                        <li>
+                        <li class="list-group-item border-0">
 
-                            <a class="text-decoration-none text-dark @if($main_category->id == $category->id) bg-warning @endif " href="{{ route('showCategory', $category->slug) }}">{{ mb_strtoupper($category->name) }}</a>
+                            <a class="text-decoration-none @if($main_category->id == $category->id) text-primary @else text-dark @endif " href="{{ route('showCategory', $category->slug) }}">{{ mb_strtoupper($category->name) }}</a>
 
                             @if($main_category->id == $category->id)
 
-                                <ul>
+                                <ul class="list-group">
 
                                     @foreach($category->subcategories as $subcategory)
 
-                                        <li>
-                                            <a class="text-decoration-none text-dark @if($main_subcategory->id == $subcategory->id) bg-warning @endif  " href="{{ route('showSubcategory', [$category->slug, $subcategory->slug]) }}">
+                                        <li class="list-group-item border-0">
+                                            <a class="text-decoration-none @if($main_subcategory->id == $subcategory->id) text-primary @else text-dark @endif " href="{{ route('showSubcategory', [$category->slug, $subcategory->slug]) }}">
                                                 | {{ mb_strtoupper($subcategory->name) }}
                                             </a>
                                         </li>
@@ -82,7 +82,12 @@
                                         <div class="card-body text-center">
                                             <p class="card-title w-75 mx-auto text-dark">{{ mb_strtoupper($product->name) }}</p>
                                             <h3 class="card-title w-75 mx-auto">{{ $product->price }} грн</h3>
-                                            <a href="#" class="btn btn-primary">ДОБАВИТЬ В КОРЗИНУ</a>
+                                            <form action="{{ route('basketAdd', $product->id) }}" method="POST">
+                                                <button type="submit" class="btn btn-primary">
+                                                    В КОРЗИНУ <span><i class="fas fa-shopping-cart"></i></span>
+                                                </button>
+                                                @csrf
+                                            </form>
                                         </div>
                                     </div>
                                 </a>

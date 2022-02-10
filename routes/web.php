@@ -52,9 +52,25 @@ Route::middleware('auth')->group(function () {
 
 });
 
+
+
 Route::group([
     'middleware' => 'set_locale',
 ], function () {
+    Route::group([
+        'prefix' => 'basket',
+    ], function () {
+        Route::post('/add/{product_id}', 'BasketController@basketAdd')->name('basketAdd');
+
+        Route::get('/', 'BasketController@basket')->name('basket');
+
+        Route::post('/remove/{product_id}', 'BasketController@basketRemove')->name('basketRemove');
+
+        Route::get('/check', 'BasketController@orderCheck')->name('orderCheck');
+
+        Route::post('/confirm', 'BasketController@orderConfirm')->name('orderConfirm');
+    });
+
     Route::get('locale/{locale}', 'PageController@changeLocale')->name('locale');
 
     Route::get('/', 'PageController@main')->name('main');
@@ -65,5 +81,6 @@ Route::group([
 
     Route::get('/{category_slug}/{subcategory_slug}/{product_slug}', 'ProductController@showProduct')->name('showProduct');
 });
+
 
 

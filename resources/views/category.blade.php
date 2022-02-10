@@ -27,21 +27,21 @@
 
                 <h5>КАТЕГОРИИ</h5>
 
-                <ul>
+                <ul class="list-group">
 
                     @foreach($categories as $category)
 
-                        <li>
+                        <li class="list-group-item border-0">
 
-                            <a class="text-decoration-none text-dark @if($main_category->id == $category->id) bg-warning @endif " href="{{ route('showCategory', $category->slug) }}">{{ mb_strtoupper($category->name) }}</a>
+                            <a class="text-decoration-none @if($main_category->id == $category->id) text-primary @else text-dark @endif " href="{{ route('showCategory', $category->slug) }}">{{ mb_strtoupper($category->name) }}</a>
 
                             @if($main_category->id == $category->id)
 
-                                <ul>
+                                <ul class="list-group">
 
                                     @foreach($category->subcategories as $subcategory)
 
-                                        <li>
+                                        <li class="list-group-item border-0">
                                             <a class="text-decoration-none text-dark" href="{{ route('showSubcategory', [$category->slug, $subcategory->slug]) }}">
                                                 | {{ mb_strtoupper($subcategory->name) }}
                                             </a>

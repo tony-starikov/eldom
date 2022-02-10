@@ -1,10 +1,10 @@
-@extends('master')
+@extends('auth.master')
 
 @section('title', 'LOGIN')
 
 @section('main')
     <!--Main layout-->
-        <div class="container mt-5">
+        <div class="container-fluid mt-5">
             <!--Section: Content-->
             <section class="text-center">
 

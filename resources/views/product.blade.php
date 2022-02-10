@@ -29,22 +29,22 @@
 
                 <h5>КАТЕГОРИИ</h5>
 
-                <ul>
+                <ul class="list-group">
 
                     @foreach($categories as $category)
 
-                        <li>
+                        <li class="list-group-item border-0">
 
-                            <a class="text-decoration-none text-dark @if($main_category->id == $category->id) bg-warning @endif " href="{{ route('showCategory', $category->slug) }}">{{ mb_strtoupper($category->name) }}</a>
+                            <a class="text-decoration-none @if($main_category->id == $category->id) text-primary @else text-dark @endif " href="{{ route('showCategory', $category->slug) }}">{{ mb_strtoupper($category->name) }}</a>
 
                             @if($main_category->id == $category->id)
 
-                                <ul>
+                                <ul class="list-group">
 
                                     @foreach($category->subcategories as $subcategory)
 
-                                        <li>
-                                            <a class="text-decoration-none text-dark @if($main_subcategory->id == $subcategory->id) bg-warning @endif  " href="{{ route('showSubcategory', [$category->slug, $subcategory->slug]) }}">
+                                        <li class="list-group-item border-0">
+                                            <a class="text-decoration-none @if($main_subcategory->id == $subcategory->id) text-primary @else text-dark @endif " href="{{ route('showSubcategory', [$category->slug, $subcategory->slug]) }}">
                                                 | {{ mb_strtoupper($subcategory->name) }}
                                             </a>
                                         </li>
@@ -70,13 +70,19 @@
 
                     <div class="row">
 
-                        <div class="col-6 text-center"><img src="/images/1.png" class="img-fluid w-75" alt="{{ $main_product->name }}"></div>
+                        <div class="col-6 text-center"><img src="/images/1.png" class="img-fluid w-75 my-5" alt="{{ $main_product->name }}"></div>
+
                         <div class="col-6">
                             <h6>АРТИКУЛ: {{ $main_product->code }}</h6>
                             <h6 class="text-primary">@if($main_product->status == 1) В НАЛИЧИИ @else ОЖИДАЕТСЯ ПОСТАВКА @endif</h6>
                             <p>{{ $main_product->small_description }}</p>
-                            <h3 class="text-success">{{ $main_product->price }} грн</h3>
-                            <a href="#" class="btn btn-primary">ДОБАВИТЬ В КОРЗИНУ</a>
+                            <h3 class="text-primary">{{ $main_product->price }} грн</h3>
+                            <form action="{{ route('basketAdd', $main_product->id) }}" method="POST">
+                                <button type="submit" class="btn btn-primary">
+                                    В КОРЗИНУ <span><i class="fas fa-shopping-cart"></i></span>
+                                </button>
+                                @csrf
+                            </form>
                         </div>
 
                     </div>
