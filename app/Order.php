@@ -10,6 +10,8 @@ class Order extends Model
         'status',
         'name',
         'phone',
+        'email',
+        'address',
         'user_id',
     ];
 
