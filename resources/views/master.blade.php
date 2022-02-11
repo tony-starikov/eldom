@@ -33,10 +33,10 @@
                         <a class="nav-link text-dark" href="{{ route('main') }}">ГЛАВНАЯ</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-dark" href="#">ДОСТАВКА</a>
+                        <a class="nav-link text-dark" href="{{ route('delivery') }}">ДОСТАВКА</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-dark" href="#">КОНТАКТЫ</a>
+                        <a class="nav-link text-dark" href="{{ route('contacts') }}">КОНТАКТЫ</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link text-dark dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -76,19 +76,19 @@
                     </li>
                     <li class="nav-item me-3 me-lg-0">
                         <a class="nav-link" href="#">
-                            <i class="fab fa-facebook"></i>
+                            <i class="fab fa-lg fa-facebook"></i>
                         </a>
                     </li>
 
                     <li class="nav-item me-3 me-lg-0">
                         <a class="nav-link" href="#">
-                            <i class="fab fa-instagram"></i>
+                            <i class="fab fa-lg fa-instagram"></i>
                         </a>
                     </li>
                     <!-- Icon dropdown -->
                     <li class="nav-item dropstart">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            <i class="fas fa-user"></i>
+                            <i class="fas fa-lg fa-user"></i>
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                             @auth()
@@ -118,13 +118,87 @@
         </div>
     </nav>
 
-    <main style="min-height: 50vh" role="main">
+    <main class="px-5" style="min-height: 80vh" role="main">
         @if(session()->has('message'))
             <p class="alert alert-success text-center text-uppercase">{{ session()->get('message') }}</p>
         @endif
 
         @yield('main')
     </main>
+
+    <!-- Footer -->
+    <footer class="text-center text-lg-start bg-light text-muted">
+        <!-- Section: Links  -->
+        <section class="pt-3">
+            <div class="container text-center text-md-start">
+                <!-- Grid row -->
+                <div class="row mt-3">
+                    <!-- Grid column -->
+                    <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                        <!-- Content -->
+                        <h6 class="text-uppercase fw-bold mb-4">
+                            Electro-Dom
+                        </h6>
+                        <p>
+                            Магазин электротехнических товаров Электродом является одним из ведущих поставщиков монтажно-технической продукции.
+                        </p>
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                        <!-- Links -->
+                        <h6 class="text-uppercase fw-bold mb-4">
+                            Информация
+                        </h6>
+                        <p>
+                            <a href="{{ route('delivery') }}" class="text-reset">Доставка и оплата</a>
+                        </p>
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+                        <!-- Links -->
+                        <h6 class="text-uppercase fw-bold mb-4">
+                            Новости
+                        </h6>
+{{--                        <p>--}}
+{{--                            <a href="#!" class="text-reset">Pricing</a>--}}
+{{--                        </p>--}}
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                        <!-- Links -->
+                        <h6 class="text-uppercase fw-bold mb-4">
+                            Контакты
+                        </h6>
+                        <p>
+                            г.Одесса<br>Староконный рынок<br>Павильон ПП-40</p>
+                        <p>
+                            <i class="fas fa-envelope me-3"></i>
+                            akimovdenis87@ukr.net
+                        </p>
+                        <p><i class="fas fa-phone me-3"></i> +38 (048) 772-24-08</p>
+                        <p><i class="fas fa-phone me-3"></i> +38 (067) 141-73-18</p>
+                    </div>
+                    <!-- Grid column -->
+                </div>
+                <!-- Grid row -->
+            </div>
+        </section>
+        <!-- Section: Links  -->
+
+        <!-- Copyright -->
+        <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+            © 2010 - 2022
+            <a class="text-reset text-decoration-none" href="{{ route('main') }}">Electro-Dom. Все права защищены.</a>
+        </div>
+        <!-- Copyright -->
+    </footer>
+    <!-- Footer -->
 
 </div>
 

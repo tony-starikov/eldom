@@ -19,6 +19,18 @@ class PagesTableSeeder extends Seeder
                 'title' => 'main | Company',
                 'description' => 'Main page'
             ],
+            [
+                'id' => 2,
+                'name' => 'delivery',
+                'title' => 'Доставка и оплата',
+                'description' => 'Main page'
+            ],
+            [
+                'id' => 3,
+                'name' => 'contacts',
+                'title' => 'Контакты',
+                'description' => 'Main page'
+            ],
         ]);
     }
 }

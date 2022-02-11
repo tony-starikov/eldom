@@ -46,6 +46,8 @@ Route::middleware('auth')->group(function () {
             Route::resource('/subcategories', 'SubcategoryController');
 
             Route::resource('/products', 'ProductController');
+
+            Route::resource('/orders', 'OrderController');
         });
 
     });
@@ -74,6 +76,10 @@ Route::group([
     Route::get('locale/{locale}', 'PageController@changeLocale')->name('locale');
 
     Route::get('/', 'PageController@main')->name('main');
+
+    Route::get('/dostavka-i-oplata', 'PageController@delivery')->name('delivery');
+
+    Route::get('/contacts', 'PageController@contacts')->name('contacts');
 
     Route::get('/{category_slug}', 'CategoryController@showCategory')->name('showCategory');
 

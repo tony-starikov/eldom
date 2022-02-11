@@ -12,6 +12,9 @@ class Order extends Model
         'phone',
         'email',
         'address',
+        'delivery',
+        'payment',
+        'sum',
         'user_id',
     ];
 
@@ -29,11 +32,15 @@ class Order extends Model
         return $sum;
     }
 
-    public function saveOrder($name, $phone)
+    public function saveOrder($name, $phone, $email, $address, $delivery, $payment)
     {
         if ($this->status == 0) {
             $this->name = $name;
             $this->phone = $phone;
+            $this->email = $email;
+            $this->address = $address;
+            $this->delivery = $delivery;
+            $this->payment = $payment;
             $this->status = 1;
             $this->save();
             session()->forget('orderId');

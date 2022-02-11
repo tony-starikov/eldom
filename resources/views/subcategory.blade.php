@@ -6,7 +6,7 @@
 
     <div class="container-fluid">
 
-        <div class="row">
+        <div class="row p-2">
 
             <div class="col-12">
 
@@ -22,9 +22,9 @@
 
         </div>
 
-        <div class="row">
+        <div class="row p-2">
 
-            <div class="col-3">
+            <div class="col-3 ps-5">
 
                 <h5>КАТЕГОРИИ</h5>
 
@@ -80,14 +80,25 @@
                                     <div class="card h-100">
                                         <img src="/images/1.png" class="card-img-top img-fluid" alt="...">
                                         <div class="card-body text-center">
-                                            <p class="card-title w-75 mx-auto text-dark">{{ mb_strtoupper($product->name) }}</p>
-                                            <h3 class="card-title w-75 mx-auto">{{ $product->price }} грн</h3>
-                                            <form action="{{ route('basketAdd', $product->id) }}" method="POST">
-                                                <button type="submit" class="btn btn-primary">
-                                                    В КОРЗИНУ <span><i class="fas fa-shopping-cart"></i></span>
-                                                </button>
-                                                @csrf
-                                            </form>
+                                            <div class="row p-0 m-0">
+                                                <h6 class="card-title p-0 m-0 w-100 text-dark" style="min-height: 60px">{{ mb_strtoupper($product->name) }}</h6>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <h3 class="card-title w-75 mx-auto">{{ $product->price }} грн</h3>
+                                                </div>
+                                                <div class="col-12">
+                                                    <form action="{{ route('basketAdd', $product->id) }}" method="POST">
+                                                        <button type="submit" class="btn btn-primary">
+                                                            В КОРЗИНУ <span><i class="fas fa-shopping-cart"></i></span>
+                                                        </button>
+                                                        @csrf
+                                                    </form>
+                                                </div>
+                                            </div>
+
+
+
                                         </div>
                                     </div>
                                 </a>

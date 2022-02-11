@@ -16,12 +16,19 @@ class BasketController extends Controller
 
         if (is_null($orderId)) {
             session()->flash('message', 'Корзина пуста, добавьте товары!');
-            return redirect()->route('main');
+            return redirect()->back();
         } else {
             $order = Order::findOrFail($orderId);
-            if ($order->products->count() < 1) {
+
+            $quantity = null;
+
+            foreach ($order->products as $product) {
+                $quantity += $product->pivot->count;
+            }
+
+            if ($quantity == 0) {
                 session()->flash('message', 'Корзина пуста, добавьте товары!');
-                return redirect()->route('main');
+                return redirect()->back();
             }
         }
 
@@ -34,12 +41,7 @@ class BasketController extends Controller
         if (is_null($order)) {
             $orderId = Order::create()->id;
             session(['orderId' => $orderId]);
-            return redirect()->route('index');
-        }
-
-        $quantity = null;
-        foreach ($order->products as $product) {
-            $quantity += $product->pivot->count;
+            return redirect()->route('main');
         }
 
         return view('basket', compact('categories', 'order', 'quantity'));
@@ -54,7 +56,7 @@ class BasketController extends Controller
         $order = Order::find($orderId);
 
         if (is_null($order)) {
-            return redirect()->route('index');
+            return redirect()->route('main');
         }
 
         $quantity = null;
@@ -75,7 +77,14 @@ class BasketController extends Controller
             return redirect()->route('main');
         }
 
-        $orderResult = $order->saveOrder($request->name, $request->phone);
+        $orderResult = $order->saveOrder(
+            $request->name,
+            $request->phone,
+            $request->email,
+            $request->address,
+            $request->delivery,
+            $request->payment
+        );
 
         if ($orderResult) {
             session()->flash('message', 'Заказ оформлен успешно!');
@@ -130,17 +139,27 @@ class BasketController extends Controller
         $order = Order::find($orderId);
 
         if (is_null($order->products)) {
-            return redirect()->route('index');
+            return redirect()->route('main');
         }
 
         if ($order->products->contains($productId)) {
             $pivotRow = $order->products()->where('product_id', $productId)->first()->pivot;
-            if ($pivotRow->count < 2) {
+            if ($pivotRow->count == 1) {
                 $order->products()->detach($productId);
             } else {
                 $pivotRow->count--;
                 $pivotRow->update();
             }
+        }
+
+        $quantity = null;
+        foreach ($order->products as $product) {
+            $quantity += $product->pivot->count;
+        }
+
+        if ($quantity == 1) {
+            session()->flash('message', 'Корзина пуста, добавьте товары!');
+            return redirect()->route('main');
         }
 
         $product = Product::find($productId);

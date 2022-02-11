@@ -6,7 +6,7 @@
 
     <div class="container-fluid">
 
-        <div class="row">
+        <div class="row p-2">
 
             <div class="col-12">
 
@@ -21,9 +21,9 @@
 
         </div>
 
-        <div class="row">
+        <div class="row p-2">
 
-            <div class="col-3">
+            <div class="col-3 ps-5">
 
                 <h5>КАТЕГОРИИ</h5>
 
