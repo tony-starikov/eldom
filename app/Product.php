@@ -29,6 +29,11 @@ class Product extends Model
         return $this->belongsTo(Subcategory::class);
     }
 
+    public function features()
+    {
+        return $this->hasMany(Feature::class);
+    }
+
     public function getPriceForCount()
     {
         if (is_null($this->pivot)) {

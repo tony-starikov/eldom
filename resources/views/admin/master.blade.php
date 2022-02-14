@@ -45,6 +45,9 @@
                         <a class="nav-link text-dark" href="{{ route('products.index') }}">ТОВАРЫ</a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link text-dark" href="{{ route('features.index') }}">ХАРАКТЕРИСТИКИ</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link text-dark" href="{{ route('orders.index') }}">ЗАКАЗЫ</a>
                     </li>
                 </ul>

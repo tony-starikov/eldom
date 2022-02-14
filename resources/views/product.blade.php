@@ -73,9 +73,12 @@
                         <div class="col-6 text-center"><img src="/images/1.png" class="img-fluid w-75 my-5" alt="{{ $main_product->name }}"></div>
 
                         <div class="col-6">
+                            <hr>
                             <h6>АРТИКУЛ: {{ $main_product->code }}</h6>
                             <h6 class="text-primary">@if($main_product->status == 1) В НАЛИЧИИ @else ОЖИДАЕТСЯ ПОСТАВКА @endif</h6>
-                            <p>{{ $main_product->small_description }}</p>
+                            <hr>
+                            <p class="lh-base">{{ $main_product->small_description }}</p>
+                            <hr>
                             <h3 class="text-primary">{{ $main_product->price }} грн</h3>
                             <form action="{{ route('basketAdd', $main_product->id) }}" method="POST">
                                 <button type="submit" class="btn btn-primary">
@@ -84,6 +87,41 @@
                                 @csrf
                             </form>
                         </div>
+
+                    </div>
+
+
+                    <div class="row">
+
+                        <div class="col-12">
+
+                            <hr>
+
+                            <h4>ОПИСАНИЕ</h4>
+
+                            <h5 class="fw-normal lh-base w-75">{{ $main_product->description }}</h5>
+
+                            <hr>
+
+                            <h4>ТЕХНИЧЕСКИЕ ХАРАКТЕРИСТИКИ</h4>
+
+                            <ul class="list-group mb-3">
+
+                                @foreach($main_product->features as $feature)
+
+                                    <li class="list-group-item border-0">
+                                        <h6 class="m-0 p-0">
+                                            {{ $feature->feature }}
+                                        </h6>
+                                    </li>
+
+                                @endforeach
+
+                            </ul>
+
+                        </div>
+
+                        <hr>
 
                     </div>
 
