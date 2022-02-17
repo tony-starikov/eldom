@@ -103,7 +103,6 @@
                 <a class="text-white text-decoration-none" href="{{ route('main') }}"><h5>ГЛАВНАЯ</h5></a>
                 <a class="text-white text-decoration-none" href="{{ route('delivery') }}"><h5>ДОСТАВКА</h5></a>
                 <a class="text-white text-decoration-none" href="{{ route('contacts') }}"><h5>КОНТАКТЫ</h5></a>
-                <a class="text-white text-decoration-none" href="{{ route('contacts') }}"><h5>КОНТАКТЫ</h5></a>
 
                 <a class="text-white text-decoration-none" href="{{ route('basket') }}">
                     @if($quantity)<span class="badge badge-pill bg-danger">{{ $quantity }}</span>@endif
