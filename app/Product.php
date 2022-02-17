@@ -18,10 +18,12 @@ class Product extends Model
         'small_description',
         'image',
         'price',
+        'old_price',
         'status',
         'new',
         'sale',
         'hit',
+        'recommend',
     ];
 
     public function subcategory()

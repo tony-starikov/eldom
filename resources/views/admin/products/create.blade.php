@@ -67,6 +67,38 @@
                         <textarea name="small_description" id="small_description" class="form-control" aria-label="КОРОТКОЕ ОПИСАНИЕ"></textarea>
                     </div>
 
+                    <input type="hidden" name="new" value="0">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="new" id="new" value="1">
+                        <label class="form-check-label" for="new">
+                            NEW
+                        </label>
+                    </div>
+
+                    <input type="hidden" name="sale" value="0">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="sale" id="sale" value="1">
+                        <label class="form-check-label" for="sale">
+                            SALE
+                        </label>
+                    </div>
+
+                    <input type="hidden" name="hit" value="0">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="hit" id="hit" value="1">
+                        <label class="form-check-label" for="hit">
+                            HIT
+                        </label>
+                    </div>
+
+                    <input type="hidden" name="recommend" value="0">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="recommend" id="recommend" value="1">
+                        <label class="form-check-label" for="hit">
+                            RECOMMEND
+                        </label>
+                    </div>
+
                     <button type="submit" class="btn btn-success mt-3">ДОБАВИТЬ</button>
                 </form>
 

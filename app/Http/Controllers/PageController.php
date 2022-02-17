@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Category;
 use App\Order;
 use App\Page;
+use App\Product;
 use Illuminate\Support\Facades\App;
 
 class PageController extends Controller
@@ -32,7 +33,9 @@ class PageController extends Controller
 
         $categories = Category::orderBy('id', 'asc')->get();
 
-        return view('main', compact('page_info', 'categories', 'quantity'));
+        $recommended_products = Product::where('recommend', 1)->get();
+
+        return view('main', compact('page_info', 'categories', 'quantity', 'recommended_products'));
     }
 
     public function delivery()

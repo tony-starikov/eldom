@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Category;
 use App\Order;
+use App\Product;
 use Illuminate\Http\Request;
 
 class CategoryController extends Controller
@@ -32,7 +33,15 @@ class CategoryController extends Controller
 
         $categories = Category::orderBy('id', 'asc')->get();
 
-        return view('category', compact('main_category', 'categories', 'main_subcategories', 'quantity'));
+        $subcategories_ides = [];
+
+        foreach ($main_subcategories as $main_subcategory){
+            $subcategories_ides[] = $main_subcategory['id'];
+        }
+
+        $category_products = Product::query()->whereIn('subcategory_id', $subcategories_ides)->get();
+
+        return view('category', compact('main_category', 'categories', 'main_subcategories', 'quantity', 'category_products'));
 
     }
 }

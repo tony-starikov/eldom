@@ -25,10 +25,12 @@ class CreateProductsTable extends Migration
             $table->text('small_description')->nullable();
             $table->text('image')->nullable();
             $table->integer('price')->default(0);
+            $table->integer('old_price')->default(0);
             $table->integer('status')->default(0);
             $table->integer('new')->default(0);
             $table->integer('sale')->default(0);
             $table->integer('hit')->default(0);
+            $table->integer('recommend')->default(0);
             $table->timestamps();
         });
     }

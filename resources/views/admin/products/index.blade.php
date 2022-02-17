@@ -20,7 +20,10 @@
                                 <th scope="col">#</th>
                                 <th scope="col">ПОДКАТЕГОРИЯ</th>
                                 <th scope="col">НАЗВАНИЕ ТОВАРА</th>
-{{--                                <th scope="col">SLUG</th>--}}
+                                <th scope="col">NEW</th>
+                                <th scope="col">SALE</th>
+                                <th scope="col">HIT</th>
+                                <th scope="col">RECOMMEND</th>
                                 <th scope="col">АРТИКУЛ</th>
                                 <th scope="col">ЦЕНА</th>
                                 <th scope="col">ДЕЙСТВИЯ</th>
@@ -32,7 +35,10 @@
                                 <th scope="row">{{ $product->id }}</th>
                                 <td>{{ mb_strtoupper($product->subcategory->name) }}</td>
                                 <td>{{ mb_strtoupper($product->name) }}</td>
-{{--                                <td>{{ $product->slug }}</td>--}}
+                                <td>@if($product->new == 1) YES @endif</td>
+                                <td>@if($product->sale == 1) YES @endif</td>
+                                <td>@if($product->hit == 1) YES @endif</td>
+                                <td>@if($product->recommend == 1) YES @endif</td>
                                 <td>{{ $product->code }}</td>
                                 <td>{{ $product->price }}</td>
                                 <td>
