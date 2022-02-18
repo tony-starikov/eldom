@@ -33,7 +33,7 @@ class CreateProductsTable extends Migration
             $table->integer('recommend')->default(0);
             $table->timestamps();
             $table->charset = 'utf8';
-            $table->collation = 'utf8_unicode_ci';
+            $table->collation = 'utf8_general_ci';
         });
     }
 
