@@ -15,7 +15,7 @@ class ProductsTableSeeder extends Seeder
             [
                 'subcategory_id' => 1,
                 'manufacturer_id' => 1,
-                'name' => 'Счетчик энергомера трехфазный ЦЭ6803В-Р32 5 (60)',
+                'name' => mb_strtolower('Счетчик энергомера трехфазный ЦЭ6803В-Р32 5 (60)'),
                 'code' => 's003',
                 'slug' => 'schetchik-energomera-trekhfaznyj-tse6803v-r32-5-60-detail',
                 'title' => '',
@@ -33,7 +33,7 @@ class ProductsTableSeeder extends Seeder
             [
                 'subcategory_id' => 1,
                 'manufacturer_id' => 1,
-                'name' => 'Счетчик энергомера трехфазный ЦЭ6803В-Р32 5 (7,5 через трансфораторы тока)',
+                'name' => mb_strtolower('Счетчик энергомера трехфазный ЦЭ6803В-Р32 5 (7,5 через трансфораторы тока)'),
                 'code' => 's001',
                 'slug' => 'schetchik-energomera-trekhfaznyj-tse6803v-r32-5-7-5-cherez-transforatory-toka-detail',
                 'title' => '',
@@ -51,7 +51,7 @@ class ProductsTableSeeder extends Seeder
             [
                 'subcategory_id' => 1,
                 'manufacturer_id' => 1,
-                'name' => 'Счетчик энергомера трехфазный ЦЭ6803В-Р32 5 (100)',
+                'name' => mb_strtolower('Счетчик энергомера трехфазный ЦЭ6803В-Р32 5 (100)'),
                 'code' => 's002',
                 'slug' => 'schetchik-energomera-trekhfaznyj-tse6803v-r32-5-100-detail',
                 'title' => '',
@@ -69,7 +69,7 @@ class ProductsTableSeeder extends Seeder
             [
                 'subcategory_id' => 1,
                 'manufacturer_id' => 1,
-                'name' => 'Счетчик трехфазный ЦЭ6804-Р31',
+                'name' => mb_strtolower('Счетчик трехфазный ЦЭ6804-Р31'),
                 'code' => 's004',
                 'slug' => 'schetchik-trekhfaznyj-tse6804-r31-detail',
                 'title' => '',
@@ -91,7 +91,7 @@ class ProductsTableSeeder extends Seeder
             [
                 'subcategory_id' => 3,
                 'manufacturer_id' => 1,
-                'name' => 'Счетчик трехфазный NIK 2301 АП3(120а)',
+                'name' => mb_strtolower('Счетчик трехфазный NIK 2301 АП3(120а)'),
                 'code' => 's011',
                 'slug' => 'schetchik-trekhfaznyj-nik-2301-ap3-120a-detail',
                 'title' => '',
@@ -109,7 +109,7 @@ class ProductsTableSeeder extends Seeder
             [
                 'subcategory_id' => 3,
                 'manufacturer_id' => 1,
-                'name' => 'Счетчик трехфазный NIK 2301 АП1(100а)',
+                'name' => mb_strtolower('Счетчик трехфазный NIK 2301 АП1(100а)'),
                 'code' => 's012',
                 'slug' => 'schetchik-trekhfaznyj-nik-2301-ap1-100a-detail',
                 'title' => '',
@@ -127,7 +127,7 @@ class ProductsTableSeeder extends Seeder
             [
                 'subcategory_id' => 3,
                 'manufacturer_id' => 1,
-                'name' => 'Счетчик трехфазный NIK 2301 АК1(подключения через трансформаторы тока)',
+                'name' => mb_strtolower('Счетчик трехфазный NIK 2301 АК1(подключения через трансформаторы тока)'),
                 'code' => 's013',
                 'slug' => 'schetchik-trekhfaznyj-nik-2301-ak1-podklyucheniya-cherez-transformatory-toka-detail',
                 'title' => '',
@@ -145,7 +145,7 @@ class ProductsTableSeeder extends Seeder
             [
                 'subcategory_id' => 3,
                 'manufacturer_id' => 1,
-                'name' => 'Счетчик трехфазный NIK 2303 АРП3(120а)',
+                'name' => mb_strtolower('Счетчик трехфазный NIK 2303 АРП3(120а)'),
                 'code' => 's007',
                 'slug' => 'schetchik-trekhfaznyj-nik-2303-arp3-120a-detail',
                 'title' => '',
@@ -163,7 +163,7 @@ class ProductsTableSeeder extends Seeder
             [
                 'subcategory_id' => 3,
                 'manufacturer_id' => 1,
-                'name' => 'Счетчик трехфазный NIK 2303 АРП2(60а)',
+                'name' => mb_strtolower('Счетчик трехфазный NIK 2303 АРП2(60а)'),
                 'code' => 's008',
                 'slug' => 'schetchik-trekhfaznyj-nik-2303-arp2-60a-detail',
                 'title' => '',
@@ -181,7 +181,7 @@ class ProductsTableSeeder extends Seeder
             [
                 'subcategory_id' => 3,
                 'manufacturer_id' => 1,
-                'name' => 'Счетчик трехфазный NIK 2303 АРП1(100а)',
+                'name' => mb_strtolower('Счетчик трехфазный NIK 2303 АРП1(100а)'),
                 'code' => 's009',
                 'slug' => 'schetchik-trekhfaznyj-nik-2303-arp1-100a-detail',
                 'title' => '',
@@ -199,7 +199,7 @@ class ProductsTableSeeder extends Seeder
             [
                 'subcategory_id' => 3,
                 'manufacturer_id' => 1,
-                'name' => 'Счетчик трехфазный NIK 2303 АРК1(через трансформаторы тока)',
+                'name' => mb_strtolower('Счетчик трехфазный NIK 2303 АРК1(через трансформаторы тока)'),
                 'code' => 's010',
                 'slug' => 'schetchik-trekhfaznyj-nik-2303-ark1-cherez-transformatory-toka-detail',
                 'title' => '',

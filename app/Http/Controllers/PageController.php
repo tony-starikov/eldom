@@ -81,6 +81,8 @@ class PageController extends Controller
     {
         $search_string = $request->search_string;
 
+        $search_string = mb_strtolower($search_string);
+
         $products = Product::where('name', 'LIKE', "%{$search_string}%")->orderBy('name')->get();
 
         $quantity = null;
