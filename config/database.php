@@ -41,6 +41,8 @@ return [
             'database' => env('DB_DATABASE', database_path('database.sqlite')),
             'prefix' => '',
             'foreign_key_constraints' => env('DB_FOREIGN_KEYS', true),
+            'charset'   => 'utf8',
+            'collation' => 'utf8_unicode_ci',
         ],
 
         'mysql' => [

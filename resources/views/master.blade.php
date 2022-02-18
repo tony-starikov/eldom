@@ -320,6 +320,19 @@
     </nav>
 
     <main class="px-5" style="min-height: 80vh" role="main">
+        <div class="row">
+            <div class="col-6 mx-auto">
+                <form action="{{ route('search') }}" method="post">
+                    @csrf
+                    <div class="input-group mt-3">
+                        <label class="input-group-text" for="inputGroupFile01">ПОИСК</label>
+                        <input type="text" name="search_string" class="form-control" id="inputGroupFile01" placeholder="ВВЕДИТЕ НАЗВАНИЕ ТОВАРА">
+                        <button class="btn btn-outline-primary" type="submit" id="inputGroupFileAddon04">ИСКАТЬ</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
         @if(session()->has('message'))
             <p class="alert alert-success text-center text-uppercase">{{ session()->get('message') }}</p>
         @endif
@@ -496,6 +509,31 @@
     </nav>
 
     <main class="px-2" style="min-height: 80vh" role="main">
+        <div class="row d-none d-sm-block">
+            <div class="col-9 mx-auto">
+                <form action="{{ route('search') }}" method="post">
+                    @csrf
+                    <div class="input-group mt-3">
+                        <label class="input-group-text" for="inputGroupFile01">ПОИСК</label>
+                        <input type="text" name="search_string" class="form-control" id="inputGroupFile01" placeholder="ВВЕДИТЕ НАЗВАНИЕ ТОВАРА">
+                        <button class="btn btn-outline-primary" type="submit" id="inputGroupFileAddon04">ИСКАТЬ</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="row d-block d-sm-none">
+            <div class="col-12 mx-auto">
+                <form action="{{ route('search') }}" method="post">
+                    @csrf
+                    <div class="input-group mt-3">
+                        <label class="input-group-text" for="inputGroupFile01">ПОИСК</label>
+                        <input type="text" name="search_string" class="form-control" id="inputGroupFile01" placeholder="ВВЕДИТЕ НАЗВАНИЕ ТОВАРА">
+                        <button class="btn btn-outline-primary" type="submit" id="inputGroupFileAddon04">ИСКАТЬ</button>
+                    </div>
+                </form>
+            </div>
+        </div>
         @if(session()->has('message'))
             <p class="alert alert-success text-center text-uppercase">{{ session()->get('message') }}</p>
         @endif

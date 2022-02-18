@@ -83,6 +83,8 @@ Route::group([
 
     Route::get('/contacts', 'PageController@contacts')->name('contacts');
 
+    Route::post('/search', 'PageController@search')->name('search');
+
     Route::get('/{category_slug}', 'CategoryController@showCategory')->name('showCategory');
 
     Route::get('/{category_slug}/{subcategory_slug}', 'SubcategoryController@showSubcategory')->name('showSubcategory');
