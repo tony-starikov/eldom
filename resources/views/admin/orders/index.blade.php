@@ -5,53 +5,58 @@
 @section('main')
     <div class="container-fluid">
 
-        <h1>ЗАКАЗЫ</h1>
-        <a class="btn btn-success" type="button" href="{{ route('orders.create') }}">ДОБАВИТЬ ЗАКАЗ</a>
+        <h3>ЗАКАЗЫ</h3>
+{{--        <a class="btn btn-success" type="button" href="{{ route('orders.create') }}">ДОБАВИТЬ ЗАКАЗ</a>--}}
 
-        <hr>
+        <div class="row d-none d-lg-block">
+            <div class="col-12">
+                <table class="table table-striped">
+                    <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Имя</th>
+                        <th scope="col">Телефон</th>
+                        <th scope="col">Время заказа</th>
+                        <th scope="col">Статус</th>
+                        <th scope="col">Доставка</th>
+                        <th scope="col">Оплата</th>
+                        <th scope="col">Статус оплаты</th>
+                        <th scope="col">Сумма</th>
+                        <th scope="col">Действия</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    @foreach($orders as $order)
+                        <tr>
+                            <th scope="row">{{ $order->id }}</th>
+                            <td>{{ $order->name }}</td>
+                            <td>{{ $order->phone }}</td>
+                            <td>{{ $order->created_at->format('d.m.Y | H:i') }}</td>
+                            <td>@if($order->state == 1)В обработке@elseif($order->state == 2)Доставка@elseЗавершен@endif</td>
+                            <td>@if($order->delivery == 1)Самовывоз@elseНовая Почта@endif</td>
+                            <td>@if($order->payment == 1)Наличными в магазине@elseif($order->payment == 2)Банковский перевод@elseНаложным платежом@endif</td>
+                            <td>@if($order->payment_status == 0)<h4>-</h4>@else<h4>+</h4>@endif</td>
+                            <td>{{ $order->getFullPrice() }} UAH</td>
+                            <td>
+                                <a class="btn btn-success mt-1" type="button" href="{{ route('orders.show', $order) }}">ПОКАЗАТЬ</a>
+                                <a class="btn btn-success mt-1" type="button" href="{{ route('orders.edit', $order) }}">ИЗМЕНИТЬ</a>
+                                <form class="d-inline-block" id="delete-form" action="{{ route('orders.destroy', $order) }}" method="POST">
+                                    @method('DELETE')
+                                    @csrf
+                                    <button type="submit" class="btn btn-success mt-1">УДАЛИТЬ</button>
+                                </form>
+                            </td>
+                        </tr>
+                    @endforeach
+                    </tbody>
+                </table>
+            </div>
+        </div>
 
         <div class="row">
-
-                <div class="col-12">
-
-                    <table class="table">
-                        <thead>
-                            <tr>
-                                <th scope="col">#</th>
-                                <th scope="col">ИМЯ</th>
-                                <th scope="col">ТЕЛЕФОН</th>
-                                <th scope="col">ОПЛАТА</th>
-                                <th scope="col">ДОСТАВКА</th>
-                                <th scope="col">СУММА</th>
-                                <th scope="col">ДЕЙСТВИЯ</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                        @foreach($orders as $order)
-                            <tr>
-                                <th scope="row">{{ $order->id }}</th>
-                                <td>{{ mb_strtoupper($order->name) }}</td>
-                                <td>{{ $order->phone }}</td>
-                                <td>@if($order->payment == 1) Наличными в магазине @elseif($order->payment == 2) Банковский перевод @elseif($order->payment == 3) Наложным платежом @endif</td>
-                                <td>@if($order->delivery == 1) Самовывоз @elseif($order->delivery == 2) Новой Почтой @endif</td>
-                                <td>{{ $order->getFullPrice() }} грн</td>
-                                <td>
-                                    <div class="btn-group">
-                                        <a href="{{ route('orders.edit', $order) }}"><button type="button" class="btn btn-link">ИЗМЕНИТЬ</button></a>
-                                        <a href="{{ route('orders.show', $order) }}"><button type="button" class="btn btn-link">ПОКАЗАТЬ</button></a>
-                                        <form id="delete-form" action="{{ route('orders.destroy', $order) }}" method="POST">
-                                            @method('DELETE')
-                                            @csrf
-                                            <button type="submit" class="btn btn-link">УДАЛИТЬ</button>
-                                        </form>
-                                    </div>
-                                </td>
-                            </tr>
-                        @endforeach
-                        </tbody>
-                    </table>
-
-                </div>
+            <nav class="d-flex justify-content-center mt-3">
+                {{ $orders->links() }}
+            </nav>
         </div>
     </div> <!-- /container -->
 @endsection

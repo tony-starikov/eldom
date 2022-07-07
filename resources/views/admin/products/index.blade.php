@@ -5,10 +5,8 @@
 @section('main')
     <div class="container-fluid">
 
-        <h1>ТОВАРЫ</h1>
+        <h4>ТОВАРЫ</h4>
         <a class="btn btn-success" type="button" href="{{ route('products.create') }}">ДОБАВИТЬ ТОВАР</a>
-
-        <hr>
 
         <div class="row">
 

@@ -11,7 +11,7 @@
 
                 <section class="text-center">
 
-                    <h1>ADMIN!</h1>
+                    <h1>ADMIN</h1>
 
                 </section>
 

@@ -9,9 +9,7 @@
 
             <div class="col-12">
 
-                <h1>ДОБАВИТЬ ХАРАКТЕРИСТИКУ</h1>
-
-                <hr>
+                <h4>ДОБАВИТЬ ХАРАКТЕРИСТИКУ</h4>
 
                 <form method="POST" action="{{ route('features.store') }}">
                     @csrf

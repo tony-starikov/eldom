@@ -5,10 +5,8 @@
 @section('main')
     <div class="container-fluid">
 
-        <h1>ХАРАКТЕРИСТИКИ ТОВАРОВ</h1>
+        <h4>ХАРАКТЕРИСТИКИ ТОВАРОВ</h4>
         <a class="btn btn-success" type="button" href="{{ route('features.create') }}">ДОБАВИТЬ ХАРАКТЕРИСТИКУ</a>
-
-        <hr>
 
         <div class="row">
 

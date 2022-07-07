@@ -5,10 +5,8 @@
 @section('main')
     <div class="container-fluid">
 
-        <h1>ПОДКАТЕГОРИИ</h1>
+        <h4>ПОДКАТЕГОРИИ</h4>
         <a class="btn btn-success" type="button" href="{{ route('subcategories.create') }}">ДОБАВИТЬ ПОДКАТЕГОРИЮ</a>
-
-        <hr>
 
         <div class="row">
 

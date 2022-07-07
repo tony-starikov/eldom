@@ -15,7 +15,7 @@ class OrderController extends Controller
      */
     public function index()
     {
-        $orders = Order::where('status', 1)->get();
+        $orders = Order::where('status', 1)->paginate(20);
 
         return  view('admin.orders.index', compact('orders'));
     }
@@ -49,7 +49,7 @@ class OrderController extends Controller
      */
     public function show(Order $order)
     {
-        //
+        return  view('admin.orders.show', compact('order'));
     }
 
     /**
@@ -60,7 +60,7 @@ class OrderController extends Controller
      */
     public function edit(Order $order)
     {
-        //
+        return  view('admin.orders.edit', compact('order'));
     }
 
     /**
@@ -72,7 +72,10 @@ class OrderController extends Controller
      */
     public function update(Request $request, Order $order)
     {
-        //
+        $params = $request->all();
+
+        $order->update($params);
+        return redirect()->route('orders.index');
     }
 
     /**
@@ -83,6 +86,7 @@ class OrderController extends Controller
      */
     public function destroy(Order $order)
     {
-        //
+        $order->delete();
+        return redirect()->route('orders.index');
     }
 }
