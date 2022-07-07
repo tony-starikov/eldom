@@ -6,7 +6,7 @@
 
     <div class="container-fluid d-none d-lg-block">
 
-        <div class="row d-none d-xl-block">
+        <div class="row p-2 d-none d-xl-block">
 
             <div class="col-12">
 

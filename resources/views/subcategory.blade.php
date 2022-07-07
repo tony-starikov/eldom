@@ -65,13 +65,29 @@
 
             <div class="col-9">
 
-                <h5>{{ mb_strtoupper($main_subcategory->name) }}</h5>
-
                 <section>
+
+                    <div class="row px-2 py-0">
+                        <div class="col-12 mt-0">
+
+                            <nav style="--bs-breadcrumb-divider: '';" aria-label="breadcrumb">
+                                <ol class="breadcrumb">
+                                    <li class="breadcrumb-item"><h5>ФИЛЬТРЫ:</h5></li>
+                                    <li class="breadcrumb-item"><a class="text-decoration-none" href="{{ route('showSubcategoryByPriceUp', [$main_category->slug, $main_subcategory->slug]) }}"><h6 class="mt-1">ЦЕНА <i class="fas fa-chevron-up"></i></h6></a></li>
+                                    <li class="breadcrumb-item"><a class="text-decoration-none" href="{{ route('showSubcategoryByPriceDown', [$main_category->slug, $main_subcategory->slug]) }}"><h6 class="mt-1">ЦЕНА <i class="fas fa-chevron-down"></i></h6></a></li>
+                                    <li class="breadcrumb-item"><a class="text-decoration-none" href="{{ route('showSubcategoryByNameA', [$main_category->slug, $main_subcategory->slug]) }}"><h6 class="mt-1">НАЗВАНИЕ А-Я</h6></a></li>
+                                    <li class="breadcrumb-item"><a class="text-decoration-none" href="{{ route('showSubcategoryByNameZ', [$main_category->slug, $main_subcategory->slug]) }}"><h6 class="mt-1">НАЗВАНИЕ Я-А</h6></a></li>
+                                </ol>
+                            </nav>
+
+                        </div>
+                    </div>
+
+                    <h5 class="px-2">{{ mb_strtoupper($main_subcategory->name) }}</h5>
 
                     <div class="row">
 
-                        @foreach($main_subcategory->products as $product)
+                        @foreach($subcategory_products as $product)
 
                             <div class="col-4 p-3">
 
@@ -111,6 +127,12 @@
 
                         @endforeach
 
+                    </div>
+
+                    <div class="row ">
+                        <nav class="d-flex justify-content-center mt-3">
+                            {{ $subcategory_products->links() }}
+                        </nav>
                     </div>
 
                 </section>
@@ -184,13 +206,29 @@
 
             <div class="col-9">
 
-                <h5>{{ mb_strtoupper($main_subcategory->name) }}</h5>
-
                 <section>
+
+                    <div class="row px-2 py-0">
+                        <div class="col-12 mt-0">
+
+                            <nav style="--bs-breadcrumb-divider: '';" aria-label="breadcrumb">
+                                <ol class="breadcrumb">
+                                    <li class="breadcrumb-item"><h5>ФИЛЬТРЫ:</h5></li>
+                                    <li class="breadcrumb-item"><a class="text-decoration-none" href="{{ route('showSubcategoryByPriceUp', [$main_category->slug, $main_subcategory->slug]) }}"><h6 class="mt-1">ЦЕНА <i class="fas fa-chevron-up"></i></h6></a></li>
+                                    <li class="breadcrumb-item"><a class="text-decoration-none" href="{{ route('showSubcategoryByPriceDown', [$main_category->slug, $main_subcategory->slug]) }}"><h6 class="mt-1">ЦЕНА <i class="fas fa-chevron-down"></i></h6></a></li>
+                                    <li class="breadcrumb-item"><a class="text-decoration-none" href="{{ route('showSubcategoryByNameA', [$main_category->slug, $main_subcategory->slug]) }}"><h6 class="mt-1">НАЗВАНИЕ А-Я</h6></a></li>
+                                    <li class="breadcrumb-item"><a class="text-decoration-none" href="{{ route('showSubcategoryByNameZ', [$main_category->slug, $main_subcategory->slug]) }}"><h6 class="mt-1">НАЗВАНИЕ Я-А</h6></a></li>
+                                </ol>
+                            </nav>
+
+                        </div>
+                    </div>
+
+                    <h5 class="px-2">{{ mb_strtoupper($main_subcategory->name) }}</h5>
 
                     <div class="row">
 
-                        @foreach($main_subcategory->products as $product)
+                        @foreach($subcategory_products as $product)
 
                             <div class="col-6 p-3">
 
@@ -230,6 +268,12 @@
 
                         @endforeach
 
+                    </div>
+
+                    <div class="row ">
+                        <nav class="d-flex justify-content-center mt-3">
+                            {{ $subcategory_products->links() }}
+                        </nav>
                     </div>
 
                 </section>
@@ -303,13 +347,29 @@
 
             <div class="col-9">
 
-                <h5>{{ mb_strtoupper($main_subcategory->name) }}</h5>
-
                 <section>
+
+                    <div class="row px-2 py-0">
+                        <div class="col-12 mt-0">
+
+                            <nav style="--bs-breadcrumb-divider: '';" aria-label="breadcrumb">
+                                <ol class="breadcrumb">
+                                    <li class="breadcrumb-item"><h5>ФИЛЬТРЫ:</h5></li>
+                                    <li class="breadcrumb-item"><a class="text-decoration-none" href="{{ route('showSubcategoryByPriceUp', [$main_category->slug, $main_subcategory->slug]) }}"><h6 class="mt-1">ЦЕНА <i class="fas fa-chevron-up"></i></h6></a></li>
+                                    <li class="breadcrumb-item"><a class="text-decoration-none" href="{{ route('showSubcategoryByPriceDown', [$main_category->slug, $main_subcategory->slug]) }}"><h6 class="mt-1">ЦЕНА <i class="fas fa-chevron-down"></i></h6></a></li>
+                                    <li class="breadcrumb-item"><a class="text-decoration-none" href="{{ route('showSubcategoryByNameA', [$main_category->slug, $main_subcategory->slug]) }}"><h6 class="mt-1">НАЗВАНИЕ А-Я</h6></a></li>
+                                    <li class="breadcrumb-item"><a class="text-decoration-none" href="{{ route('showSubcategoryByNameZ', [$main_category->slug, $main_subcategory->slug]) }}"><h6 class="mt-1">НАЗВАНИЕ Я-А</h6></a></li>
+                                </ol>
+                            </nav>
+
+                        </div>
+                    </div>
+
+                    <h5 class="px-2">{{ mb_strtoupper($main_subcategory->name) }}</h5>
 
                     <div class="row">
 
-                        @foreach($main_subcategory->products as $product)
+                        @foreach($subcategory_products as $product)
 
                             <div class="col-6 p-3">
 
@@ -353,6 +413,12 @@
 
                     </div>
 
+                    <div class="row ">
+                        <nav class="d-flex justify-content-center mt-3">
+                            {{ $subcategory_products->links() }}
+                        </nav>
+                    </div>
+
                 </section>
 
             </div>
@@ -385,13 +451,29 @@
 
             <div class="col-12">
 
-                <h5>{{ mb_strtoupper($main_subcategory->name) }}</h5>
-
                 <section>
+
+                    <div class="row px-2 py-0">
+                        <div class="col-12 mt-0">
+
+                            <nav style="--bs-breadcrumb-divider: '';" aria-label="breadcrumb">
+                                <ol class="breadcrumb">
+                                    <li class="breadcrumb-item"><h5>ФИЛЬТРЫ:</h5></li>
+                                    <li class="breadcrumb-item"><a class="text-decoration-none" href="{{ route('showSubcategoryByPriceUp', [$main_category->slug, $main_subcategory->slug]) }}"><h6 class="mt-1">ЦЕНА <i class="fas fa-chevron-up"></i></h6></a></li>
+                                    <li class="breadcrumb-item"><a class="text-decoration-none" href="{{ route('showSubcategoryByPriceDown', [$main_category->slug, $main_subcategory->slug]) }}"><h6 class="mt-1">ЦЕНА <i class="fas fa-chevron-down"></i></h6></a></li>
+                                    <li class="breadcrumb-item"><a class="text-decoration-none" href="{{ route('showSubcategoryByNameA', [$main_category->slug, $main_subcategory->slug]) }}"><h6 class="mt-1">НАЗВАНИЕ А-Я</h6></a></li>
+                                    <li class="breadcrumb-item"><a class="text-decoration-none" href="{{ route('showSubcategoryByNameZ', [$main_category->slug, $main_subcategory->slug]) }}"><h6 class="mt-1">НАЗВАНИЕ Я-А</h6></a></li>
+                                </ol>
+                            </nav>
+
+                        </div>
+                    </div>
+
+                    <h5 class="px-2">{{ mb_strtoupper($main_subcategory->name) }}</h5>
 
                     <div class="row p-0">
 
-                        @foreach($main_subcategory->products as $product)
+                        @foreach($subcategory_products as $product)
 
                             <div class="col-6 p-1">
 
@@ -435,6 +517,12 @@
 
                     </div>
 
+                    <div class="row ">
+                        <nav class="d-flex justify-content-center mt-3">
+                            {{ $subcategory_products->links() }}
+                        </nav>
+                    </div>
+
                 </section>
 
             </div>
@@ -467,13 +555,29 @@
 
             <div class="col-12">
 
-                <h5>{{ mb_strtoupper($main_subcategory->name) }}</h5>
-
                 <section>
+
+                    <div class="row px-2 py-0">
+                        <div class="col-12 mt-0">
+
+                            <nav style="--bs-breadcrumb-divider: '';" aria-label="breadcrumb">
+                                <ol class="breadcrumb">
+                                    <li class="breadcrumb-item"><h5>ФИЛЬТРЫ:</h5></li>
+                                    <li class="breadcrumb-item"><a class="text-decoration-none" href="{{ route('showSubcategoryByPriceUp', [$main_category->slug, $main_subcategory->slug]) }}"><h6 class="mt-1">ЦЕНА <i class="fas fa-chevron-up"></i></h6></a></li>
+                                    <li class="breadcrumb-item"><a class="text-decoration-none" href="{{ route('showSubcategoryByPriceDown', [$main_category->slug, $main_subcategory->slug]) }}"><h6 class="mt-1">ЦЕНА <i class="fas fa-chevron-down"></i></h6></a></li>
+                                    <li class="breadcrumb-item"><a class="text-decoration-none" href="{{ route('showSubcategoryByNameA', [$main_category->slug, $main_subcategory->slug]) }}"><h6 class="mt-1">НАЗВАНИЕ А-Я</h6></a></li>
+                                    <li class="breadcrumb-item"><a class="text-decoration-none" href="{{ route('showSubcategoryByNameZ', [$main_category->slug, $main_subcategory->slug]) }}"><h6 class="mt-1">НАЗВАНИЕ Я-А</h6></a></li>
+                                </ol>
+                            </nav>
+
+                        </div>
+                    </div>
+
+                    <h5 class="px-2">{{ mb_strtoupper($main_subcategory->name) }}</h5>
 
                     <div class="row p-0">
 
-                        @foreach($main_subcategory->products as $product)
+                        @foreach($subcategory_products as $product)
 
                             <div class="col-12 p-1">
 
@@ -515,6 +619,12 @@
 
                         @endforeach
 
+                    </div>
+
+                    <div class="row ">
+                        <nav class="d-flex justify-content-center mt-3">
+                            {{ $subcategory_products->links() }}
+                        </nav>
                     </div>
 
                 </section>

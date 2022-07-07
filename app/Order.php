@@ -8,6 +8,8 @@ class Order extends Model
 {
     protected $fillable = [
         'status',
+        'state',
+        'payment_status',
         'name',
         'phone',
         'email',
@@ -42,6 +44,7 @@ class Order extends Model
             $this->delivery = $delivery;
             $this->payment = $payment;
             $this->status = 1;
+            $this->state = 1;
             $this->save();
             session()->forget('orderId');
             return true;

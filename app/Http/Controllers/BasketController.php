@@ -59,16 +59,46 @@ class BasketController extends Controller
             return redirect()->route('main');
         }
 
+        if (Auth::check()) {
+            $user_name = Auth::user()->name;
+            $user_email = Auth::user()->email;
+            $user_phone = Auth::user()->phone;
+        } else {
+            $user_name = null;
+            $user_email = null;
+            $user_phone = null;
+        }
+
         $quantity = null;
         foreach ($order->products as $product) {
             $quantity += $product->pivot->count;
         }
 
-        return view('order', compact('categories', 'quantity', 'order'));
+        return view('order', compact('categories', 'quantity', 'order', 'user_name', 'user_email', 'user_phone'));
     }
 
     public function orderConfirm(Request $request)
     {
+        if (!$request->name or !$request->phone or !$request->email or !$request->delivery or !$request->payment) {
+            session()->flash('message', 'Заполните все поля');
+            return back()->withInput();
+        }
+
+        if (!$request->address and $request->delivery == 2) {
+            session()->flash('message', 'Заполните поле адрес при доставке новой почтой');
+            return back()->withInput();
+        }
+
+        if ($request->delivery == 2 and $request->payment == 1) {
+            session()->flash('message', 'При доставке новой почтой невозможно оплатить заказ наличными в магазине');
+            return back()->withInput();
+        }
+
+        if ($request->delivery == 1 and $request->payment == 3) {
+            session()->flash('message', 'При самовывозе невозможно оплатить заказ наложеным платежом');
+            return back()->withInput();
+        }
+
         $orderId = session('orderId');
 
         $order = Order::find($orderId);

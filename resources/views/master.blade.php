@@ -22,7 +22,7 @@
             height: 100%;
             width: 100%;
             position: fixed; /* Stay in place */
-            z-index: 1; /* Sit on top */
+            z-index: 100; /* Sit on top */
             left: 0;
             top: 0;
             padding: 20px;
@@ -95,7 +95,7 @@
 
 {{--    ////////////////////////////////////--}}
 
-    <section class="d-none d-md-block">
+    <section class="d-none d-md-block d-xl-none">
 
         <div class="row text-white">
             <div class="col-12">
@@ -250,7 +250,7 @@
                         <a class="nav-link text-dark" href="{{ route('contacts') }}">КОНТАКТЫ</a>
                     </li>
                     <li class="nav-item">
-                        <a onclick="myOpenNav()" class="nav-link text-dark">КАТАЛОГ</a>
+                        <a onclick="myOpenNav()" class="nav-link text-dark" href="#">КАТАЛОГ</a>
                     </li>
                 </ul>
                 <!-- Right links -->
@@ -334,7 +334,7 @@
         </div>
 
         @if(session()->has('message'))
-            <p class="alert alert-success text-center text-uppercase">{{ session()->get('message') }}</p>
+            <p class="alert alert-success text-center text-uppercase mt-3">{{ session()->get('message') }}</p>
         @endif
 
         @yield('main')

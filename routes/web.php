@@ -27,6 +27,7 @@ Route::middleware('auth')->group(function () {
         'prefix' => 'user',
     ], function () {
         Route::get('/home', 'HomeUserController@index')->name('userHome');
+        Route::get('/orders/{order_id}', 'HomeUserController@show')->name('userOrdersShow');
     });
 
     Route::group([
@@ -87,7 +88,23 @@ Route::group([
 
     Route::get('/{category_slug}', 'CategoryController@showCategory')->name('showCategory');
 
+    Route::get('/price-up/{category_slug}', 'CategoryController@showCategoryByPriceUp')->name('showCategoryByPriceUp');
+
+    Route::get('/price-down/{category_slug}', 'CategoryController@showCategoryByPriceDown')->name('showCategoryByPriceDown');
+
+    Route::get('/name-a/{category_slug}', 'CategoryController@showCategoryByNameA')->name('showCategoryByNameA');
+
+    Route::get('/name-z/{category_slug}', 'CategoryController@showCategoryByNameZ')->name('showCategoryByNameZ');
+
     Route::get('/{category_slug}/{subcategory_slug}', 'SubcategoryController@showSubcategory')->name('showSubcategory');
+
+    Route::get('/price-up/{category_slug}/{subcategory_slug}', 'SubcategoryController@showSubcategoryByPriceUp')->name('showSubcategoryByPriceUp');
+
+    Route::get('/price-down/{category_slug}/{subcategory_slug}', 'SubcategoryController@showSubcategoryByPriceDown')->name('showSubcategoryByPriceDown');
+
+    Route::get('/name-a/{category_slug}/{subcategory_slug}', 'SubcategoryController@showSubcategoryByNameA')->name('showSubcategoryByNameA');
+
+    Route::get('/name-z/{category_slug}/{subcategory_slug}', 'SubcategoryController@showSubcategoryByNameZ')->name('showSubcategoryByNameZ');
 
     Route::get('/{category_slug}/{subcategory_slug}/{product_slug}', 'ProductController@showProduct')->name('showProduct');
 });
