@@ -7,11 +7,9 @@
 
         <div class="row">
 
-            <div class="col-12">
+            <div class="col-6">
 
-                <h1>ДОБАВИТЬ КАТЕГОРИЮ</h1>
-
-                <hr>
+                <h4>ДОБАВИТЬ КАТЕГОРИЮ</h4>
 
                 <form method="POST" action="{{ route('categories.store') }}">
                     @csrf

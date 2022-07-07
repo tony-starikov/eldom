@@ -5,11 +5,7 @@
 @section('main')
     <div class="container">
 
-        <hr>
-
-        <h1>ADD USER</h1>
-
-        <hr>
+        <h4>СОЗДАТЬ ПОЛЬЗОВАТЕЛЯ</h4>
 
         <form method="POST" action="{{ route('users.store') }}">
             @csrf
@@ -20,14 +16,14 @@
 
             <div class="input-group flex-nowrap mb-3">
                 <div class="input-group-prepend">
-                    <span class="input-group-text" id="addon-wrapping">Name</span>
+                    <span class="input-group-text" id="addon-wrapping">Имя</span>
                 </div>
                 <input value="{{ $name }}" type="text" name="name" id="name" class="form-control" placeholder="REQUIRED" aria-describedby="addon-wrapping">
             </div>
 
             <div class="input-group flex-nowrap mb-3">
                 <div class="input-group-prepend">
-                    <span class="input-group-text" id="addon-wrapping">Surname</span>
+                    <span class="input-group-text" id="addon-wrapping">Фамилия</span>
                 </div>
                 <input value="{{ $surname }}" type="text" name="surname" id="surname" class="form-control" placeholder="Surname" aria-describedby="addon-wrapping">
             </div>
@@ -41,20 +37,20 @@
 
             <div class="input-group flex-nowrap mb-3">
                 <div class="input-group-prepend">
-                    <span class="input-group-text" id="addon-wrapping">Phone</span>
+                    <span class="input-group-text" id="addon-wrapping">Телефон</span>
                 </div>
                 <input type="text" name="phone" id="phone" class="form-control" placeholder="+380634139684" aria-describedby="addon-wrapping">
             </div>
 
             <div class="input-group flex-nowrap mb-3">
                 <div class="input-group-prepend">
-                    <span class="input-group-text" id="addon-wrapping">Password</span>
+                    <span class="input-group-text" id="addon-wrapping">Пароль</span>
                 </div>
                 <input type="text" name="password" id="password" class="form-control" placeholder="Enter password" aria-describedby="addon-wrapping">
 {{--                <small id="emailHelp" class="form-text text-muted">Minimum 8 symbols.</small>--}}
             </div>
 
-            <button type="submit" class="btn btn-success mt-3">CREATE</button>
+            <button type="submit" class="btn btn-success mt-3">СОЗДАТЬ</button>
         </form>
 
     </div> <!-- /container -->

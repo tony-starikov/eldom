@@ -1,14 +1,12 @@
 @extends('admin.master')
 
-@section('title', 'ADMIN-USERS')
+@section('title', 'ПОЛЬЗОВАТЕЛИ')
 
 @section('main')
     <div class="container-fluid">
 
-        <h1>USERS</h1>
-        <a class="btn btn-success" type="button" href="{{ route('users.create') }}">ADD USER</a>
-
-        <hr>
+        <h4>ПОЛЬЗОВАТЕЛИ</h4>
+        <a class="btn btn-success" type="button" href="{{ route('users.create') }}">СОЗДАТЬ ПОЛЬЗОВАТЕЛЯ</a>
 
         <div class="row">
 
@@ -18,11 +16,11 @@
                         <thead>
                             <tr>
                                 <th scope="col">#</th>
-                                <th scope="col">Name</th>
-                                <th scope="col">Surname</th>
+                                <th scope="col">Имя</th>
+                                <th scope="col">Фамилия</th>
                                 <th scope="col">Email</th>
-{{--                                <th scope="col">Last visit</th>--}}
-                                <th scope="col">Functions</th>
+                                <th scope="col">Телефон</th>
+                                <th scope="col">Действия</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -33,15 +31,14 @@
                                     <td>{{ $user->name }}</td>
                                     <td>{{ $user->surname }}</td>
                                     <td>{{ $user->email }}</td>
-{{--                                    <td>{{ date("Y-m-d G:i:s", $user->last_visit)  }}</td>--}}
+                                    <td>{{ $user->phone }}</td>
                                     <td>
                                         <div class="btn-group">
-                                            <a href="{{ route('users.edit', $user) }}"><button type="button" class="btn btn-link">EDIT</button></a>
-{{--                                            <a href="{{ route('users.show', $user) }}"><button type="button" class="btn btn-link">@if($user->status == 1) UNBLOCK @else BLOCK @endif</button></a>--}}
+                                            <a href="{{ route('users.edit', $user) }}"><button type="button" class="btn btn-link">ИЗМЕНИТЬ</button></a>
                                             <form id="delete-form" action="{{ route('users.destroy', $user) }}" method="POST">
                                                 @method('DELETE')
                                                 @csrf
-                                                <button type="submit" class="btn btn-link">DELETE</button>
+                                                <button type="submit" class="btn btn-link">УДАЛИТЬ</button>
                                             </form>
                                         </div>
                                     </td>

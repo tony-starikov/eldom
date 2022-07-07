@@ -5,7 +5,7 @@
 @section('main')
     <div class="container-fluid">
 
-        <h1>КАТЕГОРИИ</h1>
+        <h4>КАТЕГОРИИ</h4>
         <a class="btn btn-success" type="button" href="{{ route('categories.create') }}">ДОБАВИТЬ КАТЕГОРИЮ</a>
 
         <hr>

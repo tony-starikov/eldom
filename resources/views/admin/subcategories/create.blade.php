@@ -9,9 +9,7 @@
 
             <div class="col-12">
 
-                <h1>ДОБАВИТЬ ПОДКАТЕГОРИЮ</h1>
-
-                <hr>
+                <h4>ДОБАВИТЬ ПОДКАТЕГОРИЮ</h4>
 
                 <form method="POST" action="{{ route('subcategories.store') }}">
                     @csrf
