@@ -50,7 +50,6 @@
 
                 <h5>КАТЕГОРИИ</h5>
 
-
                 <div class="row" style="background-color: rgba(0,0,0, 0.9);">
 
                     @foreach(\App\Category::all() as $category)
@@ -109,6 +108,26 @@
                     <span><i class="fas fa-shopping-cart"></i></span>
                     <h5 class="clearfix d-inline-block">КОРЗИНА</h5>
                 </a>
+
+                @auth()
+
+                    @if(Auth::user()->isAdmin())
+                        <a class="text-white text-decoration-none" href="{{ route('adminHome') }}"><h5>ADMIN</h5></a>
+                    @else
+                        <a class="text-white text-decoration-none" href="{{ route('userHome') }}"><h5>КАБИНЕТ</h5></a>
+                    @endif
+
+                    <form class="d-inline" id="logout-form" action="{{ url('logout') }}" method="POST">
+                        @csrf
+                        <button type="submit" class="h5 btn btn-link text-white text-decoration-none">ВЫЙТИ</button>
+                    </form>
+
+                @endauth
+
+                @guest()
+                    <a class="text-white text-decoration-none" href="{{ route('login') }}"><h5>ВОЙТИ</h5></a>
+                    <a class="text-white text-decoration-none" href="{{ route('register') }}"><h5>РЕГИСТРАЦИЯ</h5></a>
+                @endguest
 
                 <h5>КАТЕГОРИИ</h5>
 
@@ -171,6 +190,26 @@
                     <span><i class="fas fa-shopping-cart"></i></span>
                     <h5 class="clearfix d-inline-block">КОРЗИНА</h5>
                 </a>
+
+                @auth()
+
+                    @if(Auth::user()->isAdmin())
+                        <a class="text-white text-decoration-none" href="{{ route('adminHome') }}"><h5>ADMIN</h5></a>
+                    @else
+                        <a class="text-white text-decoration-none" href="{{ route('userHome') }}"><h5>КАБИНЕТ</h5></a>
+                    @endif
+
+                    <form class="d-inline" id="logout-form" action="{{ url('logout') }}" method="POST">
+                        @csrf
+                        <button type="submit" class="h5 btn btn-link text-white text-decoration-none">ВЫЙТИ</button>
+                    </form>
+
+                @endauth
+
+                @guest()
+                    <a class="text-white text-decoration-none" href="{{ route('login') }}"><h5>ВОЙТИ</h5></a>
+                    <a class="text-white text-decoration-none" href="{{ route('register') }}"><h5>РЕГИСТРАЦИЯ</h5></a>
+                @endguest
 
                 <h5>КАТЕГОРИИ</h5>
 
