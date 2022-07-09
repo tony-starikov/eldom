@@ -2,6 +2,7 @@
 
 use App\Category;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 
 class CategoriesTableSeeder extends Seeder
 {
@@ -65,5 +66,8 @@ class CategoriesTableSeeder extends Seeder
             'name' => 'Силовое оборудование',
             'slug' => 'silovoe-oborudovanie',
         ]);
+
+        DB::statement("SELECT setval(pg_get_serial_sequence('categories', 'id'), max(id)) FROM categories");
+//        DB::statement("SELECT setval(pg_get_serial_sequence('categories', 'id'), 10 )");
     }
 }
