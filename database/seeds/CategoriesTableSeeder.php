@@ -67,7 +67,10 @@ class CategoriesTableSeeder extends Seeder
             'slug' => 'silovoe-oborudovanie',
         ]);
 
-        DB::statement("SELECT setval(pg_get_serial_sequence('categories', 'id'), max(id)) FROM categories");
-//        DB::statement("SELECT setval(pg_get_serial_sequence('categories', 'id'), 10 )");
+        if (env('DB_CONNECTION') == 'pgsql'){
+
+            DB::statement("SELECT setval(pg_get_serial_sequence('categories', 'id'), max(id)) FROM categories");
+
+        }
     }
 }
