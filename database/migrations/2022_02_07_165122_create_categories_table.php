@@ -22,9 +22,6 @@ class CreateCategoriesTable extends Migration
             $table->text('description')->nullable();
             $table->timestamps();
         });
-
-        DB::table('categories')->insert(['id' => 9, 'name' => 'whatever', 'slug' => 'whatever',]);
-        DB::table('categories')->where('id', 9)->delete();
     }
 
     /**
