@@ -214,5 +214,11 @@ class ProductsTableSeeder extends Seeder
                 'recommend' => 0,
             ],
         ]);
+
+        if (env('DB_CONNECTION') == 'pgsql'){
+
+            DB::statement("SELECT setval(pg_get_serial_sequence('products', 'id'), max(id)) FROM products");
+
+        }
     }
 }

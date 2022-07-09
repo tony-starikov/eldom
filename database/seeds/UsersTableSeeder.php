@@ -31,5 +31,11 @@ class UsersTableSeeder extends Seeder
                 'is_admin' => 0,
             ],
         ]);
+
+        if (env('DB_CONNECTION') == 'pgsql'){
+
+            DB::statement("SELECT setval(pg_get_serial_sequence('users', 'id'), max(id)) FROM users");
+
+        }
     }
 }

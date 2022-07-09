@@ -77,5 +77,11 @@ class FeaturesTableSeeder extends Seeder
                 'feature' => 'Габаритные размеры, мм 143 x 170 x 52',
             ],
         ]);
+
+        if (env('DB_CONNECTION') == 'pgsql'){
+
+            DB::statement("SELECT setval(pg_get_serial_sequence('features', 'id'), max(id)) FROM features");
+
+        }
     }
 }

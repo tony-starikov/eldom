@@ -322,5 +322,11 @@ class SubcategoriesTableSeeder extends Seeder
             ],
 
         ]);
+
+        if (env('DB_CONNECTION') == 'pgsql'){
+
+            DB::statement("SELECT setval(pg_get_serial_sequence('subcategories', 'id'), max(id)) FROM subcategories");
+
+        }
     }
 }

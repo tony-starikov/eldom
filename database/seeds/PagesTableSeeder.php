@@ -32,5 +32,11 @@ class PagesTableSeeder extends Seeder
                 'description' => 'Main page'
             ],
         ]);
+
+        if (env('DB_CONNECTION') == 'pgsql'){
+
+            DB::statement("SELECT setval(pg_get_serial_sequence('pages', 'id'), max(id)) FROM pages");
+
+        }
     }
 }
