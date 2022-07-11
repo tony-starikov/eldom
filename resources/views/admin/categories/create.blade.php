@@ -29,7 +29,7 @@
                         <div class="input-group-prepend">
                             <span class="input-group-text" id="addon-wrapping">SLUG</span>
                         </div>
-                        <input type="text" name="slug" id="slug" class="form-control" placeholder="SLUG" aria-describedby="addon-wrapping">
+                        <input type="text" name="slug" id="slug" class="form-control" placeholder="SLUG" aria-describedby="addon-wrapping" required>
                     </div>
 
                     <button type="submit" class="btn btn-success mt-3">ДОБАВИТЬ</button>

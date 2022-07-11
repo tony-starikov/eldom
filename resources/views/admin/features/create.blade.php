@@ -31,7 +31,7 @@
                         <div class="input-group-prepend">
                             <span class="input-group-text" id="addon-wrapping">ХАРАКТЕРИСТИКА</span>
                         </div>
-                        <input type="text" name="feature" id="feature" class="form-control" aria-describedby="addon-wrapping">
+                        <input type="text" name="feature" id="feature" class="form-control" aria-describedby="addon-wrapping" required>
                     </div>
 
                     <button type="submit" class="btn btn-success mt-3">ДОБАВИТЬ</button>
