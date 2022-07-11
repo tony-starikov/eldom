@@ -1,6 +1,6 @@
 @extends('master')
 
-@section('title', $main_subcategory->name)
+@section('title', mb_strtoupper($main_product->name))
 
 @section('main')
 

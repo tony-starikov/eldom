@@ -43,62 +43,11 @@
         <a href="javascript:void(0)" class="text-decoration-none text-white" onclick="closeNav()"><h1>&times;</h1></a>
     </div>
 
-    <section class="d-none d-xl-block">
+    <div class="row text-white">
 
-        <div class="row text-white">
-            <div class="col-12">
+        <div class="col-12">
 
-                <h5>КАТЕГОРИИ</h5>
-
-                <div class="row" style="background-color: rgba(0,0,0, 0.9);">
-
-                    @foreach(\App\Category::all() as $category)
-
-                        <div class="col-3 my-3" style="background-color: rgba(0,0,0, 0.9);">
-
-                            <ul class="list-group"style="background-color: rgba(0,0,0, 0.9);">
-
-                                <li class="list-group-item border-0" style="background-color: rgba(0,0,0, 0.9);">
-
-                                    <a class="text-decoration-none text-white" style="background-color: rgba(0,0,0, 0.9);" href="{{ route('showCategory', $category->slug) }}">{{ mb_strtoupper($category->name) }}</a>
-
-                                    <ul class="list-group" style="background-color: rgba(0,0,0, 0.9);">
-
-                                        @foreach($category->subcategories as $subcategory)
-
-                                            <li class="list-group-item border-0" style="background-color: rgba(0,0,0, 0.9);">
-                                                <a class="text-decoration-none text-white" style="background-color: rgba(0,0,0, 0.9);" href="{{ route('showSubcategory', [$category->slug, $subcategory->slug]) }}">
-                                                    | {{ mb_strtoupper($subcategory->name) }}
-                                                </a>
-                                            </li>
-
-                                        @endforeach
-
-                                    </ul>
-
-                                </li>
-
-                            </ul>
-
-                        </div>
-
-                    @endforeach
-
-                </div>
-
-
-            </div>
-        </div>
-
-    </section>
-
-{{--    ////////////////////////////////////--}}
-
-    <section class="d-none d-md-block d-xl-none">
-
-        <div class="row text-white">
-            <div class="col-12">
-
+            <section class="d-block d-lg-none">
                 <a class="text-white text-decoration-none" href="{{ route('main') }}"><h5>ГЛАВНАЯ</h5></a>
                 <a class="text-white text-decoration-none" href="{{ route('delivery') }}"><h5>ДОСТАВКА</h5></a>
                 <a class="text-white text-decoration-none" href="{{ route('contacts') }}"><h5>КОНТАКТЫ</h5></a>
@@ -128,132 +77,49 @@
                     <a class="text-white text-decoration-none" href="{{ route('login') }}"><h5>ВОЙТИ</h5></a>
                     <a class="text-white text-decoration-none" href="{{ route('register') }}"><h5>РЕГИСТРАЦИЯ</h5></a>
                 @endguest
+            </section>
 
-                <h5>КАТЕГОРИИ</h5>
+            <h5>КАТЕГОРИИ</h5>
 
+            <div class="row" style="background-color: rgba(0,0,0, 0.9);">
 
-                <div class="row" style="background-color: rgba(0,0,0, 0.9);">
+                @foreach(\App\Category::all() as $category)
 
-                    @foreach(\App\Category::all() as $category)
+                    <div class="col-12 col-sm-6 col-lg-4 col-xl-3 my-3" style="background-color: rgba(0,0,0, 0.9);">
 
-                        <div class="col-6 my-3" style="background-color: rgba(0,0,0, 0.9);">
+                        <ul class="list-group"style="background-color: rgba(0,0,0, 0.9);">
 
-                            <ul class="list-group"style="background-color: rgba(0,0,0, 0.9);">
+                            <li class="list-group-item border-0" style="background-color: rgba(0,0,0, 0.9);">
 
-                                <li class="list-group-item border-0" style="background-color: rgba(0,0,0, 0.9);">
+                                <a class="text-decoration-none text-white" style="background-color: rgba(0,0,0, 0.9);" href="{{ route('showCategory', $category->slug) }}">{{ mb_strtoupper($category->name) }}</a>
 
-                                    <a class="text-decoration-none text-white" style="background-color: rgba(0,0,0, 0.9);" href="{{ route('showCategory', $category->slug) }}">{{ mb_strtoupper($category->name) }}</a>
+                                <ul class="list-group" style="background-color: rgba(0,0,0, 0.9);">
 
-                                    <ul class="list-group" style="background-color: rgba(0,0,0, 0.9);">
+                                    @foreach($category->subcategories as $subcategory)
 
-                                        @foreach($category->subcategories as $subcategory)
+                                        <li class="list-group-item border-0" style="background-color: rgba(0,0,0, 0.9);">
+                                            <a class="text-decoration-none text-white" style="background-color: rgba(0,0,0, 0.9);" href="{{ route('showSubcategory', [$category->slug, $subcategory->slug]) }}">
+                                                | {{ mb_strtoupper($subcategory->name) }}
+                                            </a>
+                                        </li>
 
-                                            <li class="list-group-item border-0" style="background-color: rgba(0,0,0, 0.9);">
-                                                <a class="text-decoration-none text-white" style="background-color: rgba(0,0,0, 0.9);" href="{{ route('showSubcategory', [$category->slug, $subcategory->slug]) }}">
-                                                    | {{ mb_strtoupper($subcategory->name) }}
-                                                </a>
-                                            </li>
+                                    @endforeach
 
-                                        @endforeach
+                                </ul>
 
-                                    </ul>
+                            </li>
 
-                                </li>
+                        </ul>
 
-                            </ul>
+                    </div>
 
-                        </div>
-
-                    @endforeach
-
-                </div>
-
+                @endforeach
 
             </div>
+
         </div>
 
-    </section>
-
-{{--    ////////////////////////////////////--}}
-
-    <section class="d-block d-md-none">
-
-        <div class="row text-white">
-            <div class="col-12">
-
-                <a class="text-white text-decoration-none" href="{{ route('main') }}"><h5>ГЛАВНАЯ</h5></a>
-                <a class="text-white text-decoration-none" href="{{ route('delivery') }}"><h5>ДОСТАВКА</h5></a>
-                <a class="text-white text-decoration-none" href="{{ route('contacts') }}"><h5>КОНТАКТЫ</h5></a>
-
-                <a class="text-white text-decoration-none" href="{{ route('basket') }}">
-                    @if($quantity)<span class="badge badge-pill bg-danger">{{ $quantity }}</span>@endif
-                    <span><i class="fas fa-shopping-cart"></i></span>
-                    <h5 class="clearfix d-inline-block">КОРЗИНА</h5>
-                </a>
-
-                @auth()
-
-                    @if(Auth::user()->isAdmin())
-                        <a class="text-white text-decoration-none" href="{{ route('adminHome') }}"><h5>ADMIN</h5></a>
-                    @else
-                        <a class="text-white text-decoration-none" href="{{ route('userHome') }}"><h5>КАБИНЕТ</h5></a>
-                    @endif
-
-                    <form class="d-inline" id="logout-form" action="{{ url('logout') }}" method="POST">
-                        @csrf
-                        <button type="submit" class="h5 btn btn-link text-white text-decoration-none">ВЫЙТИ</button>
-                    </form>
-
-                @endauth
-
-                @guest()
-                    <a class="text-white text-decoration-none" href="{{ route('login') }}"><h5>ВОЙТИ</h5></a>
-                    <a class="text-white text-decoration-none" href="{{ route('register') }}"><h5>РЕГИСТРАЦИЯ</h5></a>
-                @endguest
-
-                <h5>КАТЕГОРИИ</h5>
-
-                <div class="row" style="background-color: rgba(0,0,0, 0.9);">
-
-                    @foreach(\App\Category::all() as $category)
-
-                        <div class="col-12 my-3" style="background-color: rgba(0,0,0, 0.9);">
-
-                            <ul class="list-group"style="background-color: rgba(0,0,0, 0.9);">
-
-                                <li class="list-group-item border-0" style="background-color: rgba(0,0,0, 0.9);">
-
-                                    <a class="text-decoration-none text-white" style="background-color: rgba(0,0,0, 0.9);" href="{{ route('showCategory', $category->slug) }}">{{ mb_strtoupper($category->name) }}</a>
-
-                                    <ul class="list-group" style="background-color: rgba(0,0,0, 0.9);">
-
-                                        @foreach($category->subcategories as $subcategory)
-
-                                            <li class="list-group-item border-0" style="background-color: rgba(0,0,0, 0.9);">
-                                                <a class="text-decoration-none text-white" style="background-color: rgba(0,0,0, 0.9);" href="{{ route('showSubcategory', [$category->slug, $subcategory->slug]) }}">
-                                                    | {{ mb_strtoupper($subcategory->name) }}
-                                                </a>
-                                            </li>
-
-                                        @endforeach
-
-                                    </ul>
-
-                                </li>
-
-                            </ul>
-
-                        </div>
-
-                    @endforeach
-
-                </div>
-
-
-            </div>
-        </div>
-
-    </section>
+    </div>
 
 </div>
 
@@ -269,7 +135,7 @@
     }
 </script>
 
-<div class="container-fluid px-0 d-none d-xxl-block">
+<div class="container-fluid px-0">
 
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
@@ -277,8 +143,8 @@
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span onclick="myOpenNav()" class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 d-none d-xxl-flex">
                     <li class="nav-item">
                         <a class="nav-link text-dark" href="{{ route('main') }}">ГЛАВНАЯ</a>
                     </li>
@@ -292,184 +158,10 @@
                         <a onclick="myOpenNav()" class="nav-link text-dark" href="#">КАТАЛОГ</a>
                     </li>
                 </ul>
-                <!-- Right links -->
-                <ul class="navbar-nav d-flex flex-row">
-                    <!-- Icons -->
-                    <li class="nav-item me-3 me-lg-0">
-                        <a class="nav-link" href="tel:+38 (048) 772-24-08">
-                            <span><i class="fas fa-phone"></i></span>
-                            <span class="clearfix d-none d-sm-inline-block">+38 (048) 772-24-08</span>
-                        </a>
-                    </li>
-                    <li class="nav-item me-3 me-lg-0">
-                        <a class="nav-link" href="tel:+38 (067) 141-73-18">
-                            <span><i class="fas fa-phone"></i></span>
-                            <span class="clearfix d-none d-sm-inline-block">+38 (067) 141-73-18</span>
-                        </a>
-                    </li>
-                    <li class="nav-item me-3 me-lg-0">
-                        <a class="nav-link" href="{{ route('basket') }}">
-                            @if($quantity)<span class="badge badge-pill bg-danger">{{ $quantity }}</span>@endif
-                            <span><i class="fas fa-shopping-cart"></i></span>
-                            <span class="clearfix d-none d-sm-inline-block">КОРЗИНА</span>
-                        </a>
-                    </li>
-                    <li class="nav-item me-3 me-lg-0">
-                        <a class="nav-link" href="#">
-                            <i class="fab fa-lg fa-facebook"></i>
-                        </a>
-                    </li>
-
-                    <li class="nav-item me-3 me-lg-0">
-                        <a class="nav-link" href="#">
-                            <i class="fab fa-lg fa-instagram"></i>
-                        </a>
-                    </li>
-                    <!-- Icon dropdown -->
-                    <li class="nav-item dropstart">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            <i class="fas fa-lg fa-user"></i>
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            @auth()
-
-                                @if(Auth::user()->isAdmin())
-                                    <a class="dropdown-item" href="{{ route('adminHome') }}">ADMIN</a>
-                                @else
-                                    <a class="dropdown-item" href="{{ route('userHome') }}">КАБИНЕТ</a>
-                                @endif
-
-                                <form class="d-inline" id="logout-form" action="{{ url('logout') }}" method="POST">
-                                    @csrf
-                                    <button type="submit" class="dropdown-item">ВЫЙТИ</button>
-                                </form>
-
-                            @endauth
-
-                            @guest()
-                                <li><a class="dropdown-item" href="{{ route('login') }}">ВОЙТИ</a></li>
-                                <li><a class="dropdown-item" href="{{ route('register') }}">РЕГИСТРАЦИЯ</a></li>
-                            @endguest
-                        </ul>
-                    </li>
-                </ul>
-                <!-- Right links -->
-            </div>
-        </div>
-    </nav>
-
-    <main class="px-5" style="min-height: 80vh" role="main">
-        <div class="row">
-            <div class="col-6 mx-auto">
-                <form action="{{ route('search') }}" method="post">
-                    @csrf
-                    <div class="input-group mt-3">
-                        <label class="input-group-text" for="inputGroupFile01">ПОИСК</label>
-                        <input type="text" name="search_string" class="form-control" id="inputGroupFile01" placeholder="ВВЕДИТЕ НАЗВАНИЕ ТОВАРА">
-                        <button class="btn btn-outline-primary" type="submit" id="inputGroupFileAddon04">ИСКАТЬ</button>
-                    </div>
-                </form>
-            </div>
-        </div>
-
-        @if(session()->has('message'))
-            <p class="alert alert-success text-center text-uppercase mt-3">{{ session()->get('message') }}</p>
-        @endif
-
-        @yield('main')
-    </main>
-
-    <!-- Footer -->
-    <footer class="text-center text-lg-start bg-light text-muted">
-        <!-- Section: Links  -->
-        <section class="pt-3">
-            <div class="container text-center text-md-start">
-                <!-- Grid row -->
-                <div class="row mt-3">
-                    <!-- Grid column -->
-                    <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
-                        <!-- Content -->
-                        <h6 class="text-uppercase fw-bold mb-4">
-                            Electro-Dom
-                        </h6>
-                        <p>
-                            Магазин электротехнических товаров Электродом является одним из ведущих поставщиков монтажно-технической продукции.
-                        </p>
-                    </div>
-                    <!-- Grid column -->
-
-                    <!-- Grid column -->
-                    <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
-                        <!-- Links -->
-                        <h6 class="text-uppercase fw-bold mb-4">
-                            Информация
-                        </h6>
-                        <p>
-                            <a href="{{ route('delivery') }}" class="text-reset">Доставка и оплата</a>
-                        </p>
-                    </div>
-                    <!-- Grid column -->
-
-                    <!-- Grid column -->
-                    <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
-                        <!-- Links -->
-                        <h6 class="text-uppercase fw-bold mb-4">
-                            Новости
-                        </h6>
-                        {{--                        <p>--}}
-                        {{--                            <a href="#!" class="text-reset">Pricing</a>--}}
-                        {{--                        </p>--}}
-                    </div>
-                    <!-- Grid column -->
-
-                    <!-- Grid column -->
-                    <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
-                        <!-- Links -->
-                        <h6 class="text-uppercase fw-bold mb-4">
-                            Контакты
-                        </h6>
-                        <p>
-                            г. Одесса<br>Староконный рынок<br>Павильон ПП-40</p>
-                        <p>
-                            <i class="fas fa-envelope me-3"></i>
-                            akimovdenis87@ukr.net
-                        </p>
-                        <p><i class="fas fa-phone me-3"></i> +38 (048) 772-24-08</p>
-                        <p><i class="fas fa-phone me-3"></i> +38 (067) 141-73-18</p>
-                    </div>
-                    <!-- Grid column -->
-                </div>
-                <!-- Grid row -->
-            </div>
-        </section>
-        <!-- Section: Links  -->
-
-        <!-- Copyright -->
-        <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
-            © 2010 - 2022
-            <a class="text-reset text-decoration-none" href="{{ route('main') }}">Electro-Dom. Все права защищены.</a>
-        </div>
-        <!-- Copyright -->
-    </footer>
-    <!-- Footer -->
-
-</div>
-
-{{--/////////////////////////////////////////////////////////--}}
-
-<div class="container-fluid px-0 d-block d-md-block d-lg-block d-xl-block d-xxl-none">
-
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="{{ route('main') }}"><span class="fs-4 fw-bold text-primary">ELECTRO-DOM</span></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span onclick="myOpenNav()" class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 d-xxl-none">
                     <li class="nav-item dropdown">
                         <a class="nav-link text-dark dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            МЕНЮ САЙТА
+                            МЕНЮ
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
 
@@ -548,21 +240,8 @@
     </nav>
 
     <main class="px-2" style="min-height: 80vh" role="main">
-        <div class="row d-none d-sm-block">
-            <div class="col-9 mx-auto">
-                <form action="{{ route('search') }}" method="post">
-                    @csrf
-                    <div class="input-group mt-3">
-                        <label class="input-group-text" for="inputGroupFile01">ПОИСК</label>
-                        <input type="text" name="search_string" class="form-control" id="inputGroupFile01" placeholder="ВВЕДИТЕ НАЗВАНИЕ ТОВАРА">
-                        <button class="btn btn-outline-primary" type="submit" id="inputGroupFileAddon04">ИСКАТЬ</button>
-                    </div>
-                </form>
-            </div>
-        </div>
-
-        <div class="row d-block d-sm-none">
-            <div class="col-12 mx-auto">
+        <div class="row">
+            <div class="col-12 col-sm-10 col-md-9 col-lg-6 mx-auto">
                 <form action="{{ route('search') }}" method="post">
                     @csrf
                     <div class="input-group mt-3">
@@ -590,51 +269,32 @@
                     <!-- Grid column -->
                     <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
                         <!-- Content -->
-                        <h6 class="text-uppercase fw-bold mb-4">
-                            Electro-Dom
-                        </h6>
-                        <p>
-                            Магазин электротехнических товаров Электродом является одним из ведущих поставщиков монтажно-технической продукции.
-                        </p>
+                        <h6 class="text-uppercase fw-bold mb-4">Electro-Dom</h6>
+                        <p>Магазин электротехнических товаров Электродом является одним из ведущих поставщиков монтажно-технической продукции</p>
                     </div>
                     <!-- Grid column -->
 
                     <!-- Grid column -->
                     <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
                         <!-- Links -->
-                        <h6 class="text-uppercase fw-bold mb-4">
-                            Информация
-                        </h6>
-                        <p>
-                            <a href="{{ route('delivery') }}" class="text-reset">Доставка и оплата</a>
-                        </p>
+                        <h6 class="text-uppercase fw-bold mb-4">Информация</h6>
+                        <p><a href="{{ route('delivery') }}" class="text-reset text-decoration-none">Доставка и оплата</a></p>
                     </div>
                     <!-- Grid column -->
 
                     <!-- Grid column -->
                     <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
                         <!-- Links -->
-                        <h6 class="text-uppercase fw-bold mb-4">
-                            Новости
-                        </h6>
-                        {{--                        <p>--}}
-                        {{--                            <a href="#!" class="text-reset">Pricing</a>--}}
-                        {{--                        </p>--}}
+                        <h6 class="text-uppercase fw-bold mb-4">Новости</h6>
                     </div>
                     <!-- Grid column -->
 
                     <!-- Grid column -->
                     <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
                         <!-- Links -->
-                        <h6 class="text-uppercase fw-bold mb-4">
-                            Контакты
-                        </h6>
-                        <p>
-                            г. Одесса<br>Староконный рынок<br>Павильон ПП-40</p>
-                        <p>
-                            <i class="fas fa-envelope me-3"></i>
-                            akimovdenis87@ukr.net
-                        </p>
+                        <h6 class="text-uppercase fw-bold mb-4">Контакты</h6>
+                        <p>г. Одесса<br>Староконный рынок<br>Павильон ПП-40</p>
+                        <p><i class="fas fa-envelope me-3"></i>akimovdenis87@ukr.net</p>
                         <p><i class="fas fa-phone me-3"></i> +38 (048) 772-24-08</p>
                         <p><i class="fas fa-phone me-3"></i> +38 (067) 141-73-18</p>
                     </div>
@@ -647,8 +307,7 @@
 
         <!-- Copyright -->
         <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
-            © 2010 - 2022
-            <a class="text-reset text-decoration-none" href="{{ route('main') }}">Electro-Dom. Все права защищены.</a>
+            © 2010 - 2022 <a class="text-reset text-decoration-none" href="{{ route('main') }}">Electro-Dom. Все права защищены.</a>
         </div>
         <!-- Copyright -->
     </footer>
