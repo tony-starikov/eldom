@@ -85,7 +85,7 @@
 
                                     <div class="card h-100">
 
-                                        <img src="/images/1.png" class="card-img-top img-fluid my-2" alt="...">
+                                        <img src="{{ $product->image }}" class="card-img-top img-fluid my-2" alt="...">
                                         <div class="card-body text-center">
 
                                             <div class="row p-0 m-0">
