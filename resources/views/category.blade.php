@@ -119,7 +119,7 @@
 
                                             <a class="text-decoration-none" href="{{ route('showProduct', [$product->subcategory->category->slug, $product->subcategory->slug, $product->slug]) }}">
                                                 <div class="card h-100">
-                                                    <img src="/images/1.png" class="card-img-top img-fluid" alt="...">
+                                                    <img src="{{ $product->image }}" class="card-img-top img-fluid" alt="...">
                                                     <div class="card-body text-center">
                                                         <div class="row p-0 m-0">
                                                             <h6 class="card-title p-0 m-0 w-100 text-dark" style="min-height: 60px">{{ mb_strtoupper($product->name) }}</h6>

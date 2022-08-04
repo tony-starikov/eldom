@@ -70,7 +70,7 @@
 
                     <div class="row">
 
-                        <div class="col-6 text-center"><img src="/images/1.png" class="img-fluid w-75 my-5" alt="{{ $main_product->name }}"></div>
+                        <div class="col-6 text-center"><img src="{{ $main_product->image }}" class="img-fluid w-75 my-5" alt="{{ $main_product->name }}"></div>
 
                         <div class="col-6">
                             <hr>
