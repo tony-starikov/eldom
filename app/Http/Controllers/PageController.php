@@ -11,7 +11,7 @@ use Illuminate\Support\Facades\App;
 
 class PageController extends Controller
 {
-    public function changeLocale($locale = 'en')
+    public function changeLocale($locale = 'ua')
     {
         session(['locale' => $locale]);
         App::setLocale($locale);

@@ -66,7 +66,7 @@
 
                                 <a class="text-decoration-none" href="{{ route('showProduct', [$product->subcategory->category->slug, $product->subcategory->slug, $product->slug]) }}">
                                     <div class="card h-100">
-                                        <img src="/images/1.png" class="card-img-top img-fluid" alt="...">
+                                        <img src="{{ $product->image }}" class="card-img-top img-fluid" alt="...">
                                         <div class="card-body text-center">
                                             <p class="card-title w-75 mx-auto text-dark">{{ mb_strtoupper($product->name) }}</p>
                                             <h5 class="text-decoration-none text-dark"> ЦЕНА {{ $product->price }} грн / ИТОГ {{ $product->getPriceForCount() }} грн</h5>

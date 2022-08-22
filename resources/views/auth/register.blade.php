@@ -1,6 +1,6 @@
-@extends('auth.master')
+@extends('master')
 
-@section('title', 'REGISTER')
+@section('title', 'Реєстрація')
 
 @section('main')
     <!--Main layout-->
@@ -13,38 +13,38 @@
                     <form method="POST" action="{{ route('register') }}">
                         @csrf
                         <div class="form-group mb-3">
-                            <label for="name">Имя</label>
-                            <input name="name" type="name" class="form-control" id="name" aria-describedby="emailHelp" placeholder="Имя">
+                            <label for="name">{{ __('register.name') }}</label>
+                            <input name="name" type="name" class="form-control" id="name" aria-describedby="emailHelp" placeholder="{{ __('register.name_placeholder') }}">
                         </div>
 
                         <div class="form-group mb-3">
-                            <label for="surname">Фамилия</label>
-                            <input name="surname" type="text" class="form-control" id="surname" aria-describedby="emailHelp" placeholder="Фамилия">
+                            <label for="surname">{{ __('register.surname') }}</label>
+                            <input name="surname" type="text" class="form-control" id="surname" aria-describedby="emailHelp" placeholder="{{ __('register.surname_placeholder') }}">
                         </div>
 
                         <div class="form-group mb-3">
-                            <label for="exampleInputEmail1">Email</label>
-                            <input name="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Введите email">
+                            <label for="exampleInputEmail1">{{ __('register.email') }}</label>
+                            <input name="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="{{ __('register.email_placeholder') }}">
                         </div>
 
                         <div class="form-group mb-3">
-                            <label for="phone">Телефон</label>
-                            <input name="phone" type="tel" class="form-control" id="phone" aria-describedby="emailHelp" placeholder="+380634139684">
+                            <label for="phone">{{ __('register.phone') }}</label>
+                            <input name="phone" type="tel" class="form-control" id="phone" aria-describedby="emailHelp" placeholder="{{ __('register.phone_placeholder') }}">
                         </div>
 
                         <div class="form-group mb-3">
-                            <label for="Password">Пароль</label>
-                            <input name="password" type="password" class="form-control" id="Password" placeholder="Введите пароль">
-                            <small id="emailHelp" class="form-text text-muted">Пароль должен содержать не менее 8 символов</small>
+                            <label for="Password">{{ __('register.password') }}</label>
+                            <input name="password" type="password" class="form-control" id="Password" placeholder="{{ __('register.password_placeholder') }}">
+                            <small id="emailHelp" class="form-text text-muted">{{ __('register.password_warning') }}</small>
                         </div>
 
                         <div class="form-group mb-3">
-                            <label for="password_confirmation">Подтвердите пароль</label>
-                            <input name="password_confirmation" type="password" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Введите пароль">
-                            <small id="emailHelp" class="form-text text-muted">Пароль должен содержать не менее 8 символов</small>
+                            <label for="password_confirmation">{{ __('register.password_confirm') }}</label>
+                            <input name="password_confirmation" type="password" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="{{ __('register.password_confirm_placeholder') }}">
+                            <small id="emailHelp" class="form-text text-muted">{{ __('register.password_confirm_warning') }}</small>
                         </div>
 
-                        <button type="submit" class="btn btn-primary m-3">Зарегистрироваться</button>
+                        <button type="submit" class="btn btn-primary m-3">{{ __('register.button') }}</button>
                     </form>
                 </div>
             </div>

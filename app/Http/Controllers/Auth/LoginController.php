@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers\Auth;
 
+use App\Category;
 use App\Http\Controllers\Controller;
+use App\Order;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Support\Facades\Auth;
@@ -45,4 +47,23 @@ class LoginController extends Controller
     {
         $this->middleware('guest')->except('logout');
     }
+
+    public function showLoginForm()
+    {
+
+        $quantity = null;
+        $orderId = session('orderId');
+        if (!is_null($orderId)) {
+            $order = Order::findOrFail($orderId);
+            $quantity = null;
+            foreach ($order->products as $product) {
+                $quantity += $product->pivot->count;
+            }
+        }
+
+        $categories = Category::orderBy('id', 'asc')->get();
+
+        return view('auth.login', compact('quantity', 'categories'));
+    }
+
 }

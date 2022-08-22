@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers\Auth;
 
+use App\Category;
 use App\Http\Controllers\Controller;
+use App\Order;
 use App\Providers\RouteServiceProvider;
 use App\User;
 use Illuminate\Foundation\Auth\RegistersUsers;
@@ -82,4 +84,22 @@ class RegisterController extends Controller
             'password' => Hash::make($data['password']),
         ]);
     }
+
+    public function showRegistrationForm()
+    {
+        $quantity = null;
+        $orderId = session('orderId');
+        if (!is_null($orderId)) {
+            $order = Order::findOrFail($orderId);
+            $quantity = null;
+            foreach ($order->products as $product) {
+                $quantity += $product->pivot->count;
+            }
+        }
+
+        $categories = Category::orderBy('id', 'asc')->get();
+
+        return view('auth.register', compact('quantity', 'categories'));
+    }
+
 }

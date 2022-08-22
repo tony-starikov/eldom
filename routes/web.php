@@ -13,13 +13,6 @@
 
 use Illuminate\Support\Facades\Auth;
 
-Auth::routes([
-    'reset' => false,
-    'confirm' => false,
-    'verify' => false,
-]);
-
-
 Route::middleware('auth')->group(function () {
 
     Route::group([
@@ -75,6 +68,12 @@ Route::group([
 
         Route::post('/confirm', 'BasketController@orderConfirm')->name('orderConfirm');
     });
+
+    Auth::routes([
+        'reset' => false,
+        'confirm' => false,
+        'verify' => false,
+    ]);
 
     Route::get('locale/{locale}', 'PageController@changeLocale')->name('locale');
 

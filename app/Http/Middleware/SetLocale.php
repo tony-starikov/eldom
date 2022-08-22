@@ -17,7 +17,7 @@ class SetLocale
     public function handle($request, Closure $next)
     {
         if (!session('locale')) {
-            App::setLocale('en');
+            App::setLocale('ua');
         } else {
             App::setLocale(session('locale'));
         }

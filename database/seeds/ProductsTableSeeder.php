@@ -194,7 +194,7 @@ class ProductsTableSeeder extends Seeder
                 'new' => 0,
                 'sale' => 0,
                 'hit' => 1,
-                'recommend' => 1,
+                'recommend' => 0,
             ],
 
 //            ОДНОФАЗНЫЕ СЧЕТЧИКИ/СЧЕТЧИКИ ЭНЕРГОМЕРА
@@ -214,7 +214,7 @@ class ProductsTableSeeder extends Seeder
                 'new' => 0,
                 'sale' => 0,
                 'hit' => 0,
-                'recommend' => 1,
+                'recommend' => 0,
             ],
 
             [
@@ -233,7 +233,7 @@ class ProductsTableSeeder extends Seeder
                 'new' => 0,
                 'sale' => 0,
                 'hit' => 0,
-                'recommend' => 1,
+                'recommend' => 0,
             ],
 
 //            ОДНОФАЗНЫЕ СЧЕТЧИКИ/СЧЕТЧИКИ NIK
@@ -255,7 +255,7 @@ class ProductsTableSeeder extends Seeder
                 'new' => 0,
                 'sale' => 0,
                 'hit' => 1,
-                'recommend' => 1,
+                'recommend' => 0,
             ],
 
             [
@@ -276,7 +276,7 @@ class ProductsTableSeeder extends Seeder
                 'new' => 0,
                 'sale' => 0,
                 'hit' => 0,
-                'recommend' => 1,
+                'recommend' => 0,
             ],
 
 //            РЕЛЕЙНОЕ ОБОРУДОВАНИЕ/ДАТЧИКИ ДВИЖЕНИЯ
@@ -296,7 +296,7 @@ class ProductsTableSeeder extends Seeder
                 'new' => 0,
                 'sale' => 0,
                 'hit' => 0,
-                'recommend' => 1,
+                'recommend' => 0,
             ],
 
             [
@@ -315,7 +315,7 @@ class ProductsTableSeeder extends Seeder
                 'new' => 0,
                 'sale' => 0,
                 'hit' => 1,
-                'recommend' => 1,
+                'recommend' => 0,
             ],
 
             [
@@ -334,7 +334,7 @@ class ProductsTableSeeder extends Seeder
                 'new' => 0,
                 'sale' => 0,
                 'hit' => 1,
-                'recommend' => 1,
+                'recommend' => 0,
             ],
 
             [
@@ -353,7 +353,7 @@ class ProductsTableSeeder extends Seeder
                 'new' => 0,
                 'sale' => 0,
                 'hit' => 0,
-                'recommend' => 1,
+                'recommend' => 0,
             ],
 
             [
@@ -372,7 +372,7 @@ class ProductsTableSeeder extends Seeder
                 'new' => 0,
                 'sale' => 0,
                 'hit' => 0,
-                'recommend' => 1,
+                'recommend' => 0,
             ],
 
             [
@@ -391,7 +391,7 @@ class ProductsTableSeeder extends Seeder
                 'new' => 0,
                 'sale' => 0,
                 'hit' => 0,
-                'recommend' => 1,
+                'recommend' => 0,
             ],
 
             [
@@ -410,7 +410,7 @@ class ProductsTableSeeder extends Seeder
                 'new' => 0,
                 'sale' => 0,
                 'hit' => 0,
-                'recommend' => 1,
+                'recommend' => 0,
             ],
 
             [
@@ -429,7 +429,7 @@ class ProductsTableSeeder extends Seeder
                 'new' => 0,
                 'sale' => 0,
                 'hit' => 0,
-                'recommend' => 1,
+                'recommend' => 0,
             ],
 
 
@@ -450,7 +450,7 @@ class ProductsTableSeeder extends Seeder
                 'new' => 0,
                 'sale' => 0,
                 'hit' => 1,
-                'recommend' => 1,
+                'recommend' => 0,
             ],
 
             [
@@ -469,7 +469,7 @@ class ProductsTableSeeder extends Seeder
                 'new' => 0,
                 'sale' => 0,
                 'hit' => 0,
-                'recommend' => 1,
+                'recommend' => 0,
             ],
 
             [
@@ -488,7 +488,7 @@ class ProductsTableSeeder extends Seeder
                 'new' => 0,
                 'sale' => 0,
                 'hit' => 0,
-                'recommend' => 1,
+                'recommend' => 0,
             ],
 
             [
@@ -507,7 +507,7 @@ class ProductsTableSeeder extends Seeder
                 'new' => 0,
                 'sale' => 0,
                 'hit' => 0,
-                'recommend' => 1,
+                'recommend' => 0,
             ],
 
             [
@@ -526,7 +526,7 @@ class ProductsTableSeeder extends Seeder
                 'new' => 0,
                 'sale' => 0,
                 'hit' => 0,
-                'recommend' => 1,
+                'recommend' => 0,
             ],
 
 
@@ -547,7 +547,7 @@ class ProductsTableSeeder extends Seeder
                 'new' => 0,
                 'sale' => 0,
                 'hit' => 1,
-                'recommend' => 1,
+                'recommend' => 0,
             ],
 
             [
@@ -566,7 +566,7 @@ class ProductsTableSeeder extends Seeder
                 'new' => 0,
                 'sale' => 0,
                 'hit' => 0,
-                'recommend' => 1,
+                'recommend' => 0,
             ],
 
             [
@@ -585,7 +585,7 @@ class ProductsTableSeeder extends Seeder
                 'new' => 0,
                 'sale' => 0,
                 'hit' => 0,
-                'recommend' => 1,
+                'recommend' => 0,
             ],
 
             [
@@ -604,7 +604,7 @@ class ProductsTableSeeder extends Seeder
                 'new' => 0,
                 'sale' => 0,
                 'hit' => 1,
-                'recommend' => 1,
+                'recommend' => 0,
             ],
 
             [
@@ -623,7 +623,7 @@ class ProductsTableSeeder extends Seeder
                 'new' => 0,
                 'sale' => 0,
                 'hit' => 0,
-                'recommend' => 1,
+                'recommend' => 0,
             ],
 
             [
@@ -642,7 +642,7 @@ class ProductsTableSeeder extends Seeder
                 'new' => 0,
                 'sale' => 0,
                 'hit' => 0,
-                'recommend' => 1,
+                'recommend' => 0,
             ],
 
             [
@@ -661,7 +661,7 @@ class ProductsTableSeeder extends Seeder
                 'new' => 0,
                 'sale' => 0,
                 'hit' => 0,
-                'recommend' => 1,
+                'recommend' => 0,
             ],
 
             [
@@ -680,7 +680,7 @@ class ProductsTableSeeder extends Seeder
                 'new' => 0,
                 'sale' => 0,
                 'hit' => 0,
-                'recommend' => 1,
+                'recommend' => 0,
             ],
 
 
@@ -701,7 +701,7 @@ class ProductsTableSeeder extends Seeder
                 'new' => 0,
                 'sale' => 0,
                 'hit' => 0,
-                'recommend' => 1,
+                'recommend' => 0,
             ],
 
             [
@@ -720,7 +720,7 @@ class ProductsTableSeeder extends Seeder
                 'new' => 0,
                 'sale' => 0,
                 'hit' => 0,
-                'recommend' => 1,
+                'recommend' => 0,
             ],
             [
                 'id' => 37,
@@ -738,7 +738,7 @@ class ProductsTableSeeder extends Seeder
                 'new' => 0,
                 'sale' => 0,
                 'hit' => 0,
-                'recommend' => 1,
+                'recommend' => 0,
             ],
             [
                 'id' => 38,
@@ -756,7 +756,7 @@ class ProductsTableSeeder extends Seeder
                 'new' => 0,
                 'sale' => 0,
                 'hit' => 0,
-                'recommend' => 1,
+                'recommend' => 0,
             ],
             [
                 'id' => 39,
@@ -774,7 +774,7 @@ class ProductsTableSeeder extends Seeder
                 'new' => 0,
                 'sale' => 0,
                 'hit' => 0,
-                'recommend' => 1,
+                'recommend' => 0,
             ],
             [
                 'id' => 40,
@@ -792,7 +792,7 @@ class ProductsTableSeeder extends Seeder
                 'new' => 0,
                 'sale' => 0,
                 'hit' => 0,
-                'recommend' => 1,
+                'recommend' => 0,
             ],
             [
                 'id' => 41,
@@ -810,7 +810,7 @@ class ProductsTableSeeder extends Seeder
                 'new' => 0,
                 'sale' => 0,
                 'hit' => 0,
-                'recommend' => 1,
+                'recommend' => 0,
             ],
             [
                 'id' => 42,
@@ -828,7 +828,7 @@ class ProductsTableSeeder extends Seeder
                 'new' => 0,
                 'sale' => 0,
                 'hit' => 0,
-                'recommend' => 1,
+                'recommend' => 0,
             ],
             [
                 'id' => 43,
@@ -846,7 +846,7 @@ class ProductsTableSeeder extends Seeder
                 'new' => 0,
                 'sale' => 0,
                 'hit' => 0,
-                'recommend' => 1,
+                'recommend' => 0,
             ],
             [
                 'id' => 44,
@@ -864,7 +864,7 @@ class ProductsTableSeeder extends Seeder
                 'new' => 0,
                 'sale' => 0,
                 'hit' => 0,
-                'recommend' => 1,
+                'recommend' => 0,
             ],
             [
                 'id' => 45,
@@ -882,7 +882,7 @@ class ProductsTableSeeder extends Seeder
                 'new' => 0,
                 'sale' => 0,
                 'hit' => 0,
-                'recommend' => 1,
+                'recommend' => 0,
             ],
             [
                 'id' => 46,
@@ -900,7 +900,7 @@ class ProductsTableSeeder extends Seeder
                 'new' => 0,
                 'sale' => 0,
                 'hit' => 0,
-                'recommend' => 1,
+                'recommend' => 0,
             ],
             [
                 'id' => 47,
@@ -918,7 +918,7 @@ class ProductsTableSeeder extends Seeder
                 'new' => 0,
                 'sale' => 0,
                 'hit' => 0,
-                'recommend' => 1,
+                'recommend' => 0,
             ],
 
 //            МОДУЛЬНОЕ ОБОРУДОВАНИЕ/РУБИЛЬНИКИ
@@ -938,7 +938,7 @@ class ProductsTableSeeder extends Seeder
                 'new' => 0,
                 'sale' => 0,
                 'hit' => 0,
-                'recommend' => 1,
+                'recommend' => 0,
             ],
 
             [
@@ -957,7 +957,7 @@ class ProductsTableSeeder extends Seeder
                 'new' => 0,
                 'sale' => 0,
                 'hit' => 0,
-                'recommend' => 1,
+                'recommend' => 0,
             ],
 
             [
@@ -976,7 +976,7 @@ class ProductsTableSeeder extends Seeder
                 'new' => 0,
                 'sale' => 0,
                 'hit' => 0,
-                'recommend' => 1,
+                'recommend' => 0,
             ],
 
             [
@@ -995,7 +995,7 @@ class ProductsTableSeeder extends Seeder
                 'new' => 0,
                 'sale' => 0,
                 'hit' => 0,
-                'recommend' => 1,
+                'recommend' => 0,
             ],
 
             [
@@ -1014,7 +1014,7 @@ class ProductsTableSeeder extends Seeder
                 'new' => 0,
                 'sale' => 0,
                 'hit' => 0,
-                'recommend' => 1,
+                'recommend' => 0,
             ],
 
             [
@@ -1033,7 +1033,7 @@ class ProductsTableSeeder extends Seeder
                 'new' => 0,
                 'sale' => 0,
                 'hit' => 0,
-                'recommend' => 1,
+                'recommend' => 0,
             ],
 
             [
@@ -1052,7 +1052,7 @@ class ProductsTableSeeder extends Seeder
                 'new' => 0,
                 'sale' => 0,
                 'hit' => 0,
-                'recommend' => 1,
+                'recommend' => 0,
             ],
 
             [
@@ -1071,7 +1071,7 @@ class ProductsTableSeeder extends Seeder
                 'new' => 0,
                 'sale' => 0,
                 'hit' => 0,
-                'recommend' => 1,
+                'recommend' => 0,
             ],
 
             [
@@ -1090,7 +1090,7 @@ class ProductsTableSeeder extends Seeder
                 'new' => 0,
                 'sale' => 0,
                 'hit' => 0,
-                'recommend' => 1,
+                'recommend' => 0,
             ],
 
 //            ШКАФЫ И БОКСЫ/КОРПУСА ЩИТОВ УЧЕТА
@@ -1110,7 +1110,7 @@ class ProductsTableSeeder extends Seeder
                 'new' => 0,
                 'sale' => 0,
                 'hit' => 0,
-                'recommend' => 1,
+                'recommend' => 0,
             ],
 
             [
@@ -1129,7 +1129,7 @@ class ProductsTableSeeder extends Seeder
                 'new' => 0,
                 'sale' => 0,
                 'hit' => 0,
-                'recommend' => 1,
+                'recommend' => 0,
             ],
 
             [
@@ -1148,7 +1148,7 @@ class ProductsTableSeeder extends Seeder
                 'new' => 0,
                 'sale' => 0,
                 'hit' => 0,
-                'recommend' => 1,
+                'recommend' => 0,
             ],
 
             [
@@ -1167,7 +1167,7 @@ class ProductsTableSeeder extends Seeder
                 'new' => 0,
                 'sale' => 0,
                 'hit' => 0,
-                'recommend' => 1,
+                'recommend' => 0,
             ],
 
             [
@@ -1186,8 +1186,9 @@ class ProductsTableSeeder extends Seeder
                 'new' => 0,
                 'sale' => 0,
                 'hit' => 0,
-                'recommend' => 1,
+                'recommend' => 0,
             ],
+
             [
                 'id' => 62,
                 'subcategory_id' => 20,
@@ -1204,8 +1205,9 @@ class ProductsTableSeeder extends Seeder
                 'new' => 0,
                 'sale' => 0,
                 'hit' => 0,
-                'recommend' => 1,
+                'recommend' => 0,
             ],
+
             [
                 'id' => 63,
                 'subcategory_id' => 20,
@@ -1222,8 +1224,9 @@ class ProductsTableSeeder extends Seeder
                 'new' => 0,
                 'sale' => 0,
                 'hit' => 0,
-                'recommend' => 1,
+                'recommend' => 0,
             ],
+
             [
                 'id' => 64,
                 'subcategory_id' => 20,
@@ -1240,8 +1243,9 @@ class ProductsTableSeeder extends Seeder
                 'new' => 0,
                 'sale' => 0,
                 'hit' => 0,
-                'recommend' => 1,
+                'recommend' => 0,
             ],
+
             [
                 'id' => 65,
                 'subcategory_id' => 20,
@@ -1258,8 +1262,9 @@ class ProductsTableSeeder extends Seeder
                 'new' => 0,
                 'sale' => 0,
                 'hit' => 0,
-                'recommend' => 1,
+                'recommend' => 0,
             ],
+
             [
                 'id' => 66,
                 'subcategory_id' => 20,
@@ -1276,7 +1281,7 @@ class ProductsTableSeeder extends Seeder
                 'new' => 0,
                 'sale' => 0,
                 'hit' => 0,
-                'recommend' => 1,
+                'recommend' => 0,
             ],
 
             [
@@ -1295,7 +1300,7 @@ class ProductsTableSeeder extends Seeder
                 'new' => 0,
                 'sale' => 0,
                 'hit' => 0,
-                'recommend' => 1,
+                'recommend' => 0,
             ],
 
             [
@@ -1314,8 +1319,9 @@ class ProductsTableSeeder extends Seeder
                 'new' => 0,
                 'sale' => 0,
                 'hit' => 0,
-                'recommend' => 1,
+                'recommend' => 0,
             ],
+
             [
                 'id' => 69,
                 'subcategory_id' => 20,
@@ -1332,7 +1338,7 @@ class ProductsTableSeeder extends Seeder
                 'new' => 0,
                 'sale' => 0,
                 'hit' => 0,
-                'recommend' => 1,
+                'recommend' => 0,
             ],
 
 //            ШКАФЫ И БОКСЫ/ЩИТ С МОНТАЖНОЙ ПАНЕЛЬЮ
@@ -1352,7 +1358,7 @@ class ProductsTableSeeder extends Seeder
                 'new' => 0,
                 'sale' => 0,
                 'hit' => 0,
-                'recommend' => 1,
+                'recommend' => 0,
             ],
 
             [
@@ -1371,7 +1377,7 @@ class ProductsTableSeeder extends Seeder
                 'new' => 0,
                 'sale' => 0,
                 'hit' => 0,
-                'recommend' => 1,
+                'recommend' => 0,
             ],
 
             [
@@ -1390,7 +1396,7 @@ class ProductsTableSeeder extends Seeder
                 'new' => 0,
                 'sale' => 0,
                 'hit' => 0,
-                'recommend' => 1,
+                'recommend' => 0,
             ],
 
             [
@@ -1409,7 +1415,7 @@ class ProductsTableSeeder extends Seeder
                 'new' => 0,
                 'sale' => 0,
                 'hit' => 0,
-                'recommend' => 1,
+                'recommend' => 0,
             ],
 
             [
@@ -1428,7 +1434,7 @@ class ProductsTableSeeder extends Seeder
                 'new' => 0,
                 'sale' => 0,
                 'hit' => 0,
-                'recommend' => 1,
+                'recommend' => 0,
             ],
 
             [
@@ -1447,7 +1453,7 @@ class ProductsTableSeeder extends Seeder
                 'new' => 0,
                 'sale' => 0,
                 'hit' => 0,
-                'recommend' => 1,
+                'recommend' => 0,
             ],
 
             [
@@ -1466,7 +1472,7 @@ class ProductsTableSeeder extends Seeder
                 'new' => 0,
                 'sale' => 0,
                 'hit' => 0,
-                'recommend' => 1,
+                'recommend' => 0,
             ],
 
             [
@@ -1485,7 +1491,7 @@ class ProductsTableSeeder extends Seeder
                 'new' => 0,
                 'sale' => 0,
                 'hit' => 0,
-                'recommend' => 1,
+                'recommend' => 0,
             ],
 
             [
@@ -1504,7 +1510,7 @@ class ProductsTableSeeder extends Seeder
                 'new' => 0,
                 'sale' => 0,
                 'hit' => 0,
-                'recommend' => 1,
+                'recommend' => 0,
             ],
 
             [
@@ -1523,7 +1529,7 @@ class ProductsTableSeeder extends Seeder
                 'new' => 0,
                 'sale' => 0,
                 'hit' => 0,
-                'recommend' => 1,
+                'recommend' => 0,
             ],
 
             [
@@ -1542,7 +1548,7 @@ class ProductsTableSeeder extends Seeder
                 'new' => 0,
                 'sale' => 0,
                 'hit' => 0,
-                'recommend' => 1,
+                'recommend' => 0,
             ],
 
             [
@@ -1561,7 +1567,7 @@ class ProductsTableSeeder extends Seeder
                 'new' => 0,
                 'sale' => 0,
                 'hit' => 0,
-                'recommend' => 1,
+                'recommend' => 0,
             ],
 
             [
@@ -1580,7 +1586,7 @@ class ProductsTableSeeder extends Seeder
                 'new' => 0,
                 'sale' => 0,
                 'hit' => 0,
-                'recommend' => 1,
+                'recommend' => 0,
             ],
 
             [
@@ -1599,7 +1605,7 @@ class ProductsTableSeeder extends Seeder
                 'new' => 0,
                 'sale' => 0,
                 'hit' => 0,
-                'recommend' => 1,
+                'recommend' => 0,
             ],
 
             [
@@ -1618,7 +1624,7 @@ class ProductsTableSeeder extends Seeder
                 'new' => 0,
                 'sale' => 0,
                 'hit' => 0,
-                'recommend' => 1,
+                'recommend' => 0,
             ],
 
 //            КАБЕЛЬ И ПРОВОДА/ИНСТРУМЕНТ
@@ -1638,8 +1644,9 @@ class ProductsTableSeeder extends Seeder
                 'new' => 0,
                 'sale' => 0,
                 'hit' => 0,
-                'recommend' => 1,
+                'recommend' => 0,
             ],
+
             [
                 'id' => 86,
                 'subcategory_id' => 30,
@@ -1656,8 +1663,9 @@ class ProductsTableSeeder extends Seeder
                 'new' => 0,
                 'sale' => 0,
                 'hit' => 0,
-                'recommend' => 1,
+                'recommend' => 0,
             ],
+
             [
                 'id' => 87,
                 'subcategory_id' => 30,
@@ -1674,8 +1682,9 @@ class ProductsTableSeeder extends Seeder
                 'new' => 0,
                 'sale' => 0,
                 'hit' => 0,
-                'recommend' => 1,
+                'recommend' => 0,
             ],
+
             [
                 'id' => 88,
                 'subcategory_id' => 30,
@@ -1692,8 +1701,9 @@ class ProductsTableSeeder extends Seeder
                 'new' => 0,
                 'sale' => 0,
                 'hit' => 0,
-                'recommend' => 1,
+                'recommend' => 0,
             ],
+
             [
                 'id' => 89,
                 'subcategory_id' => 30,
@@ -1710,8 +1720,9 @@ class ProductsTableSeeder extends Seeder
                 'new' => 0,
                 'sale' => 0,
                 'hit' => 0,
-                'recommend' => 1,
+                'recommend' => 0,
             ],
+
             [
                 'id' => 90,
                 'subcategory_id' => 30,
@@ -1728,8 +1739,9 @@ class ProductsTableSeeder extends Seeder
                 'new' => 0,
                 'sale' => 0,
                 'hit' => 0,
-                'recommend' => 1,
+                'recommend' => 0,
             ],
+
             [
                 'id' => 91,
                 'subcategory_id' => 30,
@@ -1746,8 +1758,9 @@ class ProductsTableSeeder extends Seeder
                 'new' => 0,
                 'sale' => 0,
                 'hit' => 0,
-                'recommend' => 1,
+                'recommend' => 0,
             ],
+
             [
                 'id' => 92,
                 'subcategory_id' => 30,
@@ -1764,8 +1777,9 @@ class ProductsTableSeeder extends Seeder
                 'new' => 0,
                 'sale' => 0,
                 'hit' => 0,
-                'recommend' => 1,
+                'recommend' => 0,
             ],
+
             [
                 'id' => 93,
                 'subcategory_id' => 30,
@@ -1782,8 +1796,9 @@ class ProductsTableSeeder extends Seeder
                 'new' => 0,
                 'sale' => 0,
                 'hit' => 0,
-                'recommend' => 1,
+                'recommend' => 0,
             ],
+
             [
                 'id' => 94,
                 'subcategory_id' => 30,
@@ -1800,8 +1815,9 @@ class ProductsTableSeeder extends Seeder
                 'new' => 0,
                 'sale' => 0,
                 'hit' => 0,
-                'recommend' => 1,
+                'recommend' => 0,
             ],
+
             [
                 'id' => 95,
                 'subcategory_id' => 30,
@@ -1818,8 +1834,9 @@ class ProductsTableSeeder extends Seeder
                 'new' => 0,
                 'sale' => 0,
                 'hit' => 0,
-                'recommend' => 1,
+                'recommend' => 0,
             ],
+
             [
                 'id' => 96,
                 'subcategory_id' => 30,
@@ -1836,8 +1853,9 @@ class ProductsTableSeeder extends Seeder
                 'new' => 0,
                 'sale' => 0,
                 'hit' => 0,
-                'recommend' => 1,
+                'recommend' => 0,
             ],
+
             [
                 'id' => 97,
                 'subcategory_id' => 30,
@@ -1854,8 +1872,9 @@ class ProductsTableSeeder extends Seeder
                 'new' => 0,
                 'sale' => 0,
                 'hit' => 0,
-                'recommend' => 1,
+                'recommend' => 0,
             ],
+
             [
                 'id' => 98,
                 'subcategory_id' => 30,
@@ -1872,8 +1891,9 @@ class ProductsTableSeeder extends Seeder
                 'new' => 0,
                 'sale' => 0,
                 'hit' => 0,
-                'recommend' => 1,
+                'recommend' => 0,
             ],
+
             [
                 'id' => 99,
                 'subcategory_id' => 30,
@@ -1890,7 +1910,7 @@ class ProductsTableSeeder extends Seeder
                 'new' => 0,
                 'sale' => 0,
                 'hit' => 0,
-                'recommend' => 1,
+                'recommend' => 0,
             ],
 
 //            СИЛОВОЕ ОБОРУДОВАНИЕ/СИЛОВЫЕ АВТОМАТЫ ВА 88
@@ -1910,7 +1930,7 @@ class ProductsTableSeeder extends Seeder
                 'new' => 0,
                 'sale' => 0,
                 'hit' => 0,
-                'recommend' => 1,
+                'recommend' => 0,
             ],
 
             [
@@ -1929,7 +1949,7 @@ class ProductsTableSeeder extends Seeder
                 'new' => 0,
                 'sale' => 0,
                 'hit' => 0,
-                'recommend' => 1,
+                'recommend' => 0,
             ],
 
             [
@@ -1948,7 +1968,7 @@ class ProductsTableSeeder extends Seeder
                 'new' => 0,
                 'sale' => 0,
                 'hit' => 1,
-                'recommend' => 1,
+                'recommend' => 0,
             ],
 
             [
@@ -1967,7 +1987,7 @@ class ProductsTableSeeder extends Seeder
                 'new' => 0,
                 'sale' => 0,
                 'hit' => 0,
-                'recommend' => 1,
+                'recommend' => 0,
             ],
 
             [
@@ -1986,7 +2006,7 @@ class ProductsTableSeeder extends Seeder
                 'new' => 0,
                 'sale' => 0,
                 'hit' => 0,
-                'recommend' => 1,
+                'recommend' => 0,
             ],
 
             [
@@ -2005,7 +2025,7 @@ class ProductsTableSeeder extends Seeder
                 'new' => 0,
                 'sale' => 0,
                 'hit' => 0,
-                'recommend' => 1,
+                'recommend' => 0,
             ],
 
             [
@@ -2024,8 +2044,9 @@ class ProductsTableSeeder extends Seeder
                 'new' => 0,
                 'sale' => 0,
                 'hit' => 0,
-                'recommend' => 1,
+                'recommend' => 0,
             ],
+
             [
                 'id' => 107,
                 'subcategory_id' => 41,
@@ -2042,7 +2063,7 @@ class ProductsTableSeeder extends Seeder
                 'new' => 0,
                 'sale' => 0,
                 'hit' => 0,
-                'recommend' => 1,
+                'recommend' => 0,
             ],
 
             [
@@ -2061,7 +2082,7 @@ class ProductsTableSeeder extends Seeder
                 'new' => 0,
                 'sale' => 0,
                 'hit' => 0,
-                'recommend' => 1,
+                'recommend' => 0,
             ],
 
             [
@@ -2080,8 +2101,9 @@ class ProductsTableSeeder extends Seeder
                 'new' => 0,
                 'sale' => 0,
                 'hit' => 0,
-                'recommend' => 1,
+                'recommend' => 0,
             ],
+
             [
                 'id' => 110,
                 'subcategory_id' => 41,
@@ -2098,7 +2120,7 @@ class ProductsTableSeeder extends Seeder
                 'new' => 0,
                 'sale' => 0,
                 'hit' => 0,
-                'recommend' => 1,
+                'recommend' => 0,
             ],
 
             [
@@ -2117,7 +2139,7 @@ class ProductsTableSeeder extends Seeder
                 'new' => 0,
                 'sale' => 0,
                 'hit' => 1,
-                'recommend' => 1,
+                'recommend' => 0,
             ],
 
             [
@@ -2136,7 +2158,7 @@ class ProductsTableSeeder extends Seeder
                 'new' => 0,
                 'sale' => 0,
                 'hit' => 1,
-                'recommend' => 1,
+                'recommend' => 0,
             ],
 
             [
@@ -2155,7 +2177,7 @@ class ProductsTableSeeder extends Seeder
                 'new' => 0,
                 'sale' => 0,
                 'hit' => 1,
-                'recommend' => 1,
+                'recommend' => 0,
             ],
 
             [
@@ -2174,7 +2196,7 @@ class ProductsTableSeeder extends Seeder
                 'new' => 0,
                 'sale' => 0,
                 'hit' => 1,
-                'recommend' => 1,
+                'recommend' => 0,
             ],
 
             [
@@ -2193,7 +2215,7 @@ class ProductsTableSeeder extends Seeder
                 'new' => 0,
                 'sale' => 0,
                 'hit' => 1,
-                'recommend' => 1,
+                'recommend' => 0,
             ],
 
             [
@@ -2212,7 +2234,7 @@ class ProductsTableSeeder extends Seeder
                 'new' => 0,
                 'sale' => 0,
                 'hit' => 1,
-                'recommend' => 1,
+                'recommend' => 0,
             ],
 
             [
@@ -2231,7 +2253,7 @@ class ProductsTableSeeder extends Seeder
                 'new' => 0,
                 'sale' => 0,
                 'hit' => 0,
-                'recommend' => 1,
+                'recommend' => 0,
             ],
 
             [
@@ -2250,7 +2272,7 @@ class ProductsTableSeeder extends Seeder
                 'new' => 0,
                 'sale' => 0,
                 'hit' => 0,
-                'recommend' => 1,
+                'recommend' => 0,
             ],
 
             [
@@ -2269,7 +2291,7 @@ class ProductsTableSeeder extends Seeder
                 'new' => 0,
                 'sale' => 0,
                 'hit' => 0,
-                'recommend' => 1,
+                'recommend' => 0,
             ],
 
 //            СИЛОВОЕ ОБОРУДОВАНИЕ/КОНТАКТОРЫ КМИ
@@ -2289,7 +2311,7 @@ class ProductsTableSeeder extends Seeder
                 'new' => 0,
                 'sale' => 0,
                 'hit' => 0,
-                'recommend' => 1,
+                'recommend' => 0,
             ],
 
             [
@@ -2308,7 +2330,7 @@ class ProductsTableSeeder extends Seeder
                 'new' => 0,
                 'sale' => 0,
                 'hit' => 0,
-                'recommend' => 1,
+                'recommend' => 0,
             ],
 
             [
@@ -2327,7 +2349,7 @@ class ProductsTableSeeder extends Seeder
                 'new' => 0,
                 'sale' => 0,
                 'hit' => 0,
-                'recommend' => 1,
+                'recommend' => 0,
             ],
 
             [
@@ -2346,7 +2368,7 @@ class ProductsTableSeeder extends Seeder
                 'new' => 0,
                 'sale' => 0,
                 'hit' => 0,
-                'recommend' => 1,
+                'recommend' => 0,
             ],
 
             [
@@ -2365,7 +2387,7 @@ class ProductsTableSeeder extends Seeder
                 'new' => 0,
                 'sale' => 0,
                 'hit' => 0,
-                'recommend' => 1,
+                'recommend' => 0,
             ],
 
             [
@@ -2384,7 +2406,7 @@ class ProductsTableSeeder extends Seeder
                 'new' => 0,
                 'sale' => 0,
                 'hit' => 0,
-                'recommend' => 1,
+                'recommend' => 0,
             ],
 
             [
@@ -2403,7 +2425,7 @@ class ProductsTableSeeder extends Seeder
                 'new' => 0,
                 'sale' => 0,
                 'hit' => 0,
-                'recommend' => 1,
+                'recommend' => 0,
             ],
 
             [
@@ -2422,7 +2444,7 @@ class ProductsTableSeeder extends Seeder
                 'new' => 0,
                 'sale' => 0,
                 'hit' => 0,
-                'recommend' => 1,
+                'recommend' => 0,
             ],
 
             [
@@ -2441,7 +2463,7 @@ class ProductsTableSeeder extends Seeder
                 'new' => 0,
                 'sale' => 0,
                 'hit' => 0,
-                'recommend' => 1,
+                'recommend' => 0,
             ],
 
             [
@@ -2460,7 +2482,7 @@ class ProductsTableSeeder extends Seeder
                 'new' => 0,
                 'sale' => 0,
                 'hit' => 0,
-                'recommend' => 1,
+                'recommend' => 0,
             ],
 
 //            СИЛОВОЕ ОБОРУДОВАНИЕ/КОНТАКТОРЫ КМИ В ЗАЩИТНОЙ ОБОЛОЧКЕ
@@ -2480,7 +2502,7 @@ class ProductsTableSeeder extends Seeder
                 'new' => 0,
                 'sale' => 0,
                 'hit' => 0,
-                'recommend' => 1,
+                'recommend' => 0,
             ],
 
             [
@@ -2499,7 +2521,7 @@ class ProductsTableSeeder extends Seeder
                 'new' => 0,
                 'sale' => 0,
                 'hit' => 0,
-                'recommend' => 1,
+                'recommend' => 0,
             ],
 
             [
@@ -2518,7 +2540,7 @@ class ProductsTableSeeder extends Seeder
                 'new' => 0,
                 'sale' => 0,
                 'hit' => 0,
-                'recommend' => 1,
+                'recommend' => 0,
             ],
 
             [
@@ -2537,7 +2559,7 @@ class ProductsTableSeeder extends Seeder
                 'new' => 0,
                 'sale' => 0,
                 'hit' => 0,
-                'recommend' => 1,
+                'recommend' => 0,
             ],
 
             [
@@ -2556,7 +2578,7 @@ class ProductsTableSeeder extends Seeder
                 'new' => 0,
                 'sale' => 0,
                 'hit' => 0,
-                'recommend' => 1,
+                'recommend' => 0,
             ],
 
             [
@@ -2575,7 +2597,7 @@ class ProductsTableSeeder extends Seeder
                 'new' => 0,
                 'sale' => 0,
                 'hit' => 0,
-                'recommend' => 1,
+                'recommend' => 0,
             ],
 
             [
@@ -2594,7 +2616,7 @@ class ProductsTableSeeder extends Seeder
                 'new' => 0,
                 'sale' => 0,
                 'hit' => 0,
-                'recommend' => 1,
+                'recommend' => 0,
             ],
 
             [
@@ -2613,7 +2635,7 @@ class ProductsTableSeeder extends Seeder
                 'new' => 0,
                 'sale' => 0,
                 'hit' => 0,
-                'recommend' => 1,
+                'recommend' => 0,
             ],
 
             [
@@ -2632,7 +2654,7 @@ class ProductsTableSeeder extends Seeder
                 'new' => 0,
                 'sale' => 0,
                 'hit' => 0,
-                'recommend' => 1,
+                'recommend' => 0,
             ],
 
             [
@@ -2651,7 +2673,7 @@ class ProductsTableSeeder extends Seeder
                 'new' => 0,
                 'sale' => 0,
                 'hit' => 0,
-                'recommend' => 1,
+                'recommend' => 0,
             ],
 
 //            СИЛОВОЕ ОБОРУДОВАНИЕ/УСТРОЙСТВО ЗАЩИТЫ ДВИГАТЕЛЯ ПРК
@@ -2671,7 +2693,7 @@ class ProductsTableSeeder extends Seeder
                 'new' => 0,
                 'sale' => 0,
                 'hit' => 0,
-                'recommend' => 1,
+                'recommend' => 0,
             ],
 
             [
@@ -2690,7 +2712,7 @@ class ProductsTableSeeder extends Seeder
                 'new' => 0,
                 'sale' => 0,
                 'hit' => 0,
-                'recommend' => 1,
+                'recommend' => 0,
             ],
 
             [
@@ -2709,7 +2731,7 @@ class ProductsTableSeeder extends Seeder
                 'new' => 0,
                 'sale' => 0,
                 'hit' => 0,
-                'recommend' => 1,
+                'recommend' => 0,
             ],
 
             [
@@ -2728,7 +2750,7 @@ class ProductsTableSeeder extends Seeder
                 'new' => 0,
                 'sale' => 0,
                 'hit' => 0,
-                'recommend' => 1,
+                'recommend' => 0,
             ],
 
             [
@@ -2747,7 +2769,7 @@ class ProductsTableSeeder extends Seeder
                 'new' => 0,
                 'sale' => 0,
                 'hit' => 0,
-                'recommend' => 1,
+                'recommend' => 0,
             ],
 
             [
@@ -2766,7 +2788,7 @@ class ProductsTableSeeder extends Seeder
                 'new' => 0,
                 'sale' => 0,
                 'hit' => 0,
-                'recommend' => 1,
+                'recommend' => 0,
             ],
 
             [
@@ -2785,7 +2807,7 @@ class ProductsTableSeeder extends Seeder
                 'new' => 0,
                 'sale' => 0,
                 'hit' => 0,
-                'recommend' => 1,
+                'recommend' => 0,
             ],
 
             [
@@ -2804,7 +2826,7 @@ class ProductsTableSeeder extends Seeder
                 'new' => 0,
                 'sale' => 0,
                 'hit' => 0,
-                'recommend' => 1,
+                'recommend' => 0,
             ],
 
             [
@@ -2823,7 +2845,7 @@ class ProductsTableSeeder extends Seeder
                 'new' => 0,
                 'sale' => 0,
                 'hit' => 0,
-                'recommend' => 1,
+                'recommend' => 0,
             ],
 
             [
@@ -2842,7 +2864,7 @@ class ProductsTableSeeder extends Seeder
                 'new' => 0,
                 'sale' => 0,
                 'hit' => 0,
-                'recommend' => 1,
+                'recommend' => 0,
             ],
 
 //            СИЛОВОЕ ОБОРУДОВАНИЕ/КОНТАКТОРЫ МОДУЛЬНЫЕ
@@ -2862,7 +2884,7 @@ class ProductsTableSeeder extends Seeder
                 'new' => 0,
                 'sale' => 0,
                 'hit' => 1,
-                'recommend' => 1,
+                'recommend' => 0,
             ],
 
             [
@@ -2881,7 +2903,7 @@ class ProductsTableSeeder extends Seeder
                 'new' => 0,
                 'sale' => 0,
                 'hit' => 0,
-                'recommend' => 1,
+                'recommend' => 0,
             ],
 
             [
@@ -2900,7 +2922,7 @@ class ProductsTableSeeder extends Seeder
                 'new' => 0,
                 'sale' => 0,
                 'hit' => 0,
-                'recommend' => 1,
+                'recommend' => 0,
             ],
 
             [
@@ -2919,7 +2941,7 @@ class ProductsTableSeeder extends Seeder
                 'new' => 0,
                 'sale' => 0,
                 'hit' => 0,
-                'recommend' => 1,
+                'recommend' => 0,
             ],
 
 //            [

@@ -1,6 +1,6 @@
-@extends('auth.master')
+@extends('master')
 
-@section('title', 'LOGIN')
+@section('title', 'Вхід')
 
 @section('main')
     <!--Main layout-->
@@ -13,16 +13,16 @@
                         <form method="POST" action="{{ route('login') }}">
                             @csrf
                             <div class="form-group mb-3">
-                                <label for="email">Email</label>
-                                <input name="email" type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Введите email">
+                                <label for="email">{{ __('login.email') }}</label>
+                                <input name="email" type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="{{ __('login.email_placeholder') }}">
                             </div>
 
                             <div class="form-group mb-3">
-                                <label for="password">Пароль</label>
-                                <input name="password" type="password" class="form-control" id="password" placeholder="Введите пароль">
+                                <label for="password">{{ __('login.password') }}</label>
+                                <input name="password" type="password" class="form-control" id="password" placeholder="{{ __('login.password_placeholder') }}">
                             </div>
 
-                            <button type="submit" class="btn btn-primary m-3">Войти</button>
+                            <button type="submit" class="btn btn-primary m-3">{{ __('login.button') }}</button>
                         </form>
                     </div>
                 </div>
