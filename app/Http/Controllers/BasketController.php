@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Category;
+use App\Message;
 use App\Order;
 use App\Product;
 use Illuminate\Http\Request;
@@ -32,6 +33,8 @@ class BasketController extends Controller
             }
         }
 
+        $messages = Message::all();
+
         $categories = Category::get();
 
         $orderId = session('orderId');
@@ -44,7 +47,7 @@ class BasketController extends Controller
             return redirect()->route('main');
         }
 
-        return view('basket', compact('categories', 'order', 'quantity'));
+        return view('basket', compact('categories', 'order', 'quantity', 'messages'));
     }
 
     public function orderCheck()
@@ -74,7 +77,9 @@ class BasketController extends Controller
             $quantity += $product->pivot->count;
         }
 
-        return view('order', compact('categories', 'quantity', 'order', 'user_name', 'user_email', 'user_phone'));
+        $messages = Message::all();
+
+        return view('order', compact('categories', 'quantity', 'order', 'user_name', 'user_email', 'user_phone', 'messages'));
     }
 
     public function orderConfirm(Request $request)
