@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Category;
+use App\Message;
 use App\Order;
 use App\Page;
 use App\Product;
@@ -30,13 +31,15 @@ class PageController extends Controller
             }
         }
 
+        $messages = Message::all();
+
         $page_info = Page::where('name', 'main')->first();
 
         $categories = Category::orderBy('id', 'asc')->get();
 
         $recommended_products = Product::where('recommend', 1)->get();
 
-        return view('main', compact('page_info', 'categories', 'quantity', 'recommended_products'));
+        return view('main', compact('page_info', 'categories', 'quantity', 'recommended_products', 'messages'));
     }
 
     public function delivery()
@@ -51,11 +54,13 @@ class PageController extends Controller
             }
         }
 
+        $messages = Message::all();
+
         $page_info = Page::where('name', 'delivery')->first();
 
         $categories = Category::orderBy('id', 'asc')->get();
 
-        return view('delivery', compact('page_info', 'categories', 'quantity'));
+        return view('delivery', compact('page_info', 'categories', 'quantity', 'messages'));
     }
 
     public function contacts()
@@ -70,11 +75,13 @@ class PageController extends Controller
             }
         }
 
+        $messages = Message::all();
+
         $page_info = Page::where('name', 'contacts')->first();
 
         $categories = Category::orderBy('id', 'asc')->get();
 
-        return view('contacts', compact('page_info', 'categories', 'quantity'));
+        return view('contacts', compact('page_info', 'categories', 'quantity', 'messages'));
     }
 
     public function search(Request $request)
@@ -97,12 +104,14 @@ class PageController extends Controller
             }
         }
 
+        $messages = Message::all();
+
 //        $page_info = Page::where('name', 'contacts')->first();
 
         $categories = Category::orderBy('id', 'asc')->get();
 
 
 
-        return view('search', compact( 'categories', 'quantity', 'products'));
+        return view('search', compact( 'categories', 'quantity', 'products', 'messages'));
     }
 }

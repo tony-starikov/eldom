@@ -318,6 +318,12 @@
             <p class="alert alert-success text-center text-uppercase mb-0">{{ session()->get('message') }}</p>
         @endif
 
+        @if($messages)
+            @foreach($messages as $message)
+                <p class="alert alert-warning text-center text-uppercase mb-0">{{ $message->__('message') }}</p>
+            @endforeach
+        @endif
+
         @yield('main')
     </main>
 

@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Auth;
 
 use App\Category;
 use App\Http\Controllers\Controller;
+use App\Message;
 use App\Order;
 use App\Providers\RouteServiceProvider;
 use App\User;
@@ -97,9 +98,11 @@ class RegisterController extends Controller
             }
         }
 
+        $messages = Message::all();
+
         $categories = Category::orderBy('id', 'asc')->get();
 
-        return view('auth.register', compact('quantity', 'categories'));
+        return view('auth.register', compact('quantity', 'categories', 'messages'));
     }
 
 }

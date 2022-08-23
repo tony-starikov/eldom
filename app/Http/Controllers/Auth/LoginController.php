@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Auth;
 
 use App\Category;
 use App\Http\Controllers\Controller;
+use App\Message;
 use App\Order;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
@@ -61,9 +62,11 @@ class LoginController extends Controller
             }
         }
 
+        $messages = Message::all();
+
         $categories = Category::orderBy('id', 'asc')->get();
 
-        return view('auth.login', compact('quantity', 'categories'));
+        return view('auth.login', compact('quantity', 'categories', 'messages'));
     }
 
 }

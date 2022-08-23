@@ -1,5 +1,6 @@
 <?php
 
+use Database\Seeders\MessageTableSeeder;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -18,6 +19,7 @@ class DatabaseSeeder extends Seeder
             SubcategoriesTableSeeder::class,
             ProductsTableSeeder::class,
             FeaturesTableSeeder::class,
+            MessageTableSeeder::class,
         ]);
     }
 }

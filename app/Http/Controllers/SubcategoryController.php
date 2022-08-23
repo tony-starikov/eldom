@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Category;
+use App\Message;
 use App\Order;
 use App\Product;
 use App\Subcategory;
@@ -27,6 +28,8 @@ class SubcategoryController extends Controller
             }
         }
 
+        $messages = Message::all();
+
         $main_category = Category::where('slug', $category_slug)->first();
 
         $main_subcategory = Subcategory::where('slug', $subcategory_slug)->first();
@@ -35,7 +38,7 @@ class SubcategoryController extends Controller
 
         $categories = Category::orderBy('id', 'asc')->get();
 
-        return view('subcategory', compact('main_subcategory', 'categories', 'main_category', 'quantity', 'subcategory_products'));
+        return view('subcategory', compact('main_subcategory', 'categories', 'main_category', 'quantity', 'subcategory_products', 'messages'));
     }
 
     public function showSubcategoryByPriceUp($category_slug, $subcategory_slug)
@@ -50,6 +53,8 @@ class SubcategoryController extends Controller
             }
         }
 
+        $messages = Message::all();
+
         $main_category = Category::where('slug', $category_slug)->first();
 
         $main_subcategory = Subcategory::where('slug', $subcategory_slug)->first();
@@ -58,7 +63,7 @@ class SubcategoryController extends Controller
 
         $categories = Category::orderBy('id', 'asc')->get();
 
-        return view('subcategory', compact('main_subcategory', 'categories', 'main_category', 'quantity', 'subcategory_products'));
+        return view('subcategory', compact('main_subcategory', 'categories', 'main_category', 'quantity', 'subcategory_products', 'messages'));
     }
 
     public function showSubcategoryByPriceDown($category_slug, $subcategory_slug)
@@ -73,6 +78,8 @@ class SubcategoryController extends Controller
             }
         }
 
+        $messages = Message::all();
+
         $main_category = Category::where('slug', $category_slug)->first();
 
         $main_subcategory = Subcategory::where('slug', $subcategory_slug)->first();
@@ -81,7 +88,7 @@ class SubcategoryController extends Controller
 
         $categories = Category::orderBy('id', 'asc')->get();
 
-        return view('subcategory', compact('main_subcategory', 'categories', 'main_category', 'quantity', 'subcategory_products'));
+        return view('subcategory', compact('main_subcategory', 'categories', 'main_category', 'quantity', 'subcategory_products', 'messages'));
     }
 
     public function showSubcategoryByNameA($category_slug, $subcategory_slug)
@@ -96,6 +103,8 @@ class SubcategoryController extends Controller
             }
         }
 
+        $messages = Message::all();
+
         $main_category = Category::where('slug', $category_slug)->first();
 
         $main_subcategory = Subcategory::where('slug', $subcategory_slug)->first();
@@ -104,7 +113,7 @@ class SubcategoryController extends Controller
 
         $categories = Category::orderBy('id', 'asc')->get();
 
-        return view('subcategory', compact('main_subcategory', 'categories', 'main_category', 'quantity', 'subcategory_products'));
+        return view('subcategory', compact('main_subcategory', 'categories', 'main_category', 'quantity', 'subcategory_products', 'messages'));
     }
 
     public function showSubcategoryByNameZ($category_slug, $subcategory_slug)
@@ -119,6 +128,8 @@ class SubcategoryController extends Controller
             }
         }
 
+        $messages = Message::all();
+
         $main_category = Category::where('slug', $category_slug)->first();
 
         $main_subcategory = Subcategory::where('slug', $subcategory_slug)->first();
@@ -127,6 +138,6 @@ class SubcategoryController extends Controller
 
         $categories = Category::orderBy('id', 'asc')->get();
 
-        return view('subcategory', compact('main_subcategory', 'categories', 'main_category', 'quantity', 'subcategory_products'));
+        return view('subcategory', compact('main_subcategory', 'categories', 'main_category', 'quantity', 'subcategory_products', 'messages'));
     }
 }

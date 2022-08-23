@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Category;
+use App\Message;
 use App\Order;
 use App\Product;
 use App\Subcategory;
@@ -27,6 +28,8 @@ class ProductController extends Controller
             }
         }
 
+        $messages = Message::all();
+
         $main_category = Category::where('slug', $category_slug)->first();
 
         $main_subcategory = Subcategory::where('slug', $subcategory_slug)->first();
@@ -35,6 +38,6 @@ class ProductController extends Controller
 
         $categories = Category::orderBy('id', 'asc')->get();
 
-        return view('product', compact('main_subcategory', 'categories', 'main_category', 'main_product', 'quantity'));
+        return view('product', compact('main_subcategory', 'categories', 'main_category', 'main_product', 'quantity', 'messages'));
     }
 }
