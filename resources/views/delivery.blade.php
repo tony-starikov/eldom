@@ -4,7 +4,7 @@
 
 @section('main')
 
-    <div class="container-fluid d-none d-lg-block">
+    <div class="container-fluid">
 
         <div class="row p-2">
 
@@ -12,8 +12,8 @@
 
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a class="text-decoration-none" href="{{ route('main') }}">ГЛАВНАЯ</a></li>
-                        <li class="breadcrumb-item active"><a>ДОСТАВКА И ОПЛАТА</a></li>
+                        <li class="breadcrumb-item"><a class="text-decoration-none" href="{{ route('main') }}">{{ __('delivery.breadcrumb_main') }}</a></li>
+                        <li class="breadcrumb-item active"><a>{{ __('delivery.breadcrumb_delivery') }}</a></li>
                     </ol>
                 </nav>
 
@@ -23,7 +23,7 @@
 
         <div class="row p-2">
 
-            <div class="col-3 ps-5">
+            <div class="col-3 d-none d-lg-block ps-5">
 
                 <h5>КАТЕГОРИИ</h5>
 
@@ -44,170 +44,78 @@
 
             </div>
 
-            <div class="col-9">
+            <div class="col-12 col-lg-9">
 
-                <h5>ДОСТАВКА И ОПЛАТА</h5>
-
-                <section>
-
-                    <div class="row">
-
-                        <h6>Банковский перевод</h6>
-
-                        <p>
-                            Оплата по Платежному поручению может производиться в любом банке с указанием реквизитов получателя.
-                        </p>
-
-                        <p>
-                            Обратите внимание, что за перевод средств по платежному поручению, банк плательщика может взимать комиссию (в среднем 3% от стоимости заказа).
-                        </p>
-
-                        <p>
-                            Примерный срок перевода денег между банками составляет не более 2-3 рабочих дней.
-                        </p>
-
-                        <p>
-                            Зачисление денежных средств выполняется в течение 1 рабочего дня с момента их поступления на наш расчетный счет.
-                        </p>
-
-                        <h6>Реквизиты для безналичного расчета</h6>
-
-                        <h6>Код получателя: 3202708814</h6>
-                        <h6>Р/С получателя: 26005054413464</h6>
-                        <h6>МФО получателя: 328704</h6>
-                        <h6>Получатель: Акимов Денис Алексеевич.</h6>
-
-                        <h6>Наличный расчет</h6>
-
-                        <p>
-                            Вы можете оплатить заказ наличными средствами непосредственно в момент получения товара, если выбранный Вами способ заказа - самовывоз, либо доставка "Новой Почтой" по Украине или из офиса по адресу: Староконный рынок Павильон ПП-40 в рабочии дни с 9.00 до 16.00 после соглосования заказа с менеджером.
-                        </p>
-
-                        <p>
-                            Так как ассортимент товара очень широк, мы не можем весь его разместить на витринах выставки. Поэтому, просим согласовывать Ваш визит заранее.
-                        </p>
-
-                        <h6>Бесплатная доставка по Одессе</h6>
-
-                        <p>
-                            Для создания более благоприятных и комфортных условий приобретения товаров в нашем интернет-магазине мы представляем Вам бонус:
-                        </p>
-
-                        <p>
-                            - если сумма Вашей покупки превышает или равна 1500 грн. доставка осуществляется бесплатно.
-                        </p>
-
-                        <h6>Доставка Новой Потой по все Украине</h6>
-
-                        <p>
-                            С помощью доставки "Новой почтой" вы можете получить товар даже в самых отдаленных уголках нашей страны.
-                        </p>
-
-                        <p>
-                            В среднем доставка занимает 1-3 дня, во время заказа наши менеджеры согласуют с вами дату доставки перед отправкой товара.
-                        </p>
-
-                        <p>
-                            Стоимость доставки товаров Новой почтой в пункт самовывоза составляет 35 грн.
-                        </p>
-
-                    </div>
-
-                </section>
-
-            </div>
-
-        </div>
-
-    </div>
-
-{{--    /////////////////////////////--}}
-
-    <div class="container-fluid d-block d-lg-none">
-
-        <div class="row p-2">
-
-            <div class="col-12">
-
-                <nav aria-label="breadcrumb">
-                    <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a class="text-decoration-none" href="{{ route('main') }}">ГЛАВНАЯ</a></li>
-                        <li class="breadcrumb-item active"><a>ДОСТАВКА И ОПЛАТА</a></li>
-                    </ol>
-                </nav>
-
-            </div>
-
-        </div>
-
-        <div class="row p-2">
-
-            <div class="col-12">
-
-                <h5>ДОСТАВКА И ОПЛАТА</h5>
+                <h5>{{ __('delivery.breadcrumb_delivery') }}</h5>
 
                 <section>
 
                     <div class="row">
 
-                        <h6>Банковский перевод</h6>
+                        <div class="col-12 col-md-6 mb-3">
+                            <div class="card h-100">
+                                <div class="card-header">
+                                    <h6 class="text-uppercase">{{ __('delivery.bank_transfer') }}</h6>
+                                </div>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">{{ __('delivery.bank_transfer_paragraph_1') }}</li>
+                                    <li class="list-group-item">{{ __('delivery.bank_transfer_paragraph_2') }}</li>
+                                    <li class="list-group-item">{{ __('delivery.bank_transfer_paragraph_3') }}</li>
+                                    <li class="list-group-item">{{ __('delivery.bank_transfer_paragraph_4') }}</li>
+                                </ul>
+                            </div>
+                        </div>
 
-                        <p>
-                            Оплата по Платежному поручению может производиться в любом банке с указанием реквизитов получателя.
-                        </p>
+                        <div class="col-12 col-md-6 mb-3">
+                            <div class="card h-100">
+                                <div class="card-header">
+                                    <h6 class="text-uppercase">{{ __('delivery.requisites') }}</h6>
+                                </div>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">{{ __('delivery.requisites_paragraph_1') }}</li>
+                                    <li class="list-group-item">{{ __('delivery.requisites_paragraph_2') }}</li>
+                                    <li class="list-group-item">{{ __('delivery.requisites_paragraph_3') }}</li>
+                                    <li class="list-group-item">{{ __('delivery.requisites_paragraph_4') }}</li>
+                                </ul>
+                            </div>
+                        </div>
 
-                        <p>
-                            Обратите внимание, что за перевод средств по платежному поручению, банк плательщика может взимать комиссию (в среднем 3% от стоимости заказа).
-                        </p>
+                        <div class="col-12 col-md-6 mb-3">
+                            <div class="card h-100">
+                                <div class="card-header">
+                                    <h6 class="text-uppercase">{{ __('delivery.cash') }}</h6>
+                                </div>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">{{ __('delivery.cash_paragraph_1') }}</li>
+                                    <li class="list-group-item">{{ __('delivery.cash_paragraph_2') }}</li>
+                                </ul>
+                            </div>
+                        </div>
 
-                        <p>
-                            Примерный срок перевода денег между банками составляет не более 2-3 рабочих дней.
-                        </p>
+                        <div class="col-12 col-md-6 mb-3">
+                            <div class="card h-100">
+                                <div class="card-header">
+                                    <h6 class="text-uppercase">{{ __('delivery.free_delivery') }}</h6>
+                                </div>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">{{ __('delivery.free_delivery_paragraph_1') }}</li>
+                                    <li class="list-group-item">{{ __('delivery.free_delivery_paragraph_2') }}</li>
+                                </ul>
+                            </div>
+                        </div>
 
-                        <p>
-                            Зачисление денежных средств выполняется в течение 1 рабочего дня с момента их поступления на наш расчетный счет.
-                        </p>
-
-                        <h6>Реквизиты для безналичного расчета</h6>
-
-                        <h6>Код получателя: 3202708814</h6>
-                        <h6>Р/С получателя: 26005054413464</h6>
-                        <h6>МФО получателя: 328704</h6>
-                        <h6>Получатель: Акимов Денис Алексеевич.</h6>
-
-                        <h6>Наличный расчет</h6>
-
-                        <p>
-                            Вы можете оплатить заказ наличными средствами непосредственно в момент получения товара, если выбранный Вами способ заказа - самовывоз, либо доставка "Новой Почтой" по Украине или из офиса по адресу: Староконный рынок Павильон ПП-40 в рабочии дни с 9.00 до 16.00 после соглосования заказа с менеджером.
-                        </p>
-
-                        <p>
-                            Так как ассортимент товара очень широк, мы не можем весь его разместить на витринах выставки. Поэтому, просим согласовывать Ваш визит заранее.
-                        </p>
-
-                        <h6>Бесплатная доставка по Одессе</h6>
-
-                        <p>
-                            Для создания более благоприятных и комфортных условий приобретения товаров в нашем интернет-магазине мы представляем Вам бонус:
-                        </p>
-
-                        <p>
-                            - если сумма Вашей покупки превышает или равна 1500 грн. доставка осуществляется бесплатно.
-                        </p>
-
-                        <h6>Доставка Новой Потой по все Украине</h6>
-
-                        <p>
-                            С помощью доставки "Новой почтой" вы можете получить товар даже в самых отдаленных уголках нашей страны.
-                        </p>
-
-                        <p>
-                            В среднем доставка занимает 1-3 дня, во время заказа наши менеджеры согласуют с вами дату доставки перед отправкой товара.
-                        </p>
-
-                        <p>
-                            Стоимость доставки товаров Новой почтой в пункт самовывоза составляет 35 грн.
-                        </p>
+                        <div class="col-12 col-md-6 mb-3">
+                            <div class="card h-100">
+                                <div class="card-header">
+                                    <h6 class="text-uppercase">{{ __('delivery.nova_delivery') }}</h6>
+                                </div>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">{{ __('delivery.nova_delivery_paragraph_1') }}</li>
+                                    <li class="list-group-item">{{ __('delivery.nova_delivery_paragraph_2') }}</li>
+                                    <li class="list-group-item">{{ __('delivery.nova_delivery_paragraph_3') }}</li>
+                                </ul>
+                            </div>
+                        </div>
 
                     </div>
 

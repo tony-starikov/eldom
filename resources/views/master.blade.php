@@ -153,15 +153,15 @@
                 </div>
 
                 <div class="col-12 col-xl-4 order-3 order-xl-2 p-0">
-                    <ul class="nav justify-content-center">
+                    <ul class="nav justify-content-between justify-content-sm-evenly">
                         <li class="nav-item">
-                            <a class="nav-link text-secondary fw-bold" href="{{ route('main') }}">{{ __('master.main_menu') }}</a>
+                            <a class="nav-link text-secondary fw-bold p-1" href="{{ route('main') }}">{{ __('master.main_menu') }}</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-secondary fw-bold" href="{{ route('delivery') }}">{{ __('master.delivery_menu') }}</a>
+                            <a class="nav-link text-secondary fw-bold p-1" href="{{ route('delivery') }}">{{ __('master.delivery_menu') }}</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-secondary fw-bold" href="{{ route('contacts') }}">{{ __('master.contacts_menu') }}</a>
+                            <a class="nav-link text-secondary fw-bold p-1" href="{{ route('contacts') }}">{{ __('master.contacts_menu') }}</a>
                         </li>
 {{--                        <li class="nav-item">--}}
 {{--                            <a onclick="myOpenNav()" class="nav-link text-dark" href="#">{{ __('master.catalogue') }}</a>--}}
@@ -173,7 +173,7 @@
                     <ul class="nav justify-content-end">
 
                         <li class="nav-item dropdown">
-                            <a class="nav-link text-secondary dropdown-toggle fw-bold" id="navbarDropdownw2" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <a class="nav-link text-secondary dropdown-toggle fw-bold p-1 p-sm-2" id="navbarDropdownw2" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 <span><i class="fas fa-phone"></i></span>
                                 <span class="clearfix d-none d-sm-inline-block">+38 (048) 772-24-08</span>
                             </a>
@@ -197,7 +197,7 @@
                         </li>
 
                         <li class="nav-item dropdown">
-                            <a class="nav-link text-secondary dropdown-toggle fw-bold" id="navbarDropdown3" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <a class="nav-link text-secondary dropdown-toggle fw-bold p-1 p-sm-2" id="navbarDropdown3" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 @if(App::getLocale() == 'ua') UA @else RU @endif
                             </a>
                             <ul class="dropdown-menu dropdown-menu-end w-50" aria-labelledby="navbarDropdown3">
@@ -248,7 +248,7 @@
 
                 </div>
 
-                <div class="order-1 order-md-2 col-12 col-md-6 mb-3 mb-md-0">
+                <div class="order-1 order-md-2 col-12 col-md-6 px-0 px-sm-1 mb-2 mb-sm-3 mb-md-0">
                     <form action="{{ route('search') }}" method="post">
                         @csrf
                         <div class="input-group">
@@ -264,7 +264,7 @@
                     <ul class="nav justify-content-end">
 
                         <li class="nav-item dropdown">
-                            <a class="nav-link text-secondary dropdown-toggle fw-bold" id="navbarDropdown3" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <a class="nav-link text-secondary dropdown-toggle fw-bold p-1 p-sm-2" id="navbarDropdown3" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 <i class="fas fa-lg fa-user"></i>
                                 <span class="clearfix d-none d-xl-inline-block">{{ __('master.cabinet') }}</span>
                             </a>
@@ -295,7 +295,7 @@
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link fw-bold" href="{{ route('basket') }}">
+                            <a class="nav-link fw-bold p-1 p-sm-2" href="{{ route('basket') }}">
                                 @if($quantity)<span class="badge badge-pill bg-primary">{{ $quantity }}</span>@endif
                                 <span><i class="fas fa-lg fa-shopping-cart"></i></span>
                                 <span class="clearfix d-none d-xl-inline-block">{{ __('master.basket') }}</span>
@@ -385,6 +385,5 @@
 
 <!-- Option 1: Bootstrap Bundle with Popper -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </body>
 </html>

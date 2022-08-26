@@ -131,7 +131,7 @@
                                         </h4>
                                         <form class="d-inline-block" style="z-index: 2000;" action="{{ route('basketAdd', $product->id) }}" method="POST">
                                             <button type="submit" class="btn btn-primary">
-                                                <span class="d-inline d-sm-none d-md-inline">В КОРЗИНУ</span> <span><i class="fas fa-shopping-cart"></i></span>
+                                                <span class="d-inline d-sm-none d-md-inline">{{ __('master.product_basket') }}</span> <span><i class="fas fa-shopping-cart"></i></span>
                                             </button>
                                             @csrf
                                         </form>

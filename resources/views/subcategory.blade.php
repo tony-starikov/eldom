@@ -12,7 +12,7 @@
 
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a class="text-decoration-none" href="{{ route('main') }}">ГЛАВНАЯ</a></li>
+                        <li class="breadcrumb-item"><a class="text-decoration-none" href="{{ route('main') }}">{{ __('subcategory.breadcrumb_main') }}</a></li>
                         <li class="breadcrumb-item"><a class="text-decoration-none" href="{{ route('showCategory', $main_category->slug) }}">{{ mb_strtoupper($main_category->name) }}</a></li>
                         <li class="breadcrumb-item active"><a>{{ mb_strtoupper($main_subcategory->name) }}</a></li>
                     </ol>
@@ -24,9 +24,9 @@
 
         <div class="row p-2">
 
-            <div class="col-3 d-none d-lg-block ps-5 ps-lg-1 ps-xl-3">
+            <div class="col-3 d-none d-lg-block ps-5">
 
-                <h5>КАТЕГОРИИ</h5>
+                <h5>{{ __('subcategory.categories') }}</h5>
 
                 <ul class="list-group">
 
@@ -72,11 +72,11 @@
 
                             <nav style="--bs-breadcrumb-divider: '';" aria-label="breadcrumb">
                                 <ol class="breadcrumb">
-                                    <li class="breadcrumb-item"><h5>ФИЛЬТРЫ:</h5></li>
-                                    <li class="breadcrumb-item"><a class="text-decoration-none" href="{{ route('showSubcategoryByPriceUp', [$main_category->slug, $main_subcategory->slug]) }}"><h6 class="mt-1">ЦЕНА <i class="fas fa-chevron-up"></i></h6></a></li>
-                                    <li class="breadcrumb-item"><a class="text-decoration-none" href="{{ route('showSubcategoryByPriceDown', [$main_category->slug, $main_subcategory->slug]) }}"><h6 class="mt-1">ЦЕНА <i class="fas fa-chevron-down"></i></h6></a></li>
-                                    <li class="breadcrumb-item"><a class="text-decoration-none" href="{{ route('showSubcategoryByNameA', [$main_category->slug, $main_subcategory->slug]) }}"><h6 class="mt-1">НАЗВАНИЕ А-Я</h6></a></li>
-                                    <li class="breadcrumb-item"><a class="text-decoration-none" href="{{ route('showSubcategoryByNameZ', [$main_category->slug, $main_subcategory->slug]) }}"><h6 class="mt-1">НАЗВАНИЕ Я-А</h6></a></li>
+                                    <li class="breadcrumb-item"><h5>{{ __('subcategory.filters') }}</h5></li>
+                                    <li class="breadcrumb-item"><a class="text-decoration-none" href="{{ route('showSubcategoryByPriceUp', [$main_category->slug, $main_subcategory->slug]) }}"><h6 class="mt-1">{{ __('subcategory.filters_price') }} <i class="fas fa-chevron-up"></i></h6></a></li>
+                                    <li class="breadcrumb-item"><a class="text-decoration-none" href="{{ route('showSubcategoryByPriceDown', [$main_category->slug, $main_subcategory->slug]) }}"><h6 class="mt-1">{{ __('subcategory.filters_price') }} <i class="fas fa-chevron-down"></i></h6></a></li>
+                                    <li class="breadcrumb-item"><a class="text-decoration-none" href="{{ route('showSubcategoryByNameA', [$main_category->slug, $main_subcategory->slug]) }}"><h6 class="mt-1">{{ __('subcategory.filters_name') }} А-Я</h6></a></li>
+                                    <li class="breadcrumb-item"><a class="text-decoration-none" href="{{ route('showSubcategoryByNameZ', [$main_category->slug, $main_subcategory->slug]) }}"><h6 class="mt-1">{{ __('subcategory.filters_name') }} Я-А</h6></a></li>
                                 </ol>
                             </nav>
 
@@ -118,7 +118,7 @@
                                             </h4>
                                             <form class="d-inline-block" style="z-index: 2000;" action="{{ route('basketAdd', $product->id) }}" method="POST">
                                                 <button type="submit" class="btn btn-primary">
-                                                    <span class="d-inline d-sm-none d-md-inline">В КОРЗИНУ</span> <span><i class="fas fa-shopping-cart"></i></span>
+                                                    <span class="d-inline d-sm-none d-md-inline">{{ __('subcategory.product_basket') }}</span> <span><i class="fas fa-shopping-cart"></i></span>
                                                 </button>
                                                 @csrf
                                             </form>

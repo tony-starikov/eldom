@@ -12,7 +12,7 @@
 
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a class="text-decoration-none" href="{{ route('main') }}">ГЛАВНАЯ</a></li>
+                        <li class="breadcrumb-item"><a class="text-decoration-none" href="{{ route('main') }}">{{ __('category.breadcrumb_main') }}</a></li>
                         <li class="breadcrumb-item active"><a>{{ mb_strtoupper($main_category->name) }}</a></li>
                     </ol>
                 </nav>
@@ -23,9 +23,9 @@
 
         <div class="row p-2">
 
-            <div class="col-3 d-none d-lg-block ps-5 ps-lg-1 ps-xl-3">
+            <div class="col-3 d-none d-lg-block ps-5">
 
-                <h5>КАТЕГОРИИ</h5>
+                <h5>{{ __('category.categories') }}</h5>
 
                 <ul class="list-group">
 
@@ -71,11 +71,11 @@
 
                             <nav style="--bs-breadcrumb-divider: '';" aria-label="breadcrumb">
                                 <ol class="breadcrumb">
-                                    <li class="breadcrumb-item"><h5>ФИЛЬТРЫ:</h5></li>
-                                    <li class="breadcrumb-item"><a class="text-decoration-none" href="{{ route('showCategoryByPriceUp', $main_category->slug) }}"><h6 class="mt-1">ЦЕНА <i class="fas fa-chevron-up"></i></h6></a></li>
-                                    <li class="breadcrumb-item"><a class="text-decoration-none" href="{{ route('showCategoryByPriceDown', $main_category->slug) }}"><h6 class="mt-1">ЦЕНА <i class="fas fa-chevron-down"></i></h6></a></li>
-                                    <li class="breadcrumb-item"><a class="text-decoration-none" href="{{ route('showCategoryByNameA', $main_category->slug) }}"><h6 class="mt-1">НАЗВАНИЕ А-Я</h6></a></li>
-                                    <li class="breadcrumb-item"><a class="text-decoration-none" href="{{ route('showCategoryByNameZ', $main_category->slug) }}"><h6 class="mt-1">НАЗВАНИЕ Я-А</h6></a></li>
+                                    <li class="breadcrumb-item"><h5>{{ __('category.filters') }}</h5></li>
+                                    <li class="breadcrumb-item"><a class="text-decoration-none" href="{{ route('showCategoryByPriceUp', $main_category->slug) }}"><h6 class="mt-1">{{ __('category.filters_price') }} <i class="fas fa-chevron-up"></i></h6></a></li>
+                                    <li class="breadcrumb-item"><a class="text-decoration-none" href="{{ route('showCategoryByPriceDown', $main_category->slug) }}"><h6 class="mt-1">{{ __('category.filters_price') }} <i class="fas fa-chevron-down"></i></h6></a></li>
+                                    <li class="breadcrumb-item"><a class="text-decoration-none" href="{{ route('showCategoryByNameA', $main_category->slug) }}"><h6 class="mt-1">{{ __('category.filters_name') }} А-Я</h6></a></li>
+                                    <li class="breadcrumb-item"><a class="text-decoration-none" href="{{ route('showCategoryByNameZ', $main_category->slug) }}"><h6 class="mt-1">{{ __('category.filters_name') }} Я-А</h6></a></li>
                                 </ol>
                             </nav>
 
@@ -144,7 +144,7 @@
                                                         </h4>
                                                         <form class="d-inline-block" style="z-index: 2000;" action="{{ route('basketAdd', $product->id) }}" method="POST">
                                                             <button type="submit" class="btn btn-primary">
-                                                                <span class="d-inline d-sm-none d-md-inline">В КОРЗИНУ</span> <span><i class="fas fa-shopping-cart"></i></span>
+                                                                <span class="d-inline d-sm-none d-md-inline">{{ __('category.product_basket') }}</span> <span><i class="fas fa-shopping-cart"></i></span>
                                                             </button>
                                                             @csrf
                                                         </form>
