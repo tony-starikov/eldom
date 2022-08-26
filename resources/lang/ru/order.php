@@ -4,6 +4,7 @@ return [
 
     'breadcrumb_main' => 'ГЛАВНАЯ',
     'breadcrumb_order' => 'ПОДТВЕРДИТЕ ЗАКАЗ',
+    'categories' => 'КАТЕГОРИИ',
     'total_cost' => 'ОБЩАЯ СТОИМОСТЬ: ',
 
     'contact_details' => 'Контактные данные',

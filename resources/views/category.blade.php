@@ -13,7 +13,7 @@
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a class="text-decoration-none" href="{{ route('main') }}">{{ __('category.breadcrumb_main') }}</a></li>
-                        <li class="breadcrumb-item active"><a>{{ mb_strtoupper($main_category->name) }}</a></li>
+                        <li class="breadcrumb-item active"><a>{{ mb_strtoupper($main_category->__('name')) }}</a></li>
                     </ol>
                 </nav>
 
@@ -33,7 +33,7 @@
 
                         <li class="list-group-item border-0">
 
-                            <a class="text-decoration-none @if($main_category->id == $category->id) text-primary @else text-dark @endif " href="{{ route('showCategory', $category->slug) }}">{{ mb_strtoupper($category->name) }}</a>
+                            <a class="text-decoration-none @if($main_category->id == $category->id) text-primary @else text-dark @endif " href="{{ route('showCategory', $category->slug) }}">{{ mb_strtoupper($category->__('name')) }}</a>
 
                             @if($main_category->id == $category->id)
 

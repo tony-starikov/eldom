@@ -239,7 +239,7 @@
                             <ul class="dropdown-menu">
                                 @foreach($categories as $category)
                                     <li>
-                                        <a class="dropdown-item text-secondary fw-bold my-2" href="{{ route('showCategory', $category->slug) }}">{{ mb_strtoupper($category->name) }}</a>
+                                        <a class="dropdown-item text-secondary fw-bold my-2" href="{{ route('showCategory', $category->slug) }}">{{ mb_strtoupper($category->__('name')) }}</a>
                                     </li>
                                 @endforeach
                             </ul>

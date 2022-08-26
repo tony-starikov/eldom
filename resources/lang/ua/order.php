@@ -4,6 +4,7 @@ return [
 
     'breadcrumb_main' => 'ГОЛОВНА',
     'breadcrumb_order' => 'ПІДТВЕРДІТЬ ЗАМОВЛЕННЯ',
+    'categories' => 'КАТЕГОРІЇ',
     'total_cost' => 'ЗАГАЛЬНА ВАРТІСТЬ: ',
 
     'contact_details' => 'Контактні дані',

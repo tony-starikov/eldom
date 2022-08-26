@@ -25,7 +25,7 @@
 
             <div class="col-3 d-none d-lg-block ps-5">
 
-                <h5>КАТЕГОРИИ</h5>
+                <h5>{{ __('order.categories') }}</h5>
 
                 <ul class="list-group">
 
@@ -33,7 +33,7 @@
 
                         <li class="list-group-item border-0">
 
-                            <a class="text-decoration-none text-dark" href="{{ route('showCategory', $category->slug) }}">{{ mb_strtoupper($category->name) }}</a>
+                            <a class="text-decoration-none text-dark" href="{{ route('showCategory', $category->slug) }}">{{ mb_strtoupper($category->__('name')) }}</a>
 
                         </li>
 
