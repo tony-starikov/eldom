@@ -2,18 +2,15 @@
 
 namespace App;
 
+use App\Traits\Translatable;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 class Subcategory extends Model
 {
-    protected $fillable = [
-        'id',
-        'category_id',
-        'name',
-        'slug',
-        'title',
-        'description',
-    ];
+    use HasFactory, Translatable;
+
+    protected $guarded = [];
 
     public function category()
     {

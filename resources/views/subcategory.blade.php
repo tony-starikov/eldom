@@ -14,7 +14,7 @@
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a class="text-decoration-none" href="{{ route('main') }}">{{ __('subcategory.breadcrumb_main') }}</a></li>
                         <li class="breadcrumb-item"><a class="text-decoration-none" href="{{ route('showCategory', $main_category->slug) }}">{{ mb_strtoupper($main_category->__('name')) }}</a></li>
-                        <li class="breadcrumb-item active"><a>{{ mb_strtoupper($main_subcategory->name) }}</a></li>
+                        <li class="breadcrumb-item active"><a>{{ mb_strtoupper($main_subcategory->__('name')) }}</a></li>
                     </ol>
                 </nav>
 
@@ -44,7 +44,7 @@
 
                                         <li class="list-group-item border-0">
                                             <a class="text-decoration-none @if($main_subcategory->id == $subcategory->id) text-primary @else text-dark @endif " href="{{ route('showSubcategory', [$category->slug, $subcategory->slug]) }}">
-                                                | {{ mb_strtoupper($subcategory->name) }}
+                                                | {{ mb_strtoupper($subcategory->__('name')) }}
                                             </a>
                                         </li>
 
@@ -83,7 +83,7 @@
                         </div>
                     </div>
 
-                    <h5 class="px-2">{{ mb_strtoupper($main_subcategory->name) }}</h5>
+                    <h5 class="px-2">{{ mb_strtoupper($main_subcategory->__('name')) }}</h5>
 
                     <div class="row">
 

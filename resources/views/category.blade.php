@@ -43,7 +43,7 @@
 
                                         <li class="list-group-item border-0">
                                             <a class="text-decoration-none text-dark" href="{{ route('showSubcategory', [$category->slug, $subcategory->slug]) }}">
-                                                | {{ mb_strtoupper($subcategory->name) }}
+                                                | {{ mb_strtoupper($subcategory->__('name')) }}
                                             </a>
                                         </li>
 
@@ -84,6 +84,8 @@
 
                     <div class="row">
 
+{{--                        <h5 class="px-2">{{ mb_strtoupper($main_category->__('name')) }}</h5>--}}
+
                         @foreach($main_subcategories as $subcategory)
 
                             <div class="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-4">
@@ -92,7 +94,7 @@
 
                                     <a class="text-decoration-none text-dark" href="{{ route('showSubcategory', [$main_category->slug, $subcategory->slug]) }}">
                                         <div class="card-body text-center">
-                                            <h5 class="card-title">{{ mb_strtoupper($subcategory->name) }}</h5>
+                                            <h5 class="card-title">{{ mb_strtoupper($subcategory->__('name')) }}</h5>
                                         </div>
                                     </a>
 
