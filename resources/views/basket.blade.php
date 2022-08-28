@@ -68,7 +68,7 @@
                                     <div class="card h-100">
                                         <img src="{{ $product->image }}" class="card-img-top img-fluid p-3" alt="...">
                                         <ul class="list-group list-group-flush">
-                                            <li class="list-group-item">{{ mb_strtoupper($product->name) }}</li>
+                                            <li class="list-group-item">{{ mb_strtoupper($product->__('name')) }}</li>
                                             <li class="list-group-item fw-bold">{{ __('basket.price') }}{{ $product->price }} грн</li>
                                             <li class="list-group-item fw-bold">{{ __('basket.total') }}{{ $product->getPriceForCount() }} грн</li>
                                         </ul>

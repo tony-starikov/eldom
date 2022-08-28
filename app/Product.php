@@ -2,29 +2,15 @@
 
 namespace App;
 
+use App\Traits\Translatable;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 class Product extends Model
 {
-    protected $fillable = [
-        'id',
-        'subcategory_id',
-        'manufacturer_id',
-        'name',
-        'code',
-        'slug',
-        'title',
-        'description',
-        'small_description',
-        'image',
-        'price',
-        'old_price',
-        'status',
-        'new',
-        'sale',
-        'hit',
-        'recommend',
-    ];
+    use HasFactory, Translatable;
+
+    protected $guarded = [];
 
     public function subcategory()
     {

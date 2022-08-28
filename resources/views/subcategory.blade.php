@@ -109,7 +109,7 @@
 
                                         <div class="card-body text-center pb-0 px-1">
                                             <h6 class="card-title text-secondary fw-bold">
-                                                {{ mb_strtoupper($product->name) }}
+                                                {{ mb_strtoupper($product->__('name')) }}
                                             </h6>
                                         </div>
                                         <div class="card-footer d-flex justify-content-between">

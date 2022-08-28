@@ -15,7 +15,7 @@
                         <li class="breadcrumb-item"><a class="text-decoration-none" href="{{ route('main') }}">{{ __('product.breadcrumb_main') }}</a></li>
                         <li class="breadcrumb-item"><a class="text-decoration-none" href="{{ route('showCategory', $main_category->slug) }}">{{ mb_strtoupper($main_category->__('name')) }}</a></li>
                         <li class="breadcrumb-item"><a class="text-decoration-none" href="{{ route('showSubcategory', [$main_category->slug, $main_subcategory->slug]) }}">{{ mb_strtoupper($main_subcategory->__('name')) }}</a></li>
-                        <li class="breadcrumb-item active"><a>{{ mb_strtoupper($main_product->name) }}</a></li>
+                        <li class="breadcrumb-item active"><a>{{ mb_strtoupper($main_product->__('name')) }}</a></li>
                     </ol>
                 </nav>
 
@@ -65,11 +65,11 @@
 
             <div class="col-12 col-lg-9">
 
-                <h5>{{ mb_strtoupper($main_product->name) }}</h5>
+                <h5>{{ mb_strtoupper($main_product->__('name')) }}</h5>
 
                     <div class="row">
 
-                        <div class="col-6 text-center"><img src="{{ $main_product->image }}" class="img-fluid w-75 my-5" alt="{{ $main_product->name }}"></div>
+                        <div class="col-6 text-center"><img src="{{ $main_product->image }}" class="img-fluid w-75 my-5" alt="{{ $main_product->__('name') }}"></div>
 
                         <div class="col-6">
                             <hr>
@@ -80,8 +80,6 @@
                             </h3>
                             <h6>{{ __('product.vendor_code') }} {{ $main_product->code }}</h6>
                             <h6 class="text-primary">@if($main_product->status == 1) {{ __('product.in_stock_true') }} @else {{ __('product.in_stock_false') }} @endif</h6>
-                            <hr>
-                            <p class="lh-base">{{ $main_product->small_description }}</p>
                             <hr>
                             <h3 class="text-primary">{{ $main_product->price }} грн</h3>
                             <form action="{{ route('basketAdd', $main_product->id) }}" method="POST">
@@ -103,7 +101,7 @@
 
                             <h4>{{ __('product.description') }}</h4>
 
-                            <h5 class="fw-normal lh-base w-75">{{ $main_product->description }}</h5>
+                            <h5 class="fw-normal lh-base w-75">{{ $main_product->__('description') }}</h5>
 
                             <hr>
 

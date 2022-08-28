@@ -1,4 +1,4 @@
-@extends('user.master')
+@extends('master')
 
 @section('title', 'Заказы')
 
