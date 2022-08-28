@@ -15,8 +15,9 @@ class CreateFeaturesTable extends Migration
     {
         Schema::create('features', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->integer('product_id')->nullable();
-            $table->string('feature')->nullable();
+            $table->integer('product_id');
+            $table->string('feature_ua');
+            $table->string('feature_ru');
             $table->timestamps();
         });
     }

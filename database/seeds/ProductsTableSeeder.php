@@ -1922,7 +1922,7 @@ class ProductsTableSeeder extends Seeder
                 'manufacturer_id' => 1,
                 'name_ru' => mb_strtolower('Пресс гидравлический ручной ПГР-300'),
                 'name_ua' => mb_strtolower('Пресс гидравлический ручной ПГР-300'),
-                'code' => 'Артикул: инструмент-13',
+                'code' => 'инструмент-13',
                 'slug' => 'press-gidravlicheskij-ruchnoj-pgr-300-detail',
                 'title' => '',
                 'description_ru' => 'Механическое соединение типа кабельная жила-гильза или кабельная жила-наконечник с помощью механической опрессовки.',

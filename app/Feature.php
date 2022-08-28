@@ -2,15 +2,15 @@
 
 namespace App;
 
+use App\Traits\Translatable;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 class Feature extends Model
 {
-    protected $fillable = [
-        'id',
-        'product_id',
-        'feature',
-    ];
+    use HasFactory, Translatable;
+
+    protected $guarded = [];
 
     public function product()
     {

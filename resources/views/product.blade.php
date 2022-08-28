@@ -113,7 +113,7 @@
 
                                     <li class="list-group-item border-0">
                                         <h6 class="m-0 p-0">
-                                            {{ $feature->feature }}
+                                            {{ $feature->__('feature') }}
                                         </h6>
                                     </li>
 
