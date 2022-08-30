@@ -2,14 +2,13 @@
 
 namespace App;
 
+use App\Traits\Translatable;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 class Page extends Model
 {
-    protected $fillable = [
-        'id',
-        'name',
-        'title',
-        'description',
-    ];
+    use HasFactory, Translatable;
+
+    protected $guarded = [];
 }

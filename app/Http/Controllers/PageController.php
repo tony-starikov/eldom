@@ -90,7 +90,7 @@ class PageController extends Controller
 
         $search_string = mb_strtolower($search_string);
 
-        $products = Product::where('name', 'LIKE', "%{$search_string}%")->orderBy('name')->get();
+        $products = Product::where('name_ua', 'LIKE', "%{$search_string}%")->orWhere('name_ru', 'LIKE', "%{$search_string}%")->orderBy('name')->get();
 
         $quantity = null;
 
@@ -106,12 +106,12 @@ class PageController extends Controller
 
         $messages = Message::all();
 
-//        $page_info = Page::where('name', 'contacts')->first();
+        $page_info = Page::where('name', 'search')->first();
 
         $categories = Category::orderBy('id', 'asc')->get();
 
 
 
-        return view('search', compact( 'categories', 'quantity', 'products', 'messages'));
+        return view('search', compact( 'categories', 'quantity', 'products', 'messages', 'page_info'));
     }
 }

@@ -1,6 +1,8 @@
 @extends('master')
 
-@section('title', 'Результаты поиска')
+@section('title', $page_info->__('title'))
+
+@section('description', $page_info->description)
 
 @section('main')
 

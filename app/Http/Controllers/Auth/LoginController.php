@@ -6,6 +6,7 @@ use App\Category;
 use App\Http\Controllers\Controller;
 use App\Message;
 use App\Order;
+use App\Page;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Support\Facades\Auth;
@@ -66,7 +67,9 @@ class LoginController extends Controller
 
         $categories = Category::orderBy('id', 'asc')->get();
 
-        return view('auth.login', compact('quantity', 'categories', 'messages'));
+        $page_info = Page::where('name', 'login')->first();
+
+        return view('auth.login', compact('quantity', 'categories', 'messages', 'page_info'));
     }
 
 }

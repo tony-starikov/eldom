@@ -1,6 +1,8 @@
 @extends('master')
 
-@section('title', 'Вхід')
+@section('title', $page_info->__('title'))
+
+@section('description', $page_info->description)
 
 @section('main')
     <!--Main layout-->
@@ -14,12 +16,12 @@
                             @csrf
                             <div class="form-group mb-3">
                                 <label for="email">{{ __('login.email') }}</label>
-                                <input name="email" type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="{{ __('login.email_placeholder') }}">
+                                <input name="email" type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="{{ __('login.email_placeholder') }}" required>
                             </div>
 
                             <div class="form-group mb-3">
                                 <label for="password">{{ __('login.password') }}</label>
-                                <input name="password" type="password" class="form-control" id="password" placeholder="{{ __('login.password_placeholder') }}">
+                                <input name="password" type="password" class="form-control" id="password" placeholder="{{ __('login.password_placeholder') }}" required>
                             </div>
 
                             <button type="submit" class="btn btn-primary m-3">{{ __('login.button') }}</button>

@@ -1,6 +1,8 @@
 @extends('master')
 
-@section('title', $main_category->name)
+@section('title', mb_strtoupper($main_category->__('name')).' | Electro-dom')
+
+@section('description', 'Заказать электротехнику и электрику в интернет-магазине Electro-dom; Широкий выбор; Лучшие цены в Одессе; Доставка по Украине;')
 
 @section('main')
 

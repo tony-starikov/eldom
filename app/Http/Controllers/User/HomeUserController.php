@@ -6,6 +6,7 @@ use App\Category;
 use App\Http\Controllers\Controller;
 use App\Message;
 use App\Order;
+use App\Page;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -25,11 +26,13 @@ class HomeUserController extends Controller
 
         $messages = Message::all();
 
+        $page_info = Page::where('name', 'cabinet')->first();
+
         $categories = Category::orderBy('id', 'asc')->get();
 
         $orders = Auth::user()->orders()->where('status', 1)->paginate(20);
 
-        return view('user.main', compact('orders', 'quantity', 'messages', 'categories'));
+        return view('user.main', compact('orders', 'quantity', 'messages', 'categories', 'page_info'));
     }
 
     public function show($orderId)
@@ -46,12 +49,14 @@ class HomeUserController extends Controller
 
         $messages = Message::all();
 
+        $page_info = Page::where('name', 'cabinet')->first();
+
         $categories = Category::orderBy('id', 'asc')->get();
 
         $order = Order::where('id', $orderId)->first();
         if (!Auth::user()->orders->contains($order)) {
             return back();
         }
-        return view('user.show', compact('order', 'quantity', 'messages', 'categories'));
+        return view('user.show', compact('order', 'quantity', 'messages', 'categories', 'page_info'));
     }
 }
