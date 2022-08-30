@@ -3,12 +3,14 @@
 namespace App\Http\Controllers;
 
 use App\Category;
+use App\Mail\SuccessOrderMail;
 use App\Message;
 use App\Order;
 use App\Page;
 use App\Product;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Mail;
 
 class BasketController extends Controller
 {
@@ -127,7 +129,14 @@ class BasketController extends Controller
         );
 
         if ($orderResult) {
-            session()->flash('message', 'Заказ оформлен успешно!');
+            Mail::to($request->email)->send(new SuccessOrderMail());
+
+            if (Mail::failures()) {
+                session()->flash('message', 'Ошибка при отправке email!');
+            }else{
+                session()->flash('message', 'Заказ оформлен успешно!');
+            }
+
         } else {
             session()->flash('message', 'Ошибка при заказе!');
         }
