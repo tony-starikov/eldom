@@ -31,8 +31,8 @@
                         @foreach($products as $product)
                             <tr>
                                 <th scope="row">{{ $product->id }}</th>
-                                <td>{{ mb_strtoupper($product->subcategory->name) }}</td>
-                                <td>{{ mb_strtoupper($product->name) }}</td>
+                                <td>{{ mb_strtoupper($product->subcategory->name_ru) }}</td>
+                                <td>{{ mb_strtoupper($product->name_ru) }}</td>
                                 <td>@if($product->new == 1) YES @endif</td>
                                 <td>@if($product->sale == 1) YES @endif</td>
                                 <td>@if($product->hit == 1) YES @endif</td>

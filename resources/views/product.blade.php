@@ -71,7 +71,9 @@
 
                     <div class="row">
 
-                        <div class="col-6 text-center"><img src="{{ $main_product->image }}" class="img-fluid w-75 my-5" alt="{{ $main_product->__('name') }}"></div>
+                        <div class="col-6 text-center">
+                            <img src="{{ asset('images/'.$main_product->image) }}" class="img-fluid w-75 my-5" alt="{{ $main_product->__('name') }}">
+                        </div>
 
                         <div class="col-6">
                             <hr>

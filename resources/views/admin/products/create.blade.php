@@ -13,7 +13,7 @@
 
                 <hr>
 
-                <form method="POST" action="{{ route('products.store') }}">
+                <form method="POST" enctype="multipart/form-data" action="{{ route('products.store') }}">
                     @csrf
 
                     @error('name')
@@ -24,16 +24,23 @@
                         <label class="input-group-text" for="category_id">ПОДКАТЕГОРИЯ</label>
                         <select name="subcategory_id" id="subcategory_id" class="form-select">
                             @foreach($subcategories as $subcategory)
-                                <option value="{{ $subcategory->id }}">{{ mb_strtoupper($subcategory->name) }}</option>
+                                <option value="{{ $subcategory->id }}">{{ mb_strtoupper($subcategory->name_ru) }}</option>
                             @endforeach
                         </select>
                     </div>
 
                     <div class="input-group flex-nowrap mb-3">
                         <div class="input-group-prepend">
-                            <span class="input-group-text" id="addon-wrapping">НАЗВАНИЕ</span>
+                            <span class="input-group-text" id="addon-wrapping">НАЗВАНИЕ RU</span>
                         </div>
-                        <input type="text" name="name" id="name" class="form-control" placeholder="REQUIRED" aria-describedby="addon-wrapping" required>
+                        <input type="text" name="name_ru" id="name_ru" class="form-control" placeholder="REQUIRED" aria-describedby="addon-wrapping" required>
+                    </div>
+
+                    <div class="input-group flex-nowrap mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="addon-wrapping">НАЗВАНИЕ UA</span>
+                        </div>
+                        <input type="text" name="name_ua" id="name_ua" class="form-control" placeholder="REQUIRED" aria-describedby="addon-wrapping" required>
                     </div>
 
                     <div class="input-group flex-nowrap mb-3">
@@ -58,13 +65,18 @@
                     </div>
 
                     <div class="input-group flex-nowrap mb-3">
-                        <span class="input-group-text">ОПИСАНИЕ</span>
-                        <textarea name="description" id="description" class="form-control" aria-label="ОПИСАНИЕ"></textarea>
+                        <span class="input-group-text">ОПИСАНИЕ RU</span>
+                        <textarea name="description_ru" id="description_ru" class="form-control" aria-label="ОПИСАНИЕ"></textarea>
                     </div>
 
                     <div class="input-group flex-nowrap mb-3">
-                        <span class="input-group-text">КОРОТКОЕ ОПИСАНИЕ</span>
-                        <textarea name="small_description" id="small_description" class="form-control" aria-label="КОРОТКОЕ ОПИСАНИЕ"></textarea>
+                        <span class="input-group-text">ОПИСАНИЕ UA</span>
+                        <textarea name="description_ua" id="description_ua" class="form-control" aria-label="ОПИСАНИЕ"></textarea>
+                    </div>
+
+                    <div class="input-group flex-nowrap mb-3">
+                        <span class="input-group-text">КАРТИНКА</span>
+                        <input class="form-control" type="file" name="image" id="image">
                     </div>
 
                     <input type="hidden" name="new" value="0">
@@ -94,7 +106,7 @@
                     <input type="hidden" name="recommend" value="0">
                     <div class="form-check">
                         <input class="form-check-input" type="checkbox" name="recommend" id="recommend" value="1">
-                        <label class="form-check-label" for="hit">
+                        <label class="form-check-label" for="recommend">
                             RECOMMEND
                         </label>
                     </div>

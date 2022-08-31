@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Product;
 use App\Subcategory;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class ProductController extends Controller
 {
@@ -41,6 +42,13 @@ class ProductController extends Controller
     public function store(Request $request)
     {
         $parameters = $request->all();
+
+        unset($parameters['image']);
+
+        if ($request->has('image')) {
+            $path = Storage::disk('public')->putFile('products', $request->file('image'), 'public');
+            $parameters['image'] = $path;
+        }
 
         Product::create($parameters);
 
@@ -82,6 +90,12 @@ class ProductController extends Controller
     {
         $parameters = $request->all();
 
+        if ($request->has('image')) {
+            Storage::disk('public')->delete($product->image);
+            $path = Storage::disk('public')->putFile('products', $request->file('image'), 'public');
+            $parameters['image'] = $path;
+        }
+
         $product->update($parameters);
 
         return redirect()->route('products.index');
@@ -95,6 +109,8 @@ class ProductController extends Controller
      */
     public function destroy(Product $product)
     {
+        Storage::disk('public')->delete($product->image);
+
         $product->delete();
 
         return redirect()->route('products.index');

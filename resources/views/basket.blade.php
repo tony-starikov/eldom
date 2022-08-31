@@ -69,7 +69,7 @@
                                 <a class="text-decoration-none" href="{{ route('showProduct', [$product->subcategory->category->slug, $product->subcategory->slug, $product->slug]) }}">
                                     <div class="card h-100">
                                         <div class="text-center mt-3 p-1" style="height: 60%;">
-                                            <img src="{{ $product->image }}" class="img h-100" style="max-width: 100%;" alt="...">
+                                            <img src="{{ asset('images/'.$product->image) }}" class="img h-100" style="max-width: 100%;" alt="...">
                                         </div>
                                         <div class="card-body text-center pb-0 px-1">
                                             <ul class="list-group list-group-flush">

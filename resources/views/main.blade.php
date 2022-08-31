@@ -111,7 +111,7 @@
                                 <div class="card h-100">
 
                                     <div class="text-center mt-3 p-1" style="max-height: 60%;">
-                                        <img src="{{ $product->image }}" class="img h-100" style="max-width: 100%;" alt="...">
+                                        <img src="{{ asset('images/'.$product->image) }}" class="img h-100" style="max-width: 100%;" alt="{{ $product->image }}">
                                     </div>
 
                                     <div class="card-img-overlay">
