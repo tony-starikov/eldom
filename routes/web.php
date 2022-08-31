@@ -19,8 +19,8 @@ Route::middleware('auth')->group(function () {
         'namespace' => 'User',
         'prefix' => 'user',
     ], function () {
-        Route::get('/home', 'HomeUserController@index')->name('userHome');
         Route::get('/orders/{order_id}', 'HomeUserController@show')->name('userOrdersShow');
+        Route::get('/home', 'HomeUserController@index')->name('userHome');
     });
 
     Route::group([

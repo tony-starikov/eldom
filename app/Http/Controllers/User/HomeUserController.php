@@ -35,7 +35,7 @@ class HomeUserController extends Controller
         return view('user.main', compact('orders', 'quantity', 'messages', 'categories', 'page_info'));
     }
 
-    public function show($orderId)
+    public function show($order_id)
     {
         $quantity = null;
         $orderId = session('orderId');
@@ -45,6 +45,7 @@ class HomeUserController extends Controller
             foreach ($order->products as $product) {
                 $quantity += $product->pivot->count;
             }
+            $order = null;
         }
 
         $messages = Message::all();
@@ -53,10 +54,8 @@ class HomeUserController extends Controller
 
         $categories = Category::orderBy('id', 'asc')->get();
 
-        $order = Order::where('id', $orderId)->first();
-        if (!Auth::user()->orders->contains($order)) {
-            return back();
-        }
+        $order = Order::where('id', $order_id)->first();
+
         return view('user.show', compact('order', 'quantity', 'messages', 'categories', 'page_info'));
     }
 }

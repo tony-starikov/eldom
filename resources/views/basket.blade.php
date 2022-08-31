@@ -68,12 +68,16 @@
 
                                 <a class="text-decoration-none" href="{{ route('showProduct', [$product->subcategory->category->slug, $product->subcategory->slug, $product->slug]) }}">
                                     <div class="card h-100">
-                                        <img src="{{ $product->image }}" class="card-img-top img-fluid p-3" alt="...">
-                                        <ul class="list-group list-group-flush">
-                                            <li class="list-group-item">{{ mb_strtoupper($product->__('name')) }}</li>
-                                            <li class="list-group-item fw-bold">{{ __('basket.price') }}{{ $product->price }} грн</li>
-                                            <li class="list-group-item fw-bold">{{ __('basket.total') }}{{ $product->getPriceForCount() }} грн</li>
-                                        </ul>
+                                        <div class="text-center mt-3 p-1" style="height: 60%;">
+                                            <img src="{{ $product->image }}" class="img h-100" style="max-width: 100%;" alt="...">
+                                        </div>
+                                        <div class="card-body text-center pb-0 px-1">
+                                            <ul class="list-group list-group-flush">
+                                                <li class="list-group-item">{{ mb_strtoupper($product->__('name')) }}</li>
+                                                <li class="list-group-item fw-bold">{{ __('basket.price') }}{{ $product->price }} грн</li>
+                                                <li class="list-group-item fw-bold">{{ __('basket.total') }}{{ $product->getPriceForCount() }} грн</li>
+                                            </ul>
+                                        </div>
                                         <div class="card-footer text-center">
                                             <div class="btn-group" role="group">
                                                 <form action="{{ route('basketAdd', $product->id) }}" method="POST">

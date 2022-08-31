@@ -21,7 +21,7 @@
                                 @foreach($order->products as $product)
                                     <div class="col-lg-3 col-md-6 my-2">
                                         <div class="card h-100">
-                                            <img src="/images/1.png" class="card-img-top img-fluid" alt="...">
+{{--                                            <img src="/images/1.png" class="card-img-top img-fluid" alt="...">--}}
                                             <div class="card-body">
                                                 <h6>{{ $product->name }}</h6>
                                                 <ul class="list-group">
