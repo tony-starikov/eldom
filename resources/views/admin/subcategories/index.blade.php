@@ -16,8 +16,8 @@
                         <thead>
                             <tr>
                                 <th scope="col">#</th>
-                                <th scope="col">КАТЕГОРИЯ</th>
-                                <th scope="col">НАЗВАНИЕ ПОДКАТЕГОРИИ</th>
+                                <th scope="col">КАТЕГОРИЯ RU</th>
+                                <th scope="col">НАЗВАНИЕ ПОДКАТЕГОРИИ RU</th>
                                 <th scope="col">SLUG</th>
                                 <th scope="col">ДЕЙСТВИЯ</th>
                             </tr>
@@ -26,13 +26,12 @@
                         @foreach($subcategories as $subcategory)
                             <tr>
                                 <th scope="row">{{ $subcategory->id }}</th>
-                                <td>{{ mb_strtoupper($subcategory->category->name) }}</td>
-                                <td>{{ mb_strtoupper($subcategory->name) }}</td>
+                                <td>{{ mb_strtoupper($subcategory->category->name_ru) }}</td>
+                                <td>{{ mb_strtoupper($subcategory->name_ru) }}</td>
                                 <td>{{ $subcategory->slug }}</td>
                                 <td>
                                     <div class="btn-group">
                                         <a href="{{ route('subcategories.edit', $subcategory) }}"><button type="button" class="btn btn-link">ИЗМЕНИТЬ</button></a>
-                                        {{--                                            <a href="{{ route('users.show', $user) }}"><button type="button" class="btn btn-link">@if($user->status == 1) UNBLOCK @else BLOCK @endif</button></a>--}}
                                         <form id="delete-form" action="{{ route('subcategories.destroy', $subcategory) }}" method="POST">
                                             @method('DELETE')
                                             @csrf

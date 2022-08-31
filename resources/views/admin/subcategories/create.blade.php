@@ -22,16 +22,23 @@
                         <label class="input-group-text" for="category_id">КАТЕГОРИЯ</label>
                         <select name="category_id" id="category_id" class="form-select">
                             @foreach($categories as $category)
-                                <option value="{{ $category->id }}">{{ mb_strtoupper($category->name) }}</option>
+                                <option value="{{ $category->id }}">{{ mb_strtoupper($category->name_ru) }}</option>
                             @endforeach
                         </select>
                     </div>
 
                     <div class="input-group flex-nowrap mb-3">
                         <div class="input-group-prepend">
-                            <span class="input-group-text" id="addon-wrapping">НАЗВАНИЕ</span>
+                            <span class="input-group-text" id="addon-wrapping">НАЗВАНИЕ RU</span>
                         </div>
-                        <input type="text" name="name" id="name" class="form-control" placeholder="REQUIRED" aria-describedby="addon-wrapping" required>
+                        <input type="text" name="name_ru" id="name_ru" class="form-control" placeholder="REQUIRED" aria-describedby="addon-wrapping" required>
+                    </div>
+
+                    <div class="input-group flex-nowrap mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="addon-wrapping">НАЗВАНИЕ UA</span>
+                        </div>
+                        <input type="text" name="name_ua" id="name_ua" class="form-control" placeholder="REQUIRED" aria-describedby="addon-wrapping" required>
                     </div>
 
                     <div class="input-group flex-nowrap mb-3">
