@@ -18,7 +18,7 @@
         rel="stylesheet"
     />
 
-    {!! HCaptcha::renderJs('ua') !!}
+    {!! HCaptcha::renderJs('uk') !!}
 
     <style>
         /* The Overlay (background) */

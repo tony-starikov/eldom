@@ -1,12 +1,12 @@
 @extends('admin.master')
 
-@section('title', 'ХАРАКТЕРИСТИКИ')
+@section('title', 'СООБЩЕНИЯ')
 
 @section('main')
     <div class="container-fluid">
 
-        <h4>ХАРАКТЕРИСТИКИ ТОВАРОВ</h4>
-        <a class="btn btn-success" type="button" href="{{ route('features.create') }}">ДОБАВИТЬ ХАРАКТЕРИСТИКУ</a>
+        <h4>СООБЩЕНИЯ</h4>
+        <a class="btn btn-success" type="button" href="{{ route('messages.create') }}">ДОБАВИТЬ СООБЩЕНИЕ</a>
 
         <div class="row">
 
@@ -16,22 +16,19 @@
                         <thead>
                             <tr>
                                 <th scope="col">#</th>
-                                <th scope="col">ТОВАР</th>
-                                <th scope="col">ХАРАКТЕРИСТИКА</th>
+                                <th scope="col">СООБЩЕНИЕ</th>
                                 <th scope="col">ДЕЙСТВИЯ</th>
                             </tr>
                         </thead>
                         <tbody>
-                        @foreach($features as $feature)
+                        @foreach($messages as $message)
                             <tr>
-                                <th scope="row">{{ $feature->id }}</th>
-                                <td>{{ mb_strtoupper($feature->product->name_ru ) }}</td>
-                                <td>{{ $feature->feature_ru }}</td>
-
+                                <th scope="row">{{ $message->id }}</th>
+                                <td>{{ $message->message_ru }}</td>
                                 <td>
                                     <div class="btn-group">
-                                        <a href="{{ route('features.edit', $feature) }}"><button type="button" class="btn btn-link">ИЗМЕНИТЬ</button></a>
-                                        <form id="delete-form" action="{{ route('features.destroy', $feature) }}" method="POST">
+                                        <a href="{{ route('messages.edit', $message) }}"><button type="button" class="btn btn-link">ИЗМЕНИТЬ</button></a>
+                                        <form id="delete-form" action="{{ route('messages.destroy', $message) }}" method="POST">
                                             @method('DELETE')
                                             @csrf
                                             <button type="submit" class="btn btn-link">УДАЛИТЬ</button>
