@@ -67,6 +67,7 @@ class RegisterController extends Controller
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'phone' => ['required', 'string', 'max:13', 'unique:users'],
             'password' => ['required', 'string', 'min:5', 'confirmed'],
+            'h-captcha-response' => ['required', 'HCaptcha'],
         ]);
     }
 

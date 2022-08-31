@@ -18,6 +18,8 @@
         rel="stylesheet"
     />
 
+    {!! HCaptcha::renderJs('ua') !!}
+
     <style>
         /* The Overlay (background) */
         .overlay {

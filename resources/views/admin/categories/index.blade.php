@@ -18,7 +18,7 @@
                         <thead>
                             <tr>
                                 <th scope="col">#</th>
-                                <th scope="col">НАЗВАНИЕ</th>
+                                <th scope="col">НАЗВАНИЕ RU</th>
                                 <th scope="col">SLUG</th>
                                 <th scope="col">ДЕЙСТВИЯ</th>
                             </tr>
@@ -27,7 +27,7 @@
                         @foreach($categories as $category)
                             <tr>
                                 <th scope="row">{{ $category->id }}</th>
-                                <td>{{ $category->name }}</td>
+                                <td>{{ $category->name_ru }}</td>
                                 <td>{{ $category->slug }}</td>
                                 <td>
                                     <div class="btn-group">

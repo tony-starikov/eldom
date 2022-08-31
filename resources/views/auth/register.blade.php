@@ -46,6 +46,8 @@
                             <small id="emailHelp" class="form-text text-muted">{{ __('register.password_confirm_warning') }}</small>
                         </div>
 
+                        {!! HCaptcha::display() !!}
+
                         <button type="submit" class="btn btn-primary m-3">{{ __('register.button') }}</button>
                     </form>
                 </div>

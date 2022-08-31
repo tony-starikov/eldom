@@ -24,6 +24,8 @@
                                 <input name="password" type="password" class="form-control" id="password" placeholder="{{ __('login.password_placeholder') }}" required>
                             </div>
 
+                            {!! HCaptcha::display() !!}
+
                             <button type="submit" class="btn btn-primary m-3">{{ __('login.button') }}</button>
                         </form>
                     </div>
