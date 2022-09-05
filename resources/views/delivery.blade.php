@@ -8,6 +8,8 @@
 
     <div class="container-fluid">
 
+        <h1 class="d-none">{{ __('delivery.breadcrumb_delivery') }}</h1>
+
         <div class="row p-2">
 
             <div class="col-12">

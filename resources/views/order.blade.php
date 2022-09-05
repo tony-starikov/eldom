@@ -8,6 +8,8 @@
 
     <div class="container-fluid">
 
+        <h1 class="d-none">{{ __('order.breadcrumb_order') }}</h1>
+
         <div class="row p-2">
 
             <div class="col-12">
@@ -65,11 +67,11 @@
                         <form method="POST" action="{{ route('orderConfirm') }}">
                             @csrf
 
-                            <div class="row mb-4">
+                            <div class="row mb-3">
 
-                                <div class="col-8">
+                                <div class="col-lg-8">
 
-                                    <div class="card">
+                                    <div class="card mb-4">
                                         <h5 class="card-header">{{ __('order.contact_details') }}</h5>
                                         <div class="card-body">
 
@@ -102,7 +104,7 @@
 
                                 </div>
 
-                                <div class="col-4">
+                                <div class="col-lg-4">
 
                                     <div class="card mb-4">
                                         <h5 class="card-header">{{ __('order.delivery') }}</h5>

@@ -113,6 +113,14 @@
                             </label>
                         </div>
 
+                        <input type="hidden" name="status" value="0">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" name="status" id="status" value="1" @if($product->status == 1) checked @endif >
+                            <label class="form-check-label" for="status">
+                                В НАЛИЧИИ
+                            </label>
+                        </div>
+
                         <button type="submit" class="btn btn-success mt-3">ИЗМЕНИТЬ ТОВАР</button>
 
                     </div>

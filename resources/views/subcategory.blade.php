@@ -65,7 +65,7 @@
 
             </div>
 
-            <div class="col-9">
+            <div class="col-12 col-lg-9">
 
                 <section>
 

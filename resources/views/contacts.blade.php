@@ -8,6 +8,8 @@
 
     <div class="container-fluid">
 
+        <h1 class="d-none">{{ __('contacts.breadcrumb_contacts') }}</h1>
+
         <div class="row p-2">
 
             <div class="col-12">

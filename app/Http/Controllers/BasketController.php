@@ -8,6 +8,7 @@ use App\Message;
 use App\Order;
 use App\Page;
 use App\Product;
+use App\Requisite;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Mail;
@@ -128,8 +129,10 @@ class BasketController extends Controller
             $request->payment
         );
 
+        $requisite = Requisite::where('id', 1)->first();
+
         if ($orderResult) {
-            Mail::to($request->email)->send(new SuccessOrderMail());
+            Mail::to($request->email)->send(new SuccessOrderMail($order, $requisite));
 
             if (Mail::failures()) {
                 session()->flash('message', 'Ошибка при отправке email!');

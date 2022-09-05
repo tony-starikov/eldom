@@ -8,6 +8,8 @@
 
     <div class="container-fluid">
 
+        <h1 class="d-none">{{ mb_strtoupper($main_product->__('name')) }}</h1>
+
         <div class="row p-2">
 
             <div class="col-12">

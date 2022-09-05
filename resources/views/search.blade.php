@@ -8,6 +8,8 @@
 
     <div class="container-fluid">
 
+        <h1 class="d-none">{{ __('search.breadcrumb_search') }}</h1>
+
         <div class="row p-2">
 
             <div class="col-12">

@@ -46,6 +46,8 @@ Route::middleware('auth')->group(function () {
             Route::resource('/features', 'FeatureController');
 
             Route::resource('/messages', 'MessageController');
+
+            Route::resource('/requisites', 'RequisiteController');
         });
 
     });

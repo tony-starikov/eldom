@@ -22,6 +22,7 @@
                                 <th scope="col">SALE</th>
                                 <th scope="col">HIT</th>
                                 <th scope="col">RECOMMEND</th>
+                                <th scope="col">НАЛИЧИЕ</th>
                                 <th scope="col">АРТИКУЛ</th>
                                 <th scope="col">ЦЕНА</th>
                                 <th scope="col">ДЕЙСТВИЯ</th>
@@ -37,6 +38,7 @@
                                 <td>@if($product->sale == 1) YES @endif</td>
                                 <td>@if($product->hit == 1) YES @endif</td>
                                 <td>@if($product->recommend == 1) YES @endif</td>
+                                <td>@if($product->status == 1) YES @endif</td>
                                 <td>{{ $product->code }}</td>
                                 <td>{{ $product->price }}</td>
                                 <td>

@@ -8,6 +8,8 @@
 
     <div class="container-fluid">
 
+        <h1 class="d-none">{{ __('basket.breadcrumb_basket') }}</h1>
+
         <div class="row p-2">
 
             <div class="col-12">

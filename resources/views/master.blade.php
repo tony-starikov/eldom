@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>@yield('title')</title>
+
+    <meta name="keywords" content="Электрика Одесса, Заказать электротехнику и электрику в интернет-магазине Electro-dom, Широкий выбор, Лучшие цены в Одессе, Доставка по Украине" />
+
     <base href="https://electro-dom.od.ua/" />
     <meta name="description" content="@yield('description')" />
 
@@ -41,91 +44,91 @@
 <body>
 
 <!-- The overlay -->
-<div id="myNav" class="overlay">
+{{--<div id="myNav" class="overlay">--}}
 
-    <div class="row">
-        <a href="javascript:void(0)" class="text-decoration-none text-white" onclick="closeNav()"><h1>&times;</h1></a>
-    </div>
+{{--    <div class="row">--}}
+{{--        <a href="javascript:void(0)" class="text-decoration-none text-white" onclick="closeNav()"><h1>&times;</h1></a>--}}
+{{--    </div>--}}
 
-    <div class="row text-white">
+{{--    <div class="row text-white">--}}
 
-        <div class="col-12">
+{{--        <div class="col-12">--}}
 
-            <section class="d-block d-lg-none">
-                <a class="text-white text-decoration-none" href="{{ route('main') }}"><h5>ГЛАВНАЯ</h5></a>
-                <a class="text-white text-decoration-none" href="{{ route('delivery') }}"><h5>ДОСТАВКА</h5></a>
-                <a class="text-white text-decoration-none" href="{{ route('contacts') }}"><h5>КОНТАКТЫ</h5></a>
+{{--            <section class="d-block d-lg-none">--}}
+{{--                <a class="text-white text-decoration-none" href="{{ route('main') }}"><h5>ГЛАВНАЯ</h5></a>--}}
+{{--                <a class="text-white text-decoration-none" href="{{ route('delivery') }}"><h5>ДОСТАВКА</h5></a>--}}
+{{--                <a class="text-white text-decoration-none" href="{{ route('contacts') }}"><h5>КОНТАКТЫ</h5></a>--}}
 
-                <a class="text-white text-decoration-none" href="{{ route('basket') }}">
-                    @if($quantity)<span class="badge badge-pill bg-danger">{{ $quantity }}</span>@endif
-                    <span><i class="fas fa-shopping-cart"></i></span>
-                    <h5 class="clearfix d-inline-block">КОРЗИНА</h5>
-                </a>
+{{--                <a class="text-white text-decoration-none" href="{{ route('basket') }}">--}}
+{{--                    @if($quantity)<span class="badge badge-pill bg-danger">{{ $quantity }}</span>@endif--}}
+{{--                    <span><i class="fas fa-shopping-cart"></i></span>--}}
+{{--                    <h5 class="clearfix d-inline-block">КОРЗИНА</h5>--}}
+{{--                </a>--}}
 
-                @auth()
+{{--                @auth()--}}
 
-                    @if(Auth::user()->isAdmin())
-                        <a class="text-white text-decoration-none" href="{{ route('adminHome') }}"><h5>ADMIN</h5></a>
-                    @else
-                        <a class="text-white text-decoration-none" href="{{ route('userHome') }}"><h5>КАБИНЕТ</h5></a>
-                    @endif
+{{--                    @if(Auth::user()->isAdmin())--}}
+{{--                        <a class="text-white text-decoration-none" href="{{ route('adminHome') }}"><h5>ADMIN</h5></a>--}}
+{{--                    @else--}}
+{{--                        <a class="text-white text-decoration-none" href="{{ route('userHome') }}"><h5>КАБИНЕТ</h5></a>--}}
+{{--                    @endif--}}
 
-                    <form class="d-inline" id="logout-form" action="{{ url('logout') }}" method="POST">
-                        @csrf
-                        <button type="submit" class="h5 btn btn-link text-white text-decoration-none">ВЫЙТИ</button>
-                    </form>
+{{--                    <form class="d-inline" id="logout-form" action="{{ url('logout') }}" method="POST">--}}
+{{--                        @csrf--}}
+{{--                        <button type="submit" class="h5 btn btn-link text-white text-decoration-none">ВЫЙТИ</button>--}}
+{{--                    </form>--}}
 
-                @endauth
+{{--                @endauth--}}
 
-                @guest()
-                    <a class="text-white text-decoration-none" href="{{ route('login') }}"><h5>ВОЙТИ</h5></a>
-                    <a class="text-white text-decoration-none" href="{{ route('register') }}"><h5>РЕГИСТРАЦИЯ</h5></a>
-                @endguest
-            </section>
+{{--                @guest()--}}
+{{--                    <a class="text-white text-decoration-none" href="{{ route('login') }}"><h5>ВОЙТИ</h5></a>--}}
+{{--                    <a class="text-white text-decoration-none" href="{{ route('register') }}"><h5>РЕГИСТРАЦИЯ</h5></a>--}}
+{{--                @endguest--}}
+{{--            </section>--}}
 
-            <h5>КАТЕГОРИИ</h5>
+{{--            <h5>КАТЕГОРИИ</h5>--}}
 
-            <div class="row" style="background-color: rgba(0,0,0, 0.9);">
+{{--            <div class="row" style="background-color: rgba(0,0,0, 0.9);">--}}
 
-                @foreach(\App\Category::all() as $category)
+{{--                @foreach(\App\Category::all() as $category)--}}
 
-                    <div class="col-12 col-sm-6 col-lg-4 col-xl-3 my-3" style="background-color: rgba(0,0,0, 0.9);">
+{{--                    <div class="col-12 col-sm-6 col-lg-4 col-xl-3 my-3" style="background-color: rgba(0,0,0, 0.9);">--}}
 
-                        <ul class="list-group"style="background-color: rgba(0,0,0, 0.9);">
+{{--                        <ul class="list-group"style="background-color: rgba(0,0,0, 0.9);">--}}
 
-                            <li class="list-group-item border-0" style="background-color: rgba(0,0,0, 0.9);">
+{{--                            <li class="list-group-item border-0" style="background-color: rgba(0,0,0, 0.9);">--}}
 
-                                <a class="text-decoration-none text-white" style="background-color: rgba(0,0,0, 0.9);" href="{{ route('showCategory', $category->slug) }}">{{ mb_strtoupper($category->name) }}</a>
+{{--                                <a class="text-decoration-none text-white" style="background-color: rgba(0,0,0, 0.9);" href="{{ route('showCategory', $category->slug) }}">{{ mb_strtoupper($category->name) }}</a>--}}
 
-                                <ul class="list-group" style="background-color: rgba(0,0,0, 0.9);">
+{{--                                <ul class="list-group" style="background-color: rgba(0,0,0, 0.9);">--}}
 
-                                    @foreach($category->subcategories as $subcategory)
+{{--                                    @foreach($category->subcategories as $subcategory)--}}
 
-                                        <li class="list-group-item border-0" style="background-color: rgba(0,0,0, 0.9);">
-                                            <a class="text-decoration-none text-white" style="background-color: rgba(0,0,0, 0.9);" href="{{ route('showSubcategory', [$category->slug, $subcategory->slug]) }}">
-                                                | {{ mb_strtoupper($subcategory->name) }}
-                                            </a>
-                                        </li>
+{{--                                        <li class="list-group-item border-0" style="background-color: rgba(0,0,0, 0.9);">--}}
+{{--                                            <a class="text-decoration-none text-white" style="background-color: rgba(0,0,0, 0.9);" href="{{ route('showSubcategory', [$category->slug, $subcategory->slug]) }}">--}}
+{{--                                                | {{ mb_strtoupper($subcategory->name) }}--}}
+{{--                                            </a>--}}
+{{--                                        </li>--}}
 
-                                    @endforeach
+{{--                                    @endforeach--}}
 
-                                </ul>
+{{--                                </ul>--}}
 
-                            </li>
+{{--                            </li>--}}
 
-                        </ul>
+{{--                        </ul>--}}
 
-                    </div>
+{{--                    </div>--}}
 
-                @endforeach
+{{--                @endforeach--}}
 
-            </div>
+{{--            </div>--}}
 
-        </div>
+{{--        </div>--}}
 
-    </div>
+{{--    </div>--}}
 
-</div>
+{{--</div>--}}
 
 <script>
     /* Open */

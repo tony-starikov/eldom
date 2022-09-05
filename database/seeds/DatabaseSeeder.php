@@ -1,6 +1,7 @@
 <?php
 
 use Database\Seeders\MessageTableSeeder;
+use Database\Seeders\RequisitesTableSeeder;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -20,6 +21,7 @@ class DatabaseSeeder extends Seeder
             ProductsTableSeeder::class,
             FeaturesTableSeeder::class,
             MessageTableSeeder::class,
+            RequisitesTableSeeder::class,
         ]);
     }
 }

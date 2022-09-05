@@ -111,6 +111,14 @@
                         </label>
                     </div>
 
+                    <input type="hidden" name="recommend" value="0">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="status" id="status" value="1">
+                        <label class="form-check-label" for="status">
+                            В НАЛИЧИИ
+                        </label>
+                    </div>
+
                     <button type="submit" class="btn btn-success mt-3">ДОБАВИТЬ</button>
                 </form>
 
