@@ -90,7 +90,7 @@ class PageController extends Controller
 
         $search_string = mb_strtolower($search_string);
 
-        $products = Product::where('name_ua', 'LIKE', "%{$search_string}%")->orWhere('name_ru', 'LIKE', "%{$search_string}%")->orderBy('name')->get();
+        $products = Product::where('name_ua', 'LIKE', "%{$search_string}%")->orWhere('name_ru', 'LIKE', "%{$search_string}%")->orderBy('price')->get();
 
         $quantity = null;
 
