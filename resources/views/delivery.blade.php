@@ -4,6 +4,8 @@
 
 @section('description', $page_info->description)
 
+@section('keywords', $page_info->description)
+
 @section('main')
 
     <div class="container-fluid">

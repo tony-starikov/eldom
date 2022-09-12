@@ -1,8 +1,10 @@
 @extends('master')
 
-@section('title', mb_strtoupper($main_product->__('name')).' | Electro-dom')
+@section('title', mb_strtoupper($main_product->__('name')) . ' | Electro-dom')
 
-@section('description', mb_strtoupper($main_product->__('description')).' | Заказать электротехнику и электрику в интернет-магазине Electro-dom; Широкий выбор; Лучшие цены в Одессе; Доставка по Украине;')
+@section('description', mb_strtoupper($main_product->__('name')) . ' | Заказать электротехнику и электрику в интернет-магазине Electro-dom; Широкий выбор; Лучшие цены в Одессе; Доставка по Украине;')
+
+@section('keywords', 'Все о ' . mb_strtoupper($main_product->__('name')));
 
 @section('main')
 

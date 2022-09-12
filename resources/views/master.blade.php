@@ -6,11 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>@yield('title')</title>
-
-    <meta name="keywords" content="Электрика Одесса, Заказать электротехнику и электрику в интернет-магазине Electro-dom, Широкий выбор, Лучшие цены в Одессе, Доставка по Украине" />
+    <meta name="description" content="@yield('description')" />
+    <meta name="keywords" content="@yield('keywords')" />
 
     <base href="https://electro-dom.od.ua/" />
-    <meta name="description" content="@yield('description')" />
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
