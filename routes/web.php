@@ -91,6 +91,8 @@ Route::group([
 
     Route::get('/{category_slug}', 'CategoryController@showCategory')->name('showCategory');
 
+    Route::get('/schetchiki/{category_slug}', 'CategoryController@showCategory');
+
     Route::get('/price-up/{category_slug}', 'CategoryController@showCategoryByPriceUp')->name('showCategoryByPriceUp');
 
     Route::get('/price-down/{category_slug}', 'CategoryController@showCategoryByPriceDown')->name('showCategoryByPriceDown');
@@ -101,6 +103,8 @@ Route::group([
 
     Route::get('/{category_slug}/{subcategory_slug}', 'SubcategoryController@showSubcategory')->name('showSubcategory');
 
+    Route::get('/schetchiki/{category_slug}/{subcategory_slug}', 'SubcategoryController@showSubcategory');
+
     Route::get('/price-up/{category_slug}/{subcategory_slug}', 'SubcategoryController@showSubcategoryByPriceUp')->name('showSubcategoryByPriceUp');
 
     Route::get('/price-down/{category_slug}/{subcategory_slug}', 'SubcategoryController@showSubcategoryByPriceDown')->name('showSubcategoryByPriceDown');
@@ -110,6 +114,8 @@ Route::group([
     Route::get('/name-z/{category_slug}/{subcategory_slug}', 'SubcategoryController@showSubcategoryByNameZ')->name('showSubcategoryByNameZ');
 
     Route::get('/{category_slug}/{subcategory_slug}/{product_slug}', 'ProductController@showProduct')->name('showProduct');
+
+    Route::get('/schetchiki/{category_slug}/{subcategory_slug}/{product_slug}', 'ProductController@showProduct');
 });
 
 
