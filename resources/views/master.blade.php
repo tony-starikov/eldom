@@ -181,22 +181,18 @@
                         <li class="nav-item dropdown">
                             <a class="nav-link text-secondary dropdown-toggle fw-bold p-1 p-sm-2" id="navbarDropdownw2" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 <span><i class="fas fa-phone"></i></span>
-                                <span class="clearfix d-none d-sm-inline-block">+38 (048) 772-24-08</span>
+                                <span class="clearfix d-none d-sm-inline-block">{{ $main_phone }}</span>
                             </a>
                             <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownw2">
 
-                                <li>
-                                    <a class="dropdown-item" href="tel:+38 (048) 772-24-08">
-                                        <span><i class="fas fa-phone"></i></span>
-                                        <span class="clearfix">+38 (048) 772-24-08</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item" href="tel:+38 (067) 141-73-18">
-                                        <span><i class="fas fa-phone"></i></span>
-                                        <span class="clearfix">+38 (067) 141-73-18</span>
-                                    </a>
-                                </li>
+                                @foreach($phones as $phone)
+                                    <li>
+                                        <a class="dropdown-item" href="tel:{{ $phone->phone }}">
+                                            <span><i class="fas fa-phone"></i></span>
+                                            <span class="clearfix">{{ $phone->phone }}</span>
+                                        </a>
+                                    </li>
+                                @endforeach
 
                             </ul>
 

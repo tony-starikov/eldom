@@ -7,6 +7,7 @@ use App\Mail\SuccessOrderMail;
 use App\Message;
 use App\Order;
 use App\Page;
+use App\Phone;
 use App\Product;
 use App\Requisite;
 use Illuminate\Http\Request;
@@ -39,6 +40,12 @@ class BasketController extends Controller
 
         $messages = Message::all();
 
+        $phones = Phone::all();
+
+        $main_phone_item = $phones->where('main', 1)->first();
+
+        $main_phone = $main_phone_item->phone;
+
         $page_info = Page::where('name', 'basket')->first();
 
         $categories = Category::get();
@@ -53,7 +60,7 @@ class BasketController extends Controller
             return redirect()->route('main');
         }
 
-        return view('basket', compact('categories', 'order', 'quantity', 'messages', 'page_info'));
+        return view('basket', compact('categories', 'order', 'quantity', 'messages', 'page_info', 'phones', 'main_phone'));
     }
 
     public function orderCheck()
@@ -85,9 +92,15 @@ class BasketController extends Controller
 
         $messages = Message::all();
 
+        $phones = Phone::all();
+
+        $main_phone_item = $phones->where('main', 1)->first();
+
+        $main_phone = $main_phone_item->phone;
+
         $page_info = Page::where('name', 'order')->first();
 
-        return view('order', compact('categories', 'quantity', 'order', 'user_name', 'user_email', 'user_phone', 'messages', 'page_info'));
+        return view('order', compact('categories', 'quantity', 'order', 'user_name', 'user_email', 'user_phone', 'messages', 'page_info', 'phones', 'main_phone'));
     }
 
     public function orderConfirm(Request $request)

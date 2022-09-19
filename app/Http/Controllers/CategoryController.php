@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Category;
 use App\Message;
 use App\Order;
+use App\Phone;
 use App\Product;
 use Illuminate\Http\Request;
 
@@ -30,6 +31,12 @@ class CategoryController extends Controller
 
         $messages = Message::all();
 
+        $phones = Phone::all();
+
+        $main_phone_item = $phones->where('main', 1)->first();
+
+        $main_phone = $main_phone_item->phone;
+
         $main_category = Category::where('slug', $category_slug)->first();
 
         $main_subcategories = $main_category->subcategories;
@@ -44,7 +51,7 @@ class CategoryController extends Controller
 
         $category_products = Product::query()->whereIn('subcategory_id', $subcategories_ides)->paginate(9);
 
-        return view('category', compact('main_category', 'categories', 'main_subcategories', 'quantity', 'category_products', 'messages'));
+        return view('category', compact('main_category', 'categories', 'main_subcategories', 'quantity', 'category_products', 'messages', 'phones', 'main_phone'));
 
     }
 
@@ -62,6 +69,12 @@ class CategoryController extends Controller
 
         $messages = Message::all();
 
+        $phones = Phone::all();
+
+        $main_phone_item = $phones->where('main', 1)->first();
+
+        $main_phone = $main_phone_item->phone;
+
         $main_category = Category::where('slug', $category_slug)->first();
 
         $main_subcategories = $main_category->subcategories;
@@ -76,7 +89,7 @@ class CategoryController extends Controller
 
         $category_products = Product::query()->whereIn('subcategory_id', $subcategories_ides)->orderBy('price', 'asc')->paginate(9);
 
-        return view('category', compact('main_category', 'categories', 'main_subcategories', 'quantity', 'category_products', 'messages'));
+        return view('category', compact('main_category', 'categories', 'main_subcategories', 'quantity', 'category_products', 'messages', 'phones', 'main_phone'));
 
     }
 
@@ -94,6 +107,12 @@ class CategoryController extends Controller
 
         $messages = Message::all();
 
+        $phones = Phone::all();
+
+        $main_phone_item = $phones->where('main', 1)->first();
+
+        $main_phone = $main_phone_item->phone;
+
         $main_category = Category::where('slug', $category_slug)->first();
 
         $main_subcategories = $main_category->subcategories;
@@ -108,7 +127,7 @@ class CategoryController extends Controller
 
         $category_products = Product::query()->whereIn('subcategory_id', $subcategories_ides)->orderBy('price', 'desc')->paginate(9);
 
-        return view('category', compact('main_category', 'categories', 'main_subcategories', 'quantity', 'category_products', 'messages'));
+        return view('category', compact('main_category', 'categories', 'main_subcategories', 'quantity', 'category_products', 'messages', 'phones', 'main_phone'));
 
     }
 
@@ -126,6 +145,12 @@ class CategoryController extends Controller
 
         $messages = Message::all();
 
+        $phones = Phone::all();
+
+        $main_phone_item = $phones->where('main', 1)->first();
+
+        $main_phone = $main_phone_item->phone;
+
         $main_category = Category::where('slug', $category_slug)->first();
 
         $main_subcategories = $main_category->subcategories;
@@ -140,7 +165,7 @@ class CategoryController extends Controller
 
         $category_products = Product::query()->whereIn('subcategory_id', $subcategories_ides)->orderBy('name', 'desc')->paginate(9);
 
-        return view('category', compact('main_category', 'categories', 'main_subcategories', 'quantity', 'category_products', 'messages'));
+        return view('category', compact('main_category', 'categories', 'main_subcategories', 'quantity', 'category_products', 'messages', 'phones', 'main_phone'));
 
     }
 
@@ -158,6 +183,12 @@ class CategoryController extends Controller
 
         $messages = Message::all();
 
+        $phones = Phone::all();
+
+        $main_phone_item = $phones->where('main', 1)->first();
+
+        $main_phone = $main_phone_item->phone;
+
         $main_category = Category::where('slug', $category_slug)->first();
 
         $main_subcategories = $main_category->subcategories;
@@ -172,7 +203,7 @@ class CategoryController extends Controller
 
         $category_products = Product::query()->whereIn('subcategory_id', $subcategories_ides)->orderBy('name', 'asc')->paginate(9);
 
-        return view('category', compact('main_category', 'categories', 'main_subcategories', 'quantity', 'category_products', 'messages'));
+        return view('category', compact('main_category', 'categories', 'main_subcategories', 'quantity', 'category_products', 'messages', 'phones', 'main_phone'));
 
     }
 }

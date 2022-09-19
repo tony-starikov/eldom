@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 use App\Message;
 use App\Order;
 use App\Page;
+use App\Phone;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Support\Facades\Auth;
@@ -65,11 +66,17 @@ class LoginController extends Controller
 
         $messages = Message::all();
 
+        $phones = Phone::all();
+
+        $main_phone_item = $phones->where('main', 1)->first();
+
+        $main_phone = $main_phone_item->phone;
+
         $categories = Category::orderBy('id', 'asc')->get();
 
         $page_info = Page::where('name', 'login')->first();
 
-        return view('auth.login', compact('quantity', 'categories', 'messages', 'page_info'));
+        return view('auth.login', compact('quantity', 'categories', 'messages', 'page_info', 'phones', 'main_phone'));
     }
 
 }

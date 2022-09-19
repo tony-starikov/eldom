@@ -36,6 +36,9 @@
                         <a class="nav-link text-dark" href="{{ route('requisites.index') }}">БАНК</a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link text-dark" href="{{ route('phones.index') }}">ТЕЛ.</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link text-dark" href="{{ route('messages.index') }}">СООБЩЕНИЯ</a>
                     </li>
                     <li class="nav-item">

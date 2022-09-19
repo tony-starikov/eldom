@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Category;
 use App\Message;
 use App\Order;
+use App\Phone;
 use App\Product;
 use App\Subcategory;
 use Illuminate\Http\Request;
@@ -30,6 +31,12 @@ class ProductController extends Controller
 
         $messages = Message::all();
 
+        $phones = Phone::all();
+
+        $main_phone_item = $phones->where('main', 1)->first();
+
+        $main_phone = $main_phone_item->phone;
+
         $main_category = Category::where('slug', $category_slug)->first();
 
         $main_subcategory = Subcategory::where('slug', $subcategory_slug)->first();
@@ -38,6 +45,6 @@ class ProductController extends Controller
 
         $categories = Category::orderBy('id', 'asc')->get();
 
-        return view('product', compact('main_subcategory', 'categories', 'main_category', 'main_product', 'quantity', 'messages'));
+        return view('product', compact('main_subcategory', 'categories', 'main_category', 'main_product', 'quantity', 'messages', 'phones', 'main_phone'));
     }
 }

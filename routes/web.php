@@ -47,6 +47,8 @@ Route::middleware('auth')->group(function () {
 
             Route::resource('/messages', 'MessageController');
 
+            Route::resource('/phones', 'PhoneController');
+
             Route::resource('/requisites', 'RequisiteController');
         });
 

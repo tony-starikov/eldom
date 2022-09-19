@@ -6,6 +6,7 @@ use App\Category;
 use App\Message;
 use App\Order;
 use App\Page;
+use App\Phone;
 use App\Product;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\App;
@@ -33,13 +34,19 @@ class PageController extends Controller
 
         $messages = Message::all();
 
+        $phones = Phone::all();
+
+        $main_phone_item = $phones->where('main', 1)->first();
+
+        $main_phone = $main_phone_item->phone;
+
         $page_info = Page::where('name', 'main')->first();
 
         $categories = Category::orderBy('id', 'asc')->get();
 
         $recommended_products = Product::where('recommend', 1)->get();
 
-        return view('main', compact('page_info', 'categories', 'quantity', 'recommended_products', 'messages'));
+        return view('main', compact('page_info', 'categories', 'quantity', 'recommended_products', 'messages', 'phones', 'main_phone'));
     }
 
     public function delivery()
@@ -56,11 +63,17 @@ class PageController extends Controller
 
         $messages = Message::all();
 
+        $phones = Phone::all();
+
+        $main_phone_item = $phones->where('main', 1)->first();
+
+        $main_phone = $main_phone_item->phone;
+
         $page_info = Page::where('name', 'delivery')->first();
 
         $categories = Category::orderBy('id', 'asc')->get();
 
-        return view('delivery', compact('page_info', 'categories', 'quantity', 'messages'));
+        return view('delivery', compact('page_info', 'categories', 'quantity', 'messages', 'phones', 'main_phone'));
     }
 
     public function contacts()
@@ -77,11 +90,17 @@ class PageController extends Controller
 
         $messages = Message::all();
 
+        $phones = Phone::all();
+
+        $main_phone_item = $phones->where('main', 1)->first();
+
+        $main_phone = $main_phone_item->phone;
+
         $page_info = Page::where('name', 'contacts')->first();
 
         $categories = Category::orderBy('id', 'asc')->get();
 
-        return view('contacts', compact('page_info', 'categories', 'quantity', 'messages'));
+        return view('contacts', compact('page_info', 'categories', 'quantity', 'messages', 'phones', 'main_phone'));
     }
 
     public function search(Request $request)
@@ -106,12 +125,18 @@ class PageController extends Controller
 
         $messages = Message::all();
 
+        $phones = Phone::all();
+
+        $main_phone_item = $phones->where('main', 1)->first();
+
+        $main_phone = $main_phone_item->phone;
+
         $page_info = Page::where('name', 'search')->first();
 
         $categories = Category::orderBy('id', 'asc')->get();
 
 
 
-        return view('search', compact( 'categories', 'quantity', 'products', 'messages', 'page_info'));
+        return view('search', compact( 'categories', 'quantity', 'products', 'messages', 'page_info', 'phones', 'main_phone'));
     }
 }

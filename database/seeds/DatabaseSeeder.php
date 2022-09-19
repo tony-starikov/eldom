@@ -1,6 +1,7 @@
 <?php
 
 use Database\Seeders\MessageTableSeeder;
+use Database\Seeders\PhoneSeeder;
 use Database\Seeders\RequisitesTableSeeder;
 use Illuminate\Database\Seeder;
 
@@ -22,6 +23,7 @@ class DatabaseSeeder extends Seeder
             FeaturesTableSeeder::class,
             MessageTableSeeder::class,
             RequisitesTableSeeder::class,
+            PhoneSeeder::class,
         ]);
     }
 }
