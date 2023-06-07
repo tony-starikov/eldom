@@ -1,3 +1,3 @@
-## ELDOM project
+## Online store for a small electronics store in Odessa
 
-http://eldom-shop.herokuapp.com/
+## You can check deployed project here [electro-dom.od.ua](https://electro-dom.od.ua/).
